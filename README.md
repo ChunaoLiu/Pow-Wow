@@ -25,8 +25,13 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 **Required Must-have Stories**
 
-* User can register a new account
-* User can login
+* User can see a app icon
+* User can see a launch screen with app icon
+* User can see a login page
+* User can see a login button
+* User can see a register button
+* User can register a new account by clicking the login button
+* User can login 
 * User can update their profile information
 * User can apply to become a consultant
 * User can view a stream/feed of consultants
@@ -38,15 +43,32 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can message a consultant, in-app
 * User can hire a consultant, in-app
 * User can pay a consultant, in-app
-* User can schedule a meeting with a consultant
+* User can schedule a meeting with a consultant, in-app
 * User can meet with a consultant with zoom, in-app integration
 
 ### 2. Screen Archetypes
 
-* Login
-   * User can login
-   * User can register a new account
-* [list second screen here]
+* Launch Screen
+   * User can see a launch screen with app icon
+* Initial Page
+   * User can see a login button
+   * User can see a register button
+   * User can click login button to redirect to login page
+   * User can click register button to redirect to register page
+* Login Page
+   * User can enter their username
+   * User can enter their password
+   * User can click "Log in" to redirect to the feed
+* Register page
+   * User can enter their first name
+   * User can enter their last name
+   * User can enter their email
+   * User can enter/create their username
+   * User can enter/create their password
+   * User can enter/confirm their password
+   * User can see a sign up button
+   * User can click a sign up button to redirect to login page
+* Feed
    * [list associated required story here]
    * ...
 
