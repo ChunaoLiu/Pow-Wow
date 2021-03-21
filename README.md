@@ -15,7 +15,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 - **Category:** On Demand, Consulting Platform
 - **Mobile:** iOS Application
 - **Story:** A better solution to connecting businesses and consultants.
-- **Market:** For Hire: Any Industry Consultants, For Users: Any Industry Businesses
+- **Market:** Users can either be consultants or businesses.
 - **Habit:** 
 - **Scope:**
 
