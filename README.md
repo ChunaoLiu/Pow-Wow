@@ -12,11 +12,11 @@ Consulting On Demand for iOS
 A platform that provides a wide range of on-demand consulting services. Users can either hire consultants or create and showcase their consultant profile. Consultants can optimize their profile to showcase their services and work in-app with clients. Users can search for consultants based off need and hire consultants in-app, on-demand.
 
 ### App Evaluation
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
+- **Category:** On Demand, Consulting Platform
+- **Mobile:** iOS Application
+- **Story:** A better solution to connecting businesses and consultants.
+- **Market:** For Hire: Any Industry Consultants, For Users: Any Industry Businesses
+- **Habit:** 
 - **Scope:**
 
 ## Product Spec
@@ -25,19 +25,27 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can register a new account
+* User can login
+* User can update their profile information
+* User can apply to become a consultant
+* User can view a stream/feed of consultants
+* User can search/filter their feed for their needs
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can click to expand each consultant profile
+* User can message a consultant, in-app
+* User can hire a consultant, in-app
+* User can pay a consultant, in-app
+* User can schedule a meeting with a consultant
+* User can meet with a consultant with zoom, in-app integration
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
+* Login
+   * User can login
+   * User can register a new account
 * [list second screen here]
    * [list associated required story here]
    * ...
