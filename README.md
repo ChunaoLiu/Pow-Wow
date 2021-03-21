@@ -25,44 +25,44 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 **Required Must-have Stories**
 
-* User can see a app icon
-* User can see a launch screen with app icon
-* User can see an initial page
-* User can see a login button (on the initial page)
-* User can see a register button (on the initial page)
-* User can navigate to the login page by clicking the login button (on the initial page)
-* User can navigate to the register page by clicking the register button (on the initial page)
-* User can see a login page
-* User can see a "enter username" section (on the login page)
-* User can see a "enter password" section (on the login page)
-* User can see a "login" button (on the login page)
-* User can enter their username in the "enter username" section (on the login page)
-* User can enter their password in the "enter password" section (on the login page)
-* User can click the "login" button (on the login page) to navigate to the feed
-* User can see a error message "Username or password incorrect. Please try again.", if login credentials are incorrect.
-* User can see a register page
-* User can see a "enter first name" section (on the register page)
-* User can see a "enter last name" section (on the register page)
-* User can see a "enter email" section (on the register page)
-* User can see a "create username" section (on the register page)
-* User can see a "create password" section (on the register page)
-* User can see a "confirm password" section (on the register page)
-* User can see a "sign up" button (on the register page)
-* User can enter their first name in the "enter first name" section (on the register page)
-* User can enter their last name in the "enter last name" section (on the register page)
-* User can enter their email in the "enter email" section (on the register page)
-* User can see an error message "This email is taken or not valid." if the email is already associated with an account or in the wrong format
-* User can enter a username in the "enter username" section (on the register page)
-* User can see an error message "This username is taken or not valid." if the username is already associated with an account or in the wrong format
-* User can enter a password in the "enter password" section (on the register page)
-* User can see an error message "This password is invalid" if the password in the wrong format
-* User can enter a password in the "confirm password" section (on the register page)
-* User can see an error message "Passwords do not match" if the passwords in both sections do not match
-* User can click the "sign up" button (on the register page) to navigate to the login page
-* User can see a error message "One or more fields are incomplete. Please try again.", if registration credentials are incomplete
-* User can see a feed page
-* User (business) can see a stream of consultant profiles on the feed page
-* User can see
+* **User can see a app icon**
+* **User can see a launch screen with app icon**
+* **User can see an initial page**
+* User can see a **login button** (on the initial page)
+* User can see a **register button** (on the initial page)
+* User can *navigate to the login page* by clicking the login button (on the initial page)
+* User can *navigate to the register page* by clicking the register button (on the initial page)
+* **User can see a login page**
+* User can see a **"enter username"** section (on the login page)
+* User can see a **"enter password"** section (on the login page)
+* User can see a **"login"** button (on the login page)
+* User can *enter their username* in the "enter username" section (on the login page)
+* User can *enter their password* in the "enter password" section (on the login page)
+* User can *click the "login" button* (on the login page) to navigate to the feed
+* User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
+* **User can see a register page**
+* User can see a **"enter first name"** section (on the register page)
+* User can see a **"enter last name"** section (on the register page)
+* User can see a **"enter email"** section (on the register page)
+* User can see a **"create username"** section (on the register page)
+* User can see a **"create password"** section (on the register page)
+* User can see a **"confirm password"** section (on the register page)
+* User can see a **"sign up"** button (on the register page)
+* User can *enter their first name* in the "enter first name" section (on the register page)
+* User can *enter their last name* in the "enter last name" section (on the register page)
+* User can *enter their email* in the "enter email" section (on the register page)
+* User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
+* User can *enter a username* in the "create username" section (on the register page)
+* User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
+* User can *enter a password* in the "enter password" section (on the register page)
+* User can see an error message *"This password is invalid"* if the password in the wrong format
+* User can *enter a password* in the "confirm password" section (on the register page)
+* User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
+* User can *click the "sign up" button* (on the register page) to navigate to the login page
+* User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
+* **User can see a feed page**
+* User can see a stream of consultant profiles on the feed page
+* User can see a button 
 * User can update their profile information
 * User can apply to become a consultant
 * User can view a stream/feed of consultants
