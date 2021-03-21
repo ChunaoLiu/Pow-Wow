@@ -61,8 +61,13 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can *click the "sign up" button* (on the register page) to navigate to the login page
 * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * **User can see a feed page**
-* User can see a stream of consultant profiles on the feed page
-* User can see a button 
+* User can see a vertical **stream of consultant and business profiles** on the feed page
+* User can see a **"profile" button** (on the feed page)
+* User can click the "profile" button to **navigate to the "profile"** page
+* User can see a **"search" button** (on the feed page)
+* User can click the "search" button to **navigate to the "search filter"** page
+* **User can see a profile page**
+* User can see a "edit name" section (on the profile page)
 * User can update their profile information
 * User can apply to become a consultant
 * User can view a stream/feed of consultants
