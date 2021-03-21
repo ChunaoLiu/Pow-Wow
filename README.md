@@ -16,7 +16,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 - **Mobile:** iOS Application
 - **Story:** A better solution to connecting businesses and consultants.
 - **Market:** Users can either be consultants or businesses.
-- **Habit:** Business will search for professionals when in need and Consultants will respond and work with businesses after inquiry.
+- **Habit:** Business will search for professionals. Consultants will respond and work with businesses after inquiry.
 - **Scope:** On Demand, Consulting Platform
 
 ## Product Spec
