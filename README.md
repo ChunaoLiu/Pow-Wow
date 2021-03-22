@@ -190,32 +190,34 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 **Flow Navigation** (Screen to Screen)
 
-(1) **Launch Screen**
-(2) **Initial Page**
+* (1) **Launch Screen**
+* (2) **Initial Page**
    * (3a) Login Page, or
    * (3b) Register Page
-(3a) **Login Page**
+* (3a) **Login Page**
    * (4) Feed Page
-(3b) **Register Page**
+* (3b) **Register Page**
    * (3a) Login Page
-(4) **Feed Page** (Home Page)
+* (4) **Feed Page** (Home Page)
    * (5a) Profile Page, or
    * (5b) Search Page, or
    * (5c) Settings Page
    * *(6) View Other User Profile Page (Nice-To-Have)*
-(5a) **Profile Page**
+* (5a) **Profile Page**
    * (4) Feed Page
-(5b) **Search Page**
+* (5b) **Search Page**
    * (4) Feed Page
-(5c) **Settings Page**
+* (5c) **Settings Page**
    * (4) Feed Page
-(6) *View Other User Profile Page (Nice-To-Have)*
+* (6) *View Other User Profile Page (Nice-To-Have)*
    * (7) Message Other User Page
    * (8) Pay Other User Page
-   * (9) 
-   * (10)
-(7) *Message Other User Page (Nice-To-Have)*
-(8) *Pay Other User Page (Nice-To-Have*
+   * (9) Schedule Meeting With Other User Page
+   * (10) Meeting With Other User (Zoom) Page
+* (7) *Message Other User Page (Nice-To-Have)*
+* (8) *Pay Other User Page (Nice-To-Have)*
+* (9) *Schedule Meeting With Other User Page (Nice-To-Have)*
+* (10) *Meeting With Other User (Zoom) Page (Nice-To-Have)*
 
 
 
