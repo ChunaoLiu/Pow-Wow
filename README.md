@@ -114,7 +114,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can enter a new last name in the "edit last name" section (in the account section)**
 * User can see an *"edit email" section* (in the account section)
 * **User can enter a new email in the "edit email" section (in the account section)**
-* * User can see an *"edit phone" section* (in the account section)
+* User can see an *"edit phone" section* (in the account section)
 * **User can enter a new phone number in the "edit phone" section (in the account section)**
 * User can see an *"edit username" section* (in the account section)
 * **User can enter a new username in the "edit username" section (in the account section)**
