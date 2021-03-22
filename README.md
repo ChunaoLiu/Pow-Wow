@@ -37,57 +37,61 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can see a *register button* (on the initial page)
 * **User can navigate to the login page by clicking the login button (on the initial page)**
 * **User can navigate to the register page by clicking the register button (on the initial page)**
-* User can see a login page
+* User can see a *login page*
 * **User can login to their account on the login page**
-* User can see a "enter username" section (on the login page)
-* User can see a "enter password" section (on the login page)
-* User can see a "login" button (on the login page)
+* User can see a *"enter username" section* (on the login page)
+* User can see a *"enter password" section* (on the login page)
+* User can see a *"login" button* (on the login page)
 * **User can enter their username in the "enter username" section (on the login page)**
 * **User can enter their password in the "enter password" section (on the login page)**
 * **User can click the "login" button (on the login page) to navigate to the feed**
 * User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
 * **User can see a register page**
-* User can see a **"enter first name"** section (on the register page)
-* User can see a **"enter last name"** section (on the register page)
-* User can see a **"enter email"** section (on the register page)
-* User can see a **"create username"** section (on the register page)
-* User can see a **"create password"** section (on the register page)
-* User can see a **"confirm password"** section (on the register page)
-* User can see a **"sign up"** button (on the register page)
-* User can *enter their first name* in the "enter first name" section (on the register page)
-* User can *enter their last name* in the "enter last name" section (on the register page)
-* User can *enter their email* in the "enter email" section (on the register page)
+* User can see a *"enter first name" section* (on the register page)
+* User can see a *"enter last name" section* (on the register page)
+* User can see a *"enter email" section* (on the register page)
+* User can see a *"create username" section* (on the register page)
+* User can see a *"create password" section* (on the register page)
+* User can see a *"confirm password" section* (on the register page)
+* User can see a *"sign up"** button* (on the register page)
+* **User can enter their first name in the "enter first name" section (on the register page)**
+* **User can enter their last name in the "enter last name" section (on the register page)**
+* **User can enter their email in the "enter email" section (on the register page)**
 * User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
-* User can *enter a username* in the "create username" section (on the register page)
+* **User can enter a username in the "create username" section (on the register page)**
 * User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
-* User can *enter a password* in the "enter password" section (on the register page)
+* **User can enter a password in the "enter password" section (on the register page)**
 * User can see an error message *"This password is invalid"* if the password in the wrong format
-* User can *enter a password* in the "confirm password" section (on the register page)
+* **User can enter a password in the "confirm password" section (on the register page)**
 * User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
-* User can *click the "sign up" button* (on the register page) to navigate to the login page
+* **User can click the "sign up" button* (on the register page) to navigate to the login page**
 * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
-* **User can see a feed page**
-* User can see a vertical **feed of consultant and business profiles** on the feed page
+* User can see a feed page
+* User can see a vertical feed of consultant and business profiles on the feed page
 * User can see a **"profile" button** (on the feed page)
-* User can click the "profile" button to **navigate to the "profile"** page
-* User can see a **"search/filter" button** (on the feed page)
-* User can click the "search" button to **navigate to the "search/filter"** page
-* User can see a **"settings" button** (on the feed page)
-* User can click the "settings" button to **navigate to the "settings"** page
-* **User can see a profile page**
-* User can update their profile information
-* User can see a **"business" section** (on the profile page)
-* User can see a **"business or consultant"** option (in the business section) (on the profile page)
-* User can see an **"edit name"** section (in the business section) (on the profile page)
-* User can see an **"edit profile picture"** section (in the business section) (on the profile page)
-* User can see an **"edit banner picture"** section (in the business section) (on the profile page)
-* User can see an **"edit industry"** section (in the business section) (on the profile page)
-* User can see an **"edit keywords"** sections (in the business section) (on the profile page)
-* User can see an **"edit bio"** section (in the business section) (on the profile page)
-* User can see a **"save and publish"** button (in the business section) (on the profile page)
-* **User can see a search/filter page**
-* **User can see a list of options to filter the search on the feed** (on the search/filter page)
-* User have the option to **select different industries** (with a checkbox) (on the search/filter page)
+* **User can vertically scroll through the feed page**
+* User can see consultant and business profiles (on the feed page)
+* **User can click the "profile" button to navigate to the "profile" page**
+* User can see a "search/filter" button (on the feed page)
+* **User can click the "search" button to navigate to the "search/filter" page**
+* User can see a "settings" button (on the feed page)
+* **User can click the "settings" button to navigate to the "settings" page**
+* User can see a profile page
+* **User can update their profile information**
+* User can see a "business" section (on the profile page)
+* User can see a "business or consultant" option (in the business section) (on the profile page)
+* User can see an "edit name" section (in the business section) (on the profile page)
+* User can see an "edit profile picture" section (in the business section) (on the profile page)
+* User can see an "edit banner picture" section (in the business section) (on the profile page)
+* User can see an "edit industry" section (in the business section) (on the profile page)
+* User can see an "edit keywords" sections (in the business section) (on the profile page)
+* User can see an "edit bio" section (in the business section) (on the profile page)
+* User can see a "save and publish" button (in the business section) (on the profile page)
+* User can see a search/filter page
+* **User can edit preferences (on the search/filter page)**
+* User can see a list of options to filter the search on the feed (on the search/filter page)
+* **User can select businesses or consultants (with a checkbox) (on the search/filter page)**
+* **User can select different industries (with a checkbox) (on the search/filter page)**
 * User can see a **"save" button* (on the search/filter page)
 * User have the option to **search keywords in a search bar** (typing text) (on the search/filter page)
 * User can see a **"search" button** (on the search/filter page)
