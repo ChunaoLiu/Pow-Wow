@@ -1,6 +1,8 @@
 # Pow-Wow
 Consulting On Demand for iOS
 
+![](Pow-Wow-Logo.png)
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
