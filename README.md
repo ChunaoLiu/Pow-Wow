@@ -21,6 +21,8 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 - **Habit:** Business will search for professionals. Consultants will respond and work with businesses after inquiry.
 - **Scope:** On Demand, Consulting Platform
 
+![](Pow-Wow-Log-In.jpg)
+
 ## Product Spec
 
 ### 1. User Stories (Required and Optional)
@@ -108,27 +110,42 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 ### 2. Screen Archetypes
 
-* Launch Screen
+* **Launch Screen**
    * User can see a launch screen with app icon
-* Initial Page
+* **Initial Page**
    * User can see a login button
    * User can see a register button
    * User can click login button to redirect to login page
    * User can click register button to redirect to register page
-* Login Page
-   * User can enter their username
-   * User can enter their password
-   * User can click "Log in" to redirect to the feed
-* Register page
-   * User can enter their first name
-   * User can enter their last name
-   * User can enter their email
-   * User can enter/create their username
-   * User can enter/create their password
-   * User can enter/confirm their password
-   * User can see a sign up button
-   * User can click a sign up button to redirect to login page
-* Feed
+* **Login Page**
+   * User can see a "enter username" section (on the login page)
+   * User can see a "enter password" section (on the login page)
+   * User can see a "login" button (on the login page)
+   * User can *enter their username* in the "enter username" section (on the login page)
+   * User can *enter their password* in the "enter password" section (on the login page)
+   * User can *click the "login" button* (on the login page) to navigate to the feed
+   * User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
+* **Register page**
+   * User can see a **"enter first name"** section (on the register page)
+   * User can see a **"enter last name"** section (on the register page)
+   * User can see a **"enter email"** section (on the register page)
+   * User can see a **"create username"** section (on the register page)
+   * User can see a **"create password"** section (on the register page)
+   * User can see a **"confirm password"** section (on the register page)
+   * User can see a **"sign up"** button (on the register page)
+   * User can *enter their first name* in the "enter first name" section (on the register page)
+   * User can *enter their last name* in the "enter last name" section (on the register page)
+   * User can *enter their email* in the "enter email" section (on the register page)
+   * User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
+   * User can *enter a username* in the "create username" section (on the register page)
+   * User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
+   * User can *enter a password* in the "enter password" section (on the register page)
+   * User can see an error message *"This password is invalid"* if the password in the wrong format
+   * User can *enter a password* in the "confirm password" section (on the register page)
+   * User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
+   * User can *click the "sign up" button* (on the register page) to navigate to the login page
+   * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
+* **Feed**
    * [list associated required story here]
    * ...
 
