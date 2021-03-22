@@ -77,7 +77,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can click the "settings" button to navigate to the "settings" page**
 * User can see a *"logout" button* (on the feed page)
 * **User can click the "logout" button to logout**
-* * User can see a *profile page*
+* User can see a *profile page*
 * **User can update their profile information**
 * User can see a *"business" section* (on the profile page)
 * User can see a *"business or consultant" option* (in the business section) (on the profile page)
