@@ -196,6 +196,9 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see an "enter new password" section (in the security section)
    * User can see a "confirm new password" section (in the security section)
    * User can see a "save" button (in the security section)
+   * User can see an "about" section (on the settings page)
+   * User can see an "help" section (on the settings page)
+   * User can see an "contact us" section (on the settings page)
 * **View Other User Profile** *(Nice-To-Have) !!!*
 * **Message Other User** *(Nice-To-Have) !!!*
 * **Pay Other User** *(Nice-To-Have) !!!*
