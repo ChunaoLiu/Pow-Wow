@@ -68,7 +68,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * User can see a *feed page*
 * User can see a *vertical feed of consultant and business profiles* (on the feed page)
-* * **User can vertically scroll through the feed page**
+* **User can vertically scroll through the feed page**
 * User can see a *"profile" button* (on the feed page)
 * **User can click the "profile" button to navigate to the "profile" page**
 * User can see a *"search/filter" button* (on the feed page)
@@ -80,30 +80,30 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can click the "logout" button to logout**
 * **User can update their profile information**
 * User can see a *"business" section* (on the profile page)
-* User can see a "business or consultant" option (in the business section) (on the profile page)
+* User can see a *"business or consultant" option* (in the business section) (on the profile page)
 * **User can select a "business or consultant" option (in the business section) (on the profile page)**
-* User can see an "edit name" section (in the business section) (on the profile page)
+* User can see an *"edit name" section* (in the business section) (on the profile page)
 * **User can enter their business name in the "edit name" section (in the business section) (on the profile page)**
-* User can see an "edit profile picture" section (in the business section) (on the profile page)
+* User can see an *"edit profile picture" section* (in the business section) (on the profile page)
 * **User can upload their profile picture in the "edit profile picture" section (in the business section) (on the profile page)**
-* User can see an "edit banner picture" section (in the business section) (on the profile page)
+* User can see an *"edit banner picture" section* (in the business section) (on the profile page)
 * **User can upload their banner picture in the "edit banner picture" section (in the business section) (on the profile page)**
-* User can see an "edit industry" section (in the business section) (on the profile page)
+* User can see an *"edit industry" section* (in the business section) (on the profile page)
 * **User can select their business industry out of the options in the "industry" section (in the business section) (on the profile page)**
-* User can see an "edit keywords" sections (in the business section) (on the profile page)
+* User can see an *"edit keywords" section* (in the business section) (on the profile page)
 * **User can enter their business keywords in the "edit keywords" section (in the business section) (on the profile page)**
-* User can see an "edit bio" section (in the business section) (on the profile page)
+* User can see an *"edit bio" section* (in the business section) (on the profile page)
 * **User can enter their business biography in the "edit bio" section (in the business section) (on the profile page)**
-* User can see a "save and publish" button (in the business section) (on the profile page)
+* User can see a *"save and publish" button* (in the business section) (on the profile page)
 * **User can click the "save and publish" button (in the business section) (on the profile page)**
-* User can see a search/filter page
+* User can see a *search/filter page*
 * **User can edit preferences (on the search/filter page)**
-* User can see a list of options to filter the search on the feed (on the search/filter page)
+* User can see a *list of options* to filter the search on the feed (on the search/filter page)
 * **User can select businesses or consultants (with a checkbox) (on the search/filter page)**
 * **User can select different industries (with a checkbox) (on the search/filter page)**
-* User can see a **"save" button* (on the search/filter page)
+* User can see a *"save" button* (on the search/filter page)
 * **User can search keywords in a search bar (typing text) (on the search/filter page)**
-* User can see a "search" button (on the search/filter page)
+* User can see a *"search" button* (on the search/filter page)
 * **User can click the "search" button (on the search/filter page) to query the search based off their edited preferences**
 * User can see a *settings page*
 * User can see an *"account" section* (on the settings page)
