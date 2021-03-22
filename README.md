@@ -21,7 +21,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 - **Habit:** Business will search for professionals. Consultants will respond and work with businesses after inquiry.
 - **Scope:** On Demand, Consulting Platform
 
-![](Pow-Wow-Log-In.jpg)
+![](Pow-Wow-Log-In.PNG)
 
 ## Product Spec
 
