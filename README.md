@@ -107,6 +107,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can click the "search" button (on the search/filter page) to query the search based off their edited preferences**
 * User can see a *settings page*
 * User can see an *"account" section* (on the settings page)
+* **User can edit their account information (on the settings page)**
 * User can see an *"edit first name" section* (in the account section)
 * User can see an *"edit last name" section* (in the account section)
 * User can see an *"edit email" section* (in the account section)
