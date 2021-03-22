@@ -125,6 +125,9 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can enter their new password in the "enter new password" section (in the security section)**
 * User can see a *"confirm new password" section* (in the security section)
 * **User can enter their confirmed password in the "confirm new password" section (in the security section)**
+* User can see an *"about" section* (on the settings page)
+* User can see an *"help" section* (on the settings page)
+* User can see an *"contact us" section* (on the settings page)
 
 **Optional Nice-to-have Stories**
 * User can click to expand each consultant profile
@@ -188,10 +191,11 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see an "edit last name" section (in the account section)
    * User can see an "edit email" section (in the account section)
    * User can see an "edit username" section (in the account section)
-   * User can see a "change password" section (in the account section)
-   * User can see an "enter new password" section (in the account section)
-   * User can see a "confirm new password" section (in the account section)
    * User can see a "save" button (in the account section)
+   * User can see a "change password" section (in the security section)
+   * User can see an "enter new password" section (in the security section)
+   * User can see a "confirm new password" section (in the security section)
+   * User can see a "save" button (in the security section)
 * **View Other User Profile** *(Nice-To-Have) !!!*
 * **Message Other User** *(Nice-To-Have) !!!*
 * **Pay Other User** *(Nice-To-Have) !!!*
