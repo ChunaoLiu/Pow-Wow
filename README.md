@@ -61,20 +61,37 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can *click the "sign up" button* (on the register page) to navigate to the login page
 * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * **User can see a feed page**
-* User can see a vertical **stream of consultant and business profiles** on the feed page
+* User can see a vertical **feed of consultant and business profiles** on the feed page
 * User can see a **"profile" button** (on the feed page)
 * User can click the "profile" button to **navigate to the "profile"** page
-* User can see a **"search" button** (on the feed page)
-* User can click the "search" button to **navigate to the "search filter"** page
+* User can see a **"search/filter" button** (on the feed page)
+* User can click the "search" button to **navigate to the "search/filter"** page
+* User can see a **"settings" button** (on the feed page)
+* User can click the "settings" button to **navigate to the "settings"** page
 * **User can see a profile page**
-* User can see a "edit name" section (on the profile page)
 * User can update their profile information
-* User can apply to become a consultant
-* User can view a stream/feed of consultants
-* User can search/filter their feed for their needs
+* User can see a **"business" section** (on the profile page)
+* User can see a **"business or consultant"** option (in the business section) (on the profile page)
+* User can see an **"edit name"** section (in the business section) (on the profile page)
+* User can see an **"edit profile picture"** section (in the business section) (on the profile page)
+* User can see an **"edit banner picture"** section (in the business section) (on the profile page)
+* User can see an **"edit industry"** section (in the business section) (on the profile page)
+* User can see an **"edit keywords"** sections (in the business section) (on the profile page)
+* User can see an **"edit bio"** section (in the business section) (on the profile page)
+* User can see a **"save and publish"** button (in the business section) (on the profile page)
+* **User can see a search/filter page**
+* **User can see a settings page**
+* User can see an **"account" section** (on the settings page)
+* User can see a **"edit first name"** section (in the account section)
+* User can see a **"edit last name"** section (in the account section)
+* User can see a **"edit email"** section (in the account section)
+* User can see a **"edit username"** section (in the account section)
+* User can see a **"change password"** section (in the account section)
+* User can see a **"enter new password"** section (in the account section)
+* User can see a **"confirm new password"** section (in the account section)
+* User can see a **"save"** button (in the account section)
 
 **Optional Nice-to-have Stories**
-
 * User can click to expand each consultant profile
 * User can message a consultant, in-app
 * User can hire a consultant, in-app
