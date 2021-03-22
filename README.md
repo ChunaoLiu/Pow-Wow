@@ -104,16 +104,17 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can see a **"save" button* (on the search/filter page)
 * **User can search keywords in a search bar (typing text) (on the search/filter page)**
 * User can see a "search" button (on the search/filter page)
-* **User can see a settings page**
-* User can see an **"account" section** (on the settings page)
-* User can see an **"edit first name"** section (in the account section)
-* User can see an **"edit last name"** section (in the account section)
-* User can see an **"edit email"** section (in the account section)
-* User can see an **"edit username"** section (in the account section)
-* User can see a **"change password"** section (in the account section)
-* User can see an **"enter new password"** section (in the account section)
-* User can see a **"confirm new password"** section (in the account section)
-* User can see a **"save"** button (in the account section)
+* **User can click the "search" button (on the search/filter page) to query the search based off their edited preferences**
+* User can see a *settings page*
+* User can see an *"account" section* (on the settings page)
+* User can see an *"edit first name" section* (in the account section)
+* User can see an *"edit last name" section* (in the account section)
+* User can see an *"edit email" section* (in the account section)
+* User can see an *"edit username" section* (in the account section)
+* User can see a *"change password" section* (in the account section)
+* User can see an *"enter new password" section* (in the account section)
+* User can see a *"confirm new password" section* (in the account section)
+* User can see a *"save" button* (in the account section)
 
 **Optional Nice-to-have Stories**
 * User can click to expand each consultant profile
