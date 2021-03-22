@@ -88,7 +88,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User have the option to **select different industries** (with a checkbox) (on the search/filter page)
 * User can see a **"save" button* (on the search/filter page)
 * User have the option to **search keywords in a search bar** (typing text) (on the search/filter page)
-* User can see a **"search" button* (on the search/filter page)
+* User can see a **"search" button** (on the search/filter page)
 * **User can see a settings page**
 * User can see an **"account" section** (on the settings page)
 * User can see an **"edit first name"** section (in the account section)
@@ -126,13 +126,13 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can *click the "login" button* (on the login page) to navigate to the feed
    * User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
 * **Register page**
-   * User can see a **"enter first name"** section (on the register page)
-   * User can see a **"enter last name"** section (on the register page)
-   * User can see a **"enter email"** section (on the register page)
-   * User can see a **"create username"** section (on the register page)
-   * User can see a **"create password"** section (on the register page)
-   * User can see a **"confirm password"** section (on the register page)
-   * User can see a **"sign up"** button (on the register page)
+   * User can see a "enter first name" section (on the register page)
+   * User can see a "enter last name" section (on the register page)
+   * User can see a "enter email" section (on the register page)
+   * User can see a "create username" section (on the register page)
+   * User can see a "create password" section (on the register page)
+   * User can see a "confirm password" section (on the register page)
+   * User can see a "sign up" button (on the register page)
    * User can *enter their first name* in the "enter first name" section (on the register page)
    * User can *enter their last name* in the "enter last name" section (on the register page)
    * User can *enter their email* in the "enter email" section (on the register page)
@@ -146,8 +146,40 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can *click the "sign up" button* (on the register page) to navigate to the login page
    * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * **Feed**
-   * [list associated required story here]
-   * ...
+   * User can see a vertical feed of consultant and business profiles on the feed page
+   * User can see a "profile" button (on the feed page)
+   * User can click the "profile" button to navigate to the "profile" page
+   * User can see a "search/filter" button (on the feed page)
+   * User can click the "search" button to navigate to the "search/filter" page
+   * User can see a "settings" button (on the feed page)
+   * User can click the "settings" button to navigate to the "settings" page
+* **Profile**
+   * User can update their profile information
+   * User can see a "business" section (on the profile page)
+   * User can see a "business or consultant" option (in the business section)
+   * User can see an "edit name" section (in the business section)
+   * User can see an "edit profile picture" section (in the business section)
+   * User can see an "edit banner picture" section (in the business section)
+   * User can see an "edit industry" section (in the business section)
+   * User can see an "edit keywords" sections (in the business section)
+   * User can see an "edit bio" section (in the business section)
+   * User can see a "save and publish" button (in the business section)
+* **Search**
+   * User can see a list of options to filter the search on the feed
+   * User have the option to select different industries (with a checkbox)
+   * User can see a "save" button
+   * User have the option to search keywords in a search bar** (typing text)
+   * User can see a "search" button
+* **Settings**
+   * User can see an **"account" section** (on the settings page)
+   * User can see an **"edit first name"** section (in the account section)
+   * User can see an **"edit last name"** section (in the account section)
+   * User can see an **"edit email"** section (in the account section)
+   * User can see an **"edit username"** section (in the account section)
+   * User can see a **"change password"** section (in the account section)
+   * User can see an **"enter new password"** section (in the account section)
+   * User can see a **"confirm new password"** section (in the account section)
+   * User can see a **"save"** button (in the account section)
 
 ### 3. Navigation
 
