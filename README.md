@@ -218,6 +218,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * (3b) **Register Page**
    * (3a) Login Page
 * (4) **Feed Page** (Home Page)
+   * (2) Initial Page (Logout)
    * (5a) Profile Page, or
    * (5b) Search Page, or
    * (5c) Settings Page
