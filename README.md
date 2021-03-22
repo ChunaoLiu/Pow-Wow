@@ -109,13 +109,22 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * User can see an *"account" section* (on the settings page)
 * **User can edit their account information (on the settings page)**
 * User can see an *"edit first name" section* (in the account section)
+* **User can enter a new first name in the "edit first name" section (in the account section)**
 * User can see an *"edit last name" section* (in the account section)
+* **User can enter a new last name in the "edit last name" section (in the account section)**
 * User can see an *"edit email" section* (in the account section)
+* **User can enter a new email in the "edit email" section (in the account section)**
+* * User can see an *"edit phone" section* (in the account section)
+* **User can enter a new phone number in the "edit phone" section (in the account section)**
 * User can see an *"edit username" section* (in the account section)
-* User can see a *"change password" section* (in the account section)
-* User can see an *"enter new password" section* (in the account section)
-* User can see a *"confirm new password" section* (in the account section)
-* User can see a *"save" button* (in the account section)
+* **User can enter a new username in the "edit username" section (in the account section)**
+* User can see an *"security" section* (on the settings page)
+* User can see a *"change password" section* (in the security section section)
+* **User can change their password in the "change password" section (in the security section)**
+* User can see an *"enter new password" section* (in the security section)
+* **User can enter their new password in the "enter new password" section (in the security section)**
+* User can see a *"confirm new password" section* (in the security section)
+* **User can enter their confirmed password in the "confirm new password" section (in the security section)**
 
 **Optional Nice-to-have Stories**
 * User can click to expand each consultant profile
