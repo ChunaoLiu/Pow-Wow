@@ -171,32 +171,53 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User have the option to search keywords in a search bar** (typing text)
    * User can see a "search" button
 * **Settings**
-   * User can see an **"account" section** (on the settings page)
-   * User can see an **"edit first name"** section (in the account section)
-   * User can see an **"edit last name"** section (in the account section)
-   * User can see an **"edit email"** section (in the account section)
-   * User can see an **"edit username"** section (in the account section)
-   * User can see a **"change password"** section (in the account section)
-   * User can see an **"enter new password"** section (in the account section)
-   * User can see a **"confirm new password"** section (in the account section)
-   * User can see a **"save"** button (in the account section)
+   * User can see an "account" section (on the settings page)
+   * User can see an "edit first name" section (in the account section)
+   * User can see an "edit last name" section (in the account section)
+   * User can see an "edit email" section (in the account section)
+   * User can see an "edit username" section (in the account section)
+   * User can see a "change password" section (in the account section)
+   * User can see an "enter new password" section (in the account section)
+   * User can see a "confirm new password" section (in the account section)
+   * User can see a "save" button (in the account section)
+* **View Other User Profile** *(Nice-To-Have) !!!*
+* **Message Other User** *(Nice-To-Have) !!!*
+* **Pay Other User** *(Nice-To-Have) !!!*
+* **Schedule Meeting With Other User** *(Nice-To-Have) !!!*
+* **Meeting With Other User (Zoom)** *(Nice-To-Have) !!!*
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen)
-
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
-
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+(1) **Launch Screen**
+(2) **Initial Page**
+   * (3a) Login Page, or
+   * (3b) Register Page
+(3a) **Login Page**
+   * (4) Feed Page
+(3b) **Register Page**
+   * (3a) Login Page
+(4) **Feed Page** (Home Page)
+   * (5a) Profile Page, or
+   * (5b) Search Page, or
+   * (5c) Settings Page
+   * *(6) View Other User Profile Page (Nice-To-Have)*
+(5a) **Profile Page**
+   * (4) Feed Page
+(5b) **Search Page**
+   * (4) Feed Page
+(5c) **Settings Page**
+   * (4) Feed Page
+(6) *View Other User Profile Page (Nice-To-Have)*
+   * (7) Message Other User Page
+   * (8) Pay Other User Page
+   * (9) 
+   * (10)
+(7) *Message Other User Page (Nice-To-Have)*
+(8) *Pay Other User Page (Nice-To-Have*
+
+
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
