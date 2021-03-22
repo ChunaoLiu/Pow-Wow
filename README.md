@@ -29,14 +29,15 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 **Required Must-have Stories**
 
-* **User can see a app icon**
-* **User can see a launch screen with app icon**
-* **User can see an initial page**
-* User can see a **login button** (on the initial page)
-* User can see a **register button** (on the initial page)
-* User can *navigate to the login page* by clicking the login button (on the initial page)
-* User can *navigate to the register page* by clicking the register button (on the initial page)
-* **User can see a login page**
+* **User can open the app**
+* User can see a app icon
+* User can see a launch screen with app icon
+* User can see an initial page
+* User can see a *login button* (on the initial page)
+* User can see a *register button* (on the initial page)
+* **User can navigate to the login page by clicking the login button (on the initial page)**
+* **User can navigate to the register page by clicking the register button (on the initial page)**
+* User can see a login page
 * User can see a **"enter username"** section (on the login page)
 * User can see a **"enter password"** section (on the login page)
 * User can see a **"login"** button (on the login page)
