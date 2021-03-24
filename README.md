@@ -242,7 +242,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 
 ## Wireframes
-<img src="Static-Files\Prototype-1.jpg" width=600>
+<img src="Static-Files\prototype-1.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
