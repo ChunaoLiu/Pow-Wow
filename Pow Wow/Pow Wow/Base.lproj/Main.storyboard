@@ -23,19 +23,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="Pow-Wow-Logo-Transparent.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="uO7-ZP-jFS">
                                 <rect key="frame" x="0.0" y="223" width="414" height="451"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETw-ni-Ec1">
-                                <rect key="frame" x="20" y="160" width="374" height="55"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwl-2U-Thq">
-                                <rect key="frame" x="20" y="728" width="374" height="52"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <rect key="frame" x="20" y="715" width="374" height="65"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WuA-Fn-ofq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,12 +42,14 @@
                             <constraint firstItem="mwl-2U-Thq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NEE-f3-zIB"/>
                             <constraint firstItem="uO7-ZP-jFS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Whp-hO-pB9"/>
                             <constraint firstItem="uO7-ZP-jFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zk1-cD-2VP"/>
-                            <constraint firstItem="uO7-ZP-jFS" firstAttribute="top" secondItem="ETw-ni-Ec1" secondAttribute="bottom" constant="8" id="bEO-GZ-bEq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mwl-2U-Thq" secondAttribute="bottom" constant="82" id="wxI-JZ-BCD"/>
                             <constraint firstItem="uO7-ZP-jFS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zUh-Ow-QFA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qy5-iN-kM9"/>
+                    <connections>
+                        <segue destination="VkQ-me-Lfz" kind="presentation" identifier="loginToLogin" id="4m8-gx-PyX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,65 +58,93 @@
         <!--Login View Controller-->
         <scene sceneID="lw7-ra-g4l">
             <objects>
-                <viewController id="VkQ-me-Lfz" customClass="LoginViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VkQ-me-Lfz" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYB-2O-dTn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Background.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="wcH-gX-C7X">
                                 <rect key="frame" x="-180" y="-245" width="750" height="1334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K22-4p-SEO">
-                                <rect key="frame" x="20" y="576" width="374" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K22-4p-SEO">
+                                <rect key="frame" x="20" y="609" width="374" height="65"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZR5-W7-KwA">
-                                <rect key="frame" x="20" y="410" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pC-cx-aYD">
-                                <rect key="frame" x="20" y="452" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Pow-Wow-Logo-Transparent.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-ar-zOm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHw-AI-xwQ">
-                                <rect key="frame" x="20" y="682" width="374" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHw-AI-xwQ">
+                                <rect key="frame" x="20" y="715" width="374" height="65"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
                                 <state key="normal" title="SIGNUP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHG-YJ-8RJ">
+                                <rect key="frame" x="20" y="449" width="374" height="40"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxm-hr-rvT">
+                                <rect key="frame" x="20" y="399.5" width="374" height="41.5"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4u-XX-iXy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="1Iz-Xt-7sg"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="MHw-AI-xwQ" secondAttribute="trailing" constant="20" id="1dr-Lw-MbS"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="4Je-oI-1pb"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="bxm-hr-rvT" secondAttribute="trailing" constant="20" id="84f-AP-4pc"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="bottom" secondItem="MHw-AI-xwQ" secondAttribute="bottom" constant="28" id="8cU-I0-j26"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="hHG-YJ-8RJ" secondAttribute="trailing" constant="20" id="9FI-dX-OuO"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="Any-Wu-VVP"/>
+                            <constraint firstItem="hHG-YJ-8RJ" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="BFq-ZM-JOc"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="FS1-da-RfU"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="K22-4p-SEO" secondAttribute="trailing" constant="20" id="JRM-Hk-lyn"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="LfY-dR-ZoQ"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="top" secondItem="K22-4p-SEO" secondAttribute="bottom" constant="41" id="MZ0-gf-ijX"/>
+                            <constraint firstItem="bxm-hr-rvT" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="SSC-Q2-15O"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="top" secondItem="hHG-YJ-8RJ" secondAttribute="bottom" constant="120" id="Tk1-He-FOh"/>
+                            <constraint firstItem="hHG-YJ-8RJ" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="UB0-sm-XpL"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="bottom" secondItem="MHw-AI-xwQ" secondAttribute="bottom" constant="28" id="cPW-QX-1zb"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="K22-4p-SEO" secondAttribute="trailing" constant="20" id="dLB-a5-wlK"/>
+                            <constraint firstItem="hHG-YJ-8RJ" firstAttribute="top" secondItem="bxm-hr-rvT" secondAttribute="bottom" constant="8" id="duq-tG-0OU"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="K22-4p-SEO" secondAttribute="trailing" constant="20" id="hr8-b9-lN9"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="keQ-95-KMi"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="now-H3-mVB"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="pLX-1s-1NT"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="MHw-AI-xwQ" secondAttribute="trailing" constant="20" id="pxC-PN-vcd"/>
+                            <constraint firstItem="D4u-XX-iXy" firstAttribute="trailing" secondItem="MHw-AI-xwQ" secondAttribute="trailing" constant="20" id="rH3-sn-brO"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="twP-8d-2T3"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="top" secondItem="K22-4p-SEO" secondAttribute="bottom" constant="41" id="uoW-NB-jD4"/>
+                            <constraint firstItem="K22-4p-SEO" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="wCB-Sj-YGU"/>
+                            <constraint firstItem="bxm-hr-rvT" firstAttribute="leading" secondItem="D4u-XX-iXy" secondAttribute="leading" constant="20" id="wKL-6X-jsV"/>
+                            <constraint firstItem="MHw-AI-xwQ" firstAttribute="centerX" secondItem="AYB-2O-dTn" secondAttribute="centerX" id="yGo-TN-MhM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="kwg-dM-gpM" kind="presentation" identifier="loginToSignup" id="4s3-pE-sAc"/>
+                        <segue destination="b1h-V3-3jO" kind="presentation" identifier="loginToFeed" id="R2K-mU-sbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QS-Ll-TAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673.913043478261" y="-256.47321428571428"/>
+            <point key="canvasLocation" x="1674" y="-240"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="7HK-7l-KMJ">
             <objects>
                 <viewController id="kwg-dM-gpM" customClass="SignUpViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rLm-7z-1Pc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Background.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="vB7-Ja-9AH">
@@ -129,6 +155,9 @@
                         <viewLayoutGuide key="safeArea" id="s6v-q0-wFh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="VkQ-me-Lfz" kind="presentation" identifier="signupToLogin" id="a0F-Dc-HDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5v-Il-WPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,7 +185,7 @@
             <objects>
                 <viewController id="b1h-V3-3jO" customClass="FeedViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z8u-i3-6yH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Background.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="qau-8c-zAj">
@@ -173,6 +202,9 @@
             <point key="canvasLocation" x="2443" y="94"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4m8-gx-PyX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Background.PNG" width="750" height="1334"/>
         <image name="Pow-Wow-Logo-Transparent.PNG" width="1080" height="1920"/>
