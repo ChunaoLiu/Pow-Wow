@@ -1,7 +1,7 @@
 # Pow-Wow
 Consulting On Demand for iOS
 
-![](Pow-Wow-Logo.jpg)
+![](Static-Files/Pow-Wow-Logo.jpg)
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -21,7 +21,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 - **Habit:** Business will search for professionals. Consultants will respond and work with businesses after inquiry.
 - **Scope:** On Demand, Consulting Platform
 
-![](Pow-Wow-Log-In.PNG)
+![](Static-Files/Pow-Wow-Log-In.PNG)
 
 ## Product Spec
 
@@ -242,7 +242,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
 
 ## Wireframes
-<img src="Static-Files\prototype-1.jpg" width=600>
+<img src="Static-Files\Prototype-1.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 

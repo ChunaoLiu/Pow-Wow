@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../Static-Files/Background.PNG">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Log-In.PNG">
+   </FileRef>
+   <FileRef
+      location = "group:../../Static-Files/Pow-Wow-Logo.jpg">
+   </FileRef>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
