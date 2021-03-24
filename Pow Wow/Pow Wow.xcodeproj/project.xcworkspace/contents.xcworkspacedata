@@ -2,13 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Static-Files/Background.PNG">
+      location = "group:/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo-Transparent.PNG">
+   </FileRef>
+   <FileRef
+      location = "group:../../Static-Files/Pow-Wow-Logo-Transparent.jpg">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Background.PNG">
    </FileRef>
    <FileRef
       location = "group:/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Log-In.PNG">
    </FileRef>
    <FileRef
-      location = "group:../../Static-Files/Pow-Wow-Logo.jpg">
+      location = "group:/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo.jpg">
    </FileRef>
    <FileRef
       location = "self:">

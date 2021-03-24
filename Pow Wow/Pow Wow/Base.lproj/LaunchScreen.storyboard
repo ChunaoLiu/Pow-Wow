@@ -24,9 +24,19 @@
                                 <rect key="frame" x="-167" y="-227" width="750" height="1334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Pow-Wow-Logo-Transparent.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-Mf-ssi">
+                                <rect key="frame" x="0.0" y="245" width="414" height="407"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KvU-Mf-ssi" secondAttribute="bottom" constant="210" id="MDE-1M-b81"/>
+                            <constraint firstItem="KvU-Mf-ssi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NAa-Wm-Paq"/>
+                            <constraint firstItem="KvU-Mf-ssi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="201" id="RhF-Lb-3BW"/>
+                            <constraint firstItem="KvU-Mf-ssi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tXk-RG-hI4"/>
+                            <constraint firstItem="KvU-Mf-ssi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wVb-XC-zxg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,7 +46,8 @@
     </scenes>
     <resources>
         <image name="Background.PNG" width="750" height="1334"/>
-        <image name="Pow-Wow-Logo" width="716" height="716"/>
+        <image name="Pow-Wow-Logo" width="358" height="358"/>
+        <image name="Pow-Wow-Logo-Transparent.PNG" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -55,7 +55,9 @@
 		6A14C1E0260BD47700D71998 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A14C1E5260BD48400D71998 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6A14C1F1260BD5D200D71998 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		6A14C1F6260BD6D100D71998 /* Pow-Wow-Log-In.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pow-Wow-Log-In.PNG"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Log-In.PNG"; sourceTree = "<absolute>"; };
+		6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Pow-Wow-Logo.jpg"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo.jpg"; sourceTree = "<absolute>"; };
+		6A14C1FB260BED0000D71998 /* Background.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.PNG; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Background.PNG"; sourceTree = "<absolute>"; };
+		6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pow-Wow-Logo-Transparent.PNG"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo-Transparent.PNG"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,9 @@
 				6A14C1AE260BD41100D71998 /* Main.storyboard */,
 				6A14C1B3260BD41600D71998 /* LaunchScreen.storyboard */,
 				6A14C1B1260BD41600D71998 /* Assets.xcassets */,
-				6A14C1F6260BD6D100D71998 /* Pow-Wow-Log-In.PNG */,
+				6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */,
+				6A14C1FB260BED0000D71998 /* Background.PNG */,
+				6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */,
 				6A14C1B6260BD41600D71998 /* Info.plist */,
 			);
 			path = "Pow Wow";
