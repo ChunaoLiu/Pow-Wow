@@ -13,5 +13,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func loginButton(_ sender: Any) {
+        performSegue(withIdentifier: "loginToFeed", sender: self)
+    }
     
+    @IBAction func signupButton(_ sender: Any) {
+        performSegue(withIdentifier: "loginToSignup", sender: self)
+    }
 }

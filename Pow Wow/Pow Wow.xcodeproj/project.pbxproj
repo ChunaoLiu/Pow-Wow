@@ -114,9 +114,7 @@
 				6A14C1AE260BD41100D71998 /* Main.storyboard */,
 				6A14C1B3260BD41600D71998 /* LaunchScreen.storyboard */,
 				6A14C1B1260BD41600D71998 /* Assets.xcassets */,
-				6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */,
-				6A14C1FB260BED0000D71998 /* Background.PNG */,
-				6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */,
+				6A14C200260C014B00D71998 /* PowWowAssets */,
 				6A14C1B6260BD41600D71998 /* Info.plist */,
 			);
 			path = "Pow Wow";
@@ -149,6 +147,16 @@
 				6A14C1F1260BD5D200D71998 /* InitialViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A14C200260C014B00D71998 /* PowWowAssets */ = {
+			isa = PBXGroup;
+			children = (
+				6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */,
+				6A14C1FB260BED0000D71998 /* Background.PNG */,
+				6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */,
+			);
+			path = PowWowAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
