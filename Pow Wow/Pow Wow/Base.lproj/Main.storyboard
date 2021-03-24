@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Background.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="t00-Ta-bNM">
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="223" width="414" height="451"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwl-2U-Thq">
-                                <rect key="frame" x="20" y="715" width="374" height="65"/>
+                                <rect key="frame" x="20" y="661" width="374" height="65"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
         <!--Login View Controller-->
         <scene sceneID="lw7-ra-g4l">
             <objects>
-                <viewController id="VkQ-me-Lfz" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="VkQ-me-Lfz" customClass="LoginViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYB-2O-dTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="VkQ-me-Lfz" eventType="touchUpInside" id="6oR-2i-tXl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHw-AI-xwQ">
                                 <rect key="frame" x="20" y="715" width="374" height="65"/>
@@ -80,6 +83,9 @@
                                 <state key="normal" title="SIGNUP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="VkQ-me-Lfz" eventType="touchUpInside" id="Qdm-sG-KvL"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHG-YJ-8RJ">
                                 <rect key="frame" x="20" y="449" width="374" height="40"/>
@@ -151,9 +157,111 @@
                                 <rect key="frame" x="-176" y="-198" width="750" height="1334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3g-3F-bdR">
+                                <rect key="frame" x="-166" y="-188" width="151" height="41.5"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-gb-3Tx">
+                                <rect key="frame" x="20" y="712" width="374" height="65"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
+                                <state key="normal" title="SIGNUP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="kwg-dM-gpM" eventType="touchUpInside" id="4tm-gc-6E1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vT-6K-KNT">
+                                <rect key="frame" x="20" y="401" width="374" height="41.5"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-Zy-nfp">
+                                <rect key="frame" x="20" y="449" width="374" height="40"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLQ-gl-hdB">
+                                <rect key="frame" x="20" y="497" width="374" height="40"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-Hv-qAD">
+                                <rect key="frame" x="20" y="301" width="374" height="42"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-KM-ZHd">
+                                <rect key="frame" x="20" y="351" width="374" height="42"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-VO-5iB">
+                                <rect key="frame" x="20" y="251" width="374" height="42"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9G-sS-lVW">
+                                <rect key="frame" x="20" y="201" width="374" height="42"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s6v-q0-wFh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hgt-KM-ZHd" firstAttribute="top" secondItem="mjR-Hv-qAD" secondAttribute="bottom" constant="8" symbolic="YES" id="0wy-y6-rkT"/>
+                            <constraint firstItem="s6v-q0-wFh" firstAttribute="bottom" secondItem="XV9-gb-3Tx" secondAttribute="bottom" constant="31" id="3D9-Zj-o3v"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="leading" secondItem="C9G-sS-lVW" secondAttribute="leading" id="3qZ-HZ-UxU"/>
+                            <constraint firstItem="s6v-q0-wFh" firstAttribute="trailing" secondItem="0vT-6K-KNT" secondAttribute="trailing" constant="20" id="6m9-Pb-Emd"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="trailing" secondItem="nNn-VO-5iB" secondAttribute="trailing" id="7Su-yR-3Sq"/>
+                            <constraint firstItem="0vT-6K-KNT" firstAttribute="centerX" secondItem="rLm-7z-1Pc" secondAttribute="centerX" id="8ar-PZ-2sk"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="trailing" secondItem="NLQ-gl-hdB" secondAttribute="trailing" id="9rB-Iw-kXB"/>
+                            <constraint firstItem="mjR-Hv-qAD" firstAttribute="top" secondItem="nNn-VO-5iB" secondAttribute="bottom" constant="8" symbolic="YES" id="Adf-9J-gfC"/>
+                            <constraint firstItem="NLQ-gl-hdB" firstAttribute="leading" secondItem="s6v-q0-wFh" secondAttribute="leading" constant="20" id="BJv-8v-c5I"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="top" secondItem="NLQ-gl-hdB" secondAttribute="bottom" constant="175" id="CSX-Tb-7nn"/>
+                            <constraint firstItem="NLQ-gl-hdB" firstAttribute="centerX" secondItem="rLm-7z-1Pc" secondAttribute="centerX" id="CTf-2o-B4P"/>
+                            <constraint firstItem="S3g-3F-bdR" firstAttribute="leading" secondItem="rLm-7z-1Pc" secondAttribute="leading" constant="-166" id="Ei6-Kj-YLJ"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="leading" secondItem="mjR-Hv-qAD" secondAttribute="leading" id="FfW-dH-2Kf"/>
+                            <constraint firstItem="0vT-6K-KNT" firstAttribute="top" secondItem="Hgt-KM-ZHd" secondAttribute="bottom" constant="8" symbolic="YES" id="IdW-oh-geO"/>
+                            <constraint firstItem="cFc-Zy-nfp" firstAttribute="top" secondItem="0vT-6K-KNT" secondAttribute="bottom" constant="6.5" id="Jcu-Mp-uOB"/>
+                            <constraint firstItem="0vT-6K-KNT" firstAttribute="leading" secondItem="s6v-q0-wFh" secondAttribute="leading" constant="20" id="JkY-dG-slW"/>
+                            <constraint firstItem="S3g-3F-bdR" firstAttribute="top" secondItem="rLm-7z-1Pc" secondAttribute="top" constant="-188" id="KGd-D7-Bgk"/>
+                            <constraint firstItem="cFc-Zy-nfp" firstAttribute="top" secondItem="0vT-6K-KNT" secondAttribute="bottom" constant="6.5" id="OSp-qW-Pid"/>
+                            <constraint firstItem="s6v-q0-wFh" firstAttribute="trailing" secondItem="cFc-Zy-nfp" secondAttribute="trailing" constant="20" id="T3c-vZ-faK"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="leading" secondItem="NLQ-gl-hdB" secondAttribute="leading" id="T9E-Eg-TtP"/>
+                            <constraint firstItem="0vT-6K-KNT" firstAttribute="leading" secondItem="s6v-q0-wFh" secondAttribute="leading" constant="20" id="VwP-wS-iDw"/>
+                            <constraint firstItem="0vT-6K-KNT" firstAttribute="centerX" secondItem="rLm-7z-1Pc" secondAttribute="centerX" id="YFp-7p-ZLy"/>
+                            <constraint firstItem="s6v-q0-wFh" firstAttribute="trailing" secondItem="0vT-6K-KNT" secondAttribute="trailing" constant="20" id="aDa-bN-GCk"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="trailing" secondItem="Hgt-KM-ZHd" secondAttribute="trailing" id="bX7-Yf-f2l"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="trailing" secondItem="C9G-sS-lVW" secondAttribute="trailing" id="btg-iW-2N6"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="leading" secondItem="Hgt-KM-ZHd" secondAttribute="leading" id="eSC-qw-u6C"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="trailing" secondItem="mjR-Hv-qAD" secondAttribute="trailing" id="jmc-6v-Hne"/>
+                            <constraint firstItem="cFc-Zy-nfp" firstAttribute="leading" secondItem="s6v-q0-wFh" secondAttribute="leading" constant="20" id="joq-zd-c8q"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S3g-3F-bdR" secondAttribute="trailing" constant="20" symbolic="YES" id="kpI-EU-WRU"/>
+                            <constraint firstItem="XV9-gb-3Tx" firstAttribute="leading" secondItem="nNn-VO-5iB" secondAttribute="leading" id="pXm-Jm-dfb"/>
+                            <constraint firstItem="nNn-VO-5iB" firstAttribute="top" secondItem="C9G-sS-lVW" secondAttribute="bottom" constant="8" symbolic="YES" id="q07-G2-z8m"/>
+                            <constraint firstItem="cFc-Zy-nfp" firstAttribute="centerX" secondItem="rLm-7z-1Pc" secondAttribute="centerX" id="rnK-rA-fqn"/>
+                            <constraint firstItem="NLQ-gl-hdB" firstAttribute="top" secondItem="cFc-Zy-nfp" secondAttribute="bottom" constant="8" id="sMd-LF-N2l"/>
+                            <constraint firstItem="s6v-q0-wFh" firstAttribute="trailing" secondItem="NLQ-gl-hdB" secondAttribute="trailing" constant="20" id="zea-Ja-5hA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="VkQ-me-Lfz" kind="presentation" identifier="signupToLogin" id="a0F-Dc-HDP"/>
@@ -192,10 +300,24 @@
                                 <rect key="frame" x="-170" y="-228" width="750" height="1334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGy-3Q-O09">
+                                <rect key="frame" x="156" y="756" width="103" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="b1h-V3-3jO" eventType="touchUpInside" id="2PL-hQ-zhp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RQ4-Ur-98r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logout" id="w4n-XY-xhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJi-2T-chP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +325,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4m8-gx-PyX"/>
+        <segue reference="a0F-Dc-HDP"/>
+        <segue reference="w4n-XY-xhd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background.PNG" width="750" height="1334"/>
