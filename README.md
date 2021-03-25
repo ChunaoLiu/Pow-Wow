@@ -287,14 +287,14 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 ### Networking
 List of network requests by page
 * Feed Page
-      * (Read/GET) Query professional profiles
+   * (Read/GET) Query professional profiles
 * Search Page 
-      * (Update/PUT) Update search preferences for the feed page
+   * (Update/PUT) Update search preferences for the feed page
 * Profile Page
-      * (Create/POST) Create a new professional profile
-      * (Update/PUT) Update professional profile
+   * (Create/POST) Create a new professional profile
+   * (Update/PUT) Update professional profile
 * Register Page
-      * (Create/POST) Create a new user account
+   * (Create/POST) Create a new user account
 * Settings Page
-      * (Update/PUT) Update user account information
-      * (Delete) Delete user account
+   * (Update/PUT) Update user account information
+   * (Delete) Delete user account
