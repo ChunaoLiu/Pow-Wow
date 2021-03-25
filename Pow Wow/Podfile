@@ -8,6 +8,7 @@ target 'Pow Wow' do
   # Pods for Pow Wow
   pod 'Parse'
   pod "AlamofireImage"
+  pod "SideMenu"
 
   target 'Pow WowTests' do
     inherit! :search_paths

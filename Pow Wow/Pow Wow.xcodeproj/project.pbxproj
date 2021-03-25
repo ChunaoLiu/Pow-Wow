@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463ED5CD3A33C125DD89764E /* Pods_Pow_WowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4E78F0E66AE15107503C2A /* Pods_Pow_WowTests.framework */; };
 		4E7DFF1A260BFFA900ACF83B /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DFF19260BFFA900ACF83B /* HomePage.storyboard */; };
 		4E7DFF1F260BFFFC00ACF83B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DFF1E260BFFFC00ACF83B /* HomeViewController.swift */; };
 		4E7DFF2A260C104200ACF83B /* ConsultantCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DFF29260C104200ACF83B /* ConsultantCollectionCell.swift */; };
@@ -21,6 +22,8 @@
 		6A14C1E1260BD47700D71998 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1E0260BD47700D71998 /* LoginViewController.swift */; };
 		6A14C1E6260BD48400D71998 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1E5260BD48400D71998 /* FeedViewController.swift */; };
 		6A14C1F2260BD5D200D71998 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1F1260BD5D200D71998 /* InitialViewController.swift */; };
+		7828A0342DEEBC578AAD4AEF /* Pods_Pow_Wow_Pow_WowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A5BDA187629783AB22C1F /* Pods_Pow_Wow_Pow_WowUITests.framework */; };
+		A635AFEFE9F8F4F55DE7C8A6 /* Pods_Pow_Wow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E16D17A95D26F209582368E /* Pods_Pow_Wow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2A5BDA187629783AB22C1F /* Pods_Pow_Wow_Pow_WowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pow_Wow_Pow_WowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7DFF19260BFFA900ACF83B /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		4E7DFF1E260BFFFC00ACF83B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E7DFF29260C104200ACF83B /* ConsultantCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCollectionCell.swift; sourceTree = "<group>"; };
+		5E16D17A95D26F209582368E /* Pods_Pow_Wow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pow_Wow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A14C1A5260BD41100D71998 /* Pow Wow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pow Wow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A14C1A8260BD41100D71998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A14C1AA260BD41100D71998 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +69,13 @@
 		6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Pow-Wow-Logo.jpg"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo.jpg"; sourceTree = "<absolute>"; };
 		6A14C1FB260BED0000D71998 /* Background.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.PNG; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Background.PNG"; sourceTree = "<absolute>"; };
 		6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pow-Wow-Logo-Transparent.PNG"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo-Transparent.PNG"; sourceTree = "<absolute>"; };
+		865B79F4A562808E7235BE8A /* Pods-Pow WowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow WowTests.debug.xcconfig"; path = "Target Support Files/Pods-Pow WowTests/Pods-Pow WowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A9C14C8D61A9C60A0F9F661 /* Pods-Pow Wow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow Wow.debug.xcconfig"; path = "Target Support Files/Pods-Pow Wow/Pods-Pow Wow.debug.xcconfig"; sourceTree = "<group>"; };
+		B7064F80646F74DD9C6277A5 /* Pods-Pow WowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow WowTests.release.xcconfig"; path = "Target Support Files/Pods-Pow WowTests/Pods-Pow WowTests.release.xcconfig"; sourceTree = "<group>"; };
+		BDAC5292D2C89CAC7FB8A7D7 /* Pods-Pow Wow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow Wow.release.xcconfig"; path = "Target Support Files/Pods-Pow Wow/Pods-Pow Wow.release.xcconfig"; sourceTree = "<group>"; };
+		CB4E78F0E66AE15107503C2A /* Pods_Pow_WowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pow_WowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5B0DABCF6B3CAFC479DD50 /* Pods-Pow Wow-Pow WowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow Wow-Pow WowUITests.release.xcconfig"; path = "Target Support Files/Pods-Pow Wow-Pow WowUITests/Pods-Pow Wow-Pow WowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD65A3A8721393112949B7A1 /* Pods-Pow Wow-Pow WowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow Wow-Pow WowUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pow Wow-Pow WowUITests/Pods-Pow Wow-Pow WowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A635AFEFE9F8F4F55DE7C8A6 /* Pods_Pow_Wow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463ED5CD3A33C125DD89764E /* Pods_Pow_WowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7828A0342DEEBC578AAD4AEF /* Pods_Pow_Wow_Pow_WowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +113,8 @@
 				6A14C1BE260BD41600D71998 /* Pow WowTests */,
 				6A14C1C9260BD41600D71998 /* Pow WowUITests */,
 				6A14C1A6260BD41100D71998 /* Products */,
+				FE151047B2AA2ACC50EF72A1 /* Pods */,
+				78EB1DEF52A5D4E42436218E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +185,30 @@
 			path = PowWowAssets;
 			sourceTree = "<group>";
 		};
+		78EB1DEF52A5D4E42436218E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E16D17A95D26F209582368E /* Pods_Pow_Wow.framework */,
+				0F2A5BDA187629783AB22C1F /* Pods_Pow_Wow_Pow_WowUITests.framework */,
+				CB4E78F0E66AE15107503C2A /* Pods_Pow_WowTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE151047B2AA2ACC50EF72A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A9C14C8D61A9C60A0F9F661 /* Pods-Pow Wow.debug.xcconfig */,
+				BDAC5292D2C89CAC7FB8A7D7 /* Pods-Pow Wow.release.xcconfig */,
+				FD65A3A8721393112949B7A1 /* Pods-Pow Wow-Pow WowUITests.debug.xcconfig */,
+				EA5B0DABCF6B3CAFC479DD50 /* Pods-Pow Wow-Pow WowUITests.release.xcconfig */,
+				865B79F4A562808E7235BE8A /* Pods-Pow WowTests.debug.xcconfig */,
+				B7064F80646F74DD9C6277A5 /* Pods-Pow WowTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A14C1CF260BD41600D71998 /* Build configuration list for PBXNativeTarget "Pow Wow" */;
 			buildPhases = (
+				0BCD0553CD6CA5D219800A24 /* [CP] Check Pods Manifest.lock */,
 				6A14C1A1260BD41100D71998 /* Sources */,
 				6A14C1A2260BD41100D71998 /* Frameworks */,
 				6A14C1A3260BD41100D71998 /* Resources */,
+				8C018825B5D4E8748D3BB4DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A14C1D2260BD41600D71998 /* Build configuration list for PBXNativeTarget "Pow WowTests" */;
 			buildPhases = (
+				FA3287767AF72EB57FAA04AA /* [CP] Check Pods Manifest.lock */,
 				6A14C1B7260BD41600D71998 /* Sources */,
 				6A14C1B8260BD41600D71998 /* Frameworks */,
 				6A14C1B9260BD41600D71998 /* Resources */,
@@ -210,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A14C1D5260BD41600D71998 /* Build configuration list for PBXNativeTarget "Pow WowUITests" */;
 			buildPhases = (
+				F1331BA13CAA9FC312B616B6 /* [CP] Check Pods Manifest.lock */,
 				6A14C1C2260BD41600D71998 /* Sources */,
 				6A14C1C3260BD41600D71998 /* Frameworks */,
 				6A14C1C4260BD41600D71998 /* Resources */,
+				69FC60A01F142871A88E81D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +339,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BCD0553CD6CA5D219800A24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pow Wow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69FC60A01F142871A88E81D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pow Wow-Pow WowUITests/Pods-Pow Wow-Pow WowUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pow Wow-Pow WowUITests/Pods-Pow Wow-Pow WowUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pow Wow-Pow WowUITests/Pods-Pow Wow-Pow WowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C018825B5D4E8748D3BB4DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pow Wow/Pods-Pow Wow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pow Wow/Pods-Pow Wow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pow Wow/Pods-Pow Wow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1331BA13CAA9FC312B616B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pow Wow-Pow WowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3287767AF72EB57FAA04AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pow WowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A14C1A1260BD41100D71998 /* Sources */ = {
@@ -479,6 +628,7 @@
 		};
 		6A14C1D0260BD41600D71998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9C14C8D61A9C60A0F9F661 /* Pods-Pow Wow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +647,7 @@
 		};
 		6A14C1D1260BD41600D71998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDAC5292D2C89CAC7FB8A7D7 /* Pods-Pow Wow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,6 +666,7 @@
 		};
 		6A14C1D3260BD41600D71998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865B79F4A562808E7235BE8A /* Pods-Pow WowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +688,7 @@
 		};
 		6A14C1D4260BD41600D71998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7064F80646F74DD9C6277A5 /* Pods-Pow WowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +710,7 @@
 		};
 		6A14C1D6260BD41600D71998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD65A3A8721393112949B7A1 /* Pods-Pow Wow-Pow WowUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +730,7 @@
 		};
 		6A14C1D7260BD41600D71998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5B0DABCF6B3CAFC479DD50 /* Pods-Pow Wow-Pow WowUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

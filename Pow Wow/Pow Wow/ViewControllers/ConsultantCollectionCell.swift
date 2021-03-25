@@ -7,6 +7,9 @@
 
 import UIKit
 
+
 class ConsultantCollectionCell: UICollectionViewCell {
+    
+    @IBOutlet weak var ConsultantImage: UIImageView!
     
 }

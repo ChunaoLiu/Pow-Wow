@@ -1,0 +1,6 @@
+framework module Pods_Pow_Wow_Pow_WowUITests {
+  umbrella header "Pods-Pow Wow-Pow WowUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
