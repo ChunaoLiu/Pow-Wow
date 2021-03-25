@@ -169,7 +169,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see a *"settings" button* (on the feed page)
    * User can see a *"logout" button* (on the feed page)
 * **Profile**
-   * User can see a *"business" section* (on the profile page)
+   * User can see a *"business and consultant" section* (on the profile page)
    * User can see a *"business or consultant" option* (in the business section) (on the profile page)
    * User can see an *"edit name" section* (in the business section) (on the profile page)
    * User can see an *"edit profile picture" section* (in the business section) (on the profile page)
@@ -249,7 +249,33 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+### Models
+#### User Account
+
+   | Property      | Type     | Description  |
+   | ------------- | -------- | ------------ |
+   | objectId      | String   | unique id for the user account (default field) |
+   | userAccount   | Pointer  | pointer to the user account |
+   | firstName     | String   | first name of user |
+   | lastName      | String   | last name of user |
+   | email         | String   | email of user |
+   | username      | String   | unique username for user login |
+   | password      | String   | secure password for user login |
+   
+#### Professional Profile
+
+   | Property      | Type     | Description  |
+   | ------------- | -------- | ------------ |
+   | objectId      | String   | unique id for the user profile (default field) |
+   | proProfile    | Pointer  | pointer to the professional profile |
+   | proType       | String   | type of professional profile (only "business" or "consultant") |
+   | proName       | String   | name of business or consultant |
+   | proPicture    | File     | profile picture for business or consultant |
+   | banPicture    | File     | banner picture for business or consultant |
+   | proIndustry   | String   | industry of business or consultant |
+   | proKeywords   | String Array | array of keywords that best describe professional profile |
+   | proBio        | String   | biography for professional profile |
+   
 ### Models
 [Add table of models]
 ### Networking
