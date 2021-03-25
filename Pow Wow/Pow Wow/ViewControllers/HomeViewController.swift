@@ -12,18 +12,27 @@ import SideMenu
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var TypeFilter: UITextField!
+    var menu : SideMenuNavigationController?
     var selectedType: String?
     var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
     
     @IBAction func ProfileButton(_ sender: Any) {
-        let menu = SideMenuNavigationController(rootViewController: HomeViewController)
-        present(menu, animated: true, completion: nil)
+        present(menu!, animated: true)
     }
     
     @IBOutlet weak var ConsultantCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Bubble")
+        // Initialize the SideMenu When it loads
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        // Menu will pop up at left
+        menu?.leftSide = true
+        
+        // Let the SideMenuManager take control over the left menu
+        SideMenuManager.default.leftMenuNavigationController = menu
+        // This allow the user to scroll right to see the menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
         self.createAndSetupPickerView()
         self.dismissAndClosePickerView()
 
@@ -65,6 +74,39 @@ class HomeViewController: UIViewController {
 
 }
 
+class MenuListController: UITableViewController {
+    
+    var items = ["Consultant Profile", "Business Profile", "Setting", "Log Out", "About Us"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = darkColor
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    let darkColor = UIColor(red: 33/255.0,
+                            green: 33/255.0,
+                            blue: 33/255.0, alpha: 1)
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = darkColor
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+}
+
+// Extending HomeViewController for a picker
 extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
