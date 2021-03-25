@@ -293,6 +293,7 @@ List of network requests by page
 * Profile Page
    * (Create/POST) Create a new professional profile
    * (Update/PUT) Update professional profile
+   * (Delete) Delete professional profile
 * Register Page
    * (Create/POST) Create a new user account
 * Settings Page
