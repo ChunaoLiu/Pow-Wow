@@ -149,7 +149,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see a *"enter password" section* (on the login page)
    * User can see a *"login" button* (on the login page)
    * User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
-* **Register page**
+* **Register Page**
    * User can see a *"enter first name" section* (on the register page)
    * User can see a *"enter last name" section* (on the register page)
    * User can see a *"enter email" section* (on the register page)
@@ -162,13 +162,13 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see an error message *"This password is invalid"* if the password in the wrong format
    * User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
    * User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
-* **Feed**
+* **Feed Page**
    * User can see a *vertical feed of consultant and business profiles* (on the feed page)
    * User can see a *"profile" button* (on the feed page)
    * User can see a *"search/filter" button* (on the feed page)
    * User can see a *"settings" button* (on the feed page)
    * User can see a *"logout" button* (on the feed page)
-* **Profile**
+* **Profile Page**
    * User can see a *"business and consultant" section* (on the profile page)
    * User can see a *"business or consultant" option* (in the business section) (on the profile page)
    * User can see an *"edit name" section* (in the business section) (on the profile page)
@@ -178,14 +178,14 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * User can see an *"edit keywords" section* (in the business section) (on the profile page)
    * User can see an *"edit bio" section* (in the business section) (on the profile page)
    * User can see a *"save and publish" button* (in the business section) (on the profile page)
-* **Search**
+* **Search Page**
    * User can see a *list of options* to filter the search on the feed (on the search/filter page)
    * User can see an option for *businesses or consultants* (with a checkbox) (on the search/filter page)
    * User can see an option for different industries (with a checkbox) (on the search/filter page)
    * User can see a *"save" button* (on the search/filter page)
    * User can see a section to search keywords in a search bar (typing text) (on the search/filter page)
    * User can see a *"search" button* (on the search/filter page)
-* **Settings**
+* **Settings Page**
    * User can see an "account" section (on the settings page)
    * User can see an "edit first name" section (in the account section)
    * User can see an "edit last name" section (in the account section)
@@ -254,7 +254,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
    | Property      | Type     | Description  |
    | ------------- | -------- | ------------ |
-   | objectId      | String   | unique id for the user account (default field) |
+   | objectID      | String   | unique id for the user account (default field) |
    | userAccount   | Pointer  | pointer to the user account |
    | firstName     | String   | first name of user |
    | lastName      | String   | last name of user |
@@ -266,7 +266,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 
    | Property      | Type     | Description  |
    | ------------- | -------- | ------------ |
-   | objectId      | String   | unique id for the user profile (default field) |
+   | objectID      | String   | unique id for the user profile (equal to user objectID) |
    | proProfile    | Pointer  | pointer to the professional profile |
    | proType       | String   | type of professional profile (only "business" or "consultant") |
    | proName       | String   | name of business or consultant |
@@ -276,9 +276,25 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    | proKeywords   | String Array | array of keywords that best describe professional profile |
    | proBio        | String   | biography for professional profile |
    
-### Models
-[Add table of models]
+#### Search Preferences
+
+   | Property      | Type     | Description  |
+   | ------------- | -------- | ------------ |
+   | objectID      | String   | unique id for the user account (equal to user objectID) |
+   | industries    | String Array | array of industries of professional profiles to query |
+   | keywords      | String Array   | array of keywords for professional profiles to query |
+   
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+List of network requests by page
+* Feed Page
+      * (Read/GET) Query professional profiles
+* Search Page 
+      * (Update/PUT) Update search preferences for the feed page
+* Profile Page
+      * (Create/POST) Create a new professional profile
+      * (Update/PUT) Update professional profile
+* Register Page
+      * (Create/POST) Create a new user account
+* Settings Page
+      * (Update/PUT) Update user account information
+      * (Delete) Delete user account
