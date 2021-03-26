@@ -9,6 +9,10 @@ import UIKit
 
 class PersonalProfileViewController: UIViewController {
 
+    @IBAction func ToHome(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "PersonalProfileToHome", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
