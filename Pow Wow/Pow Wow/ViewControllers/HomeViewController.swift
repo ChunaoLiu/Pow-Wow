@@ -101,6 +101,10 @@ class MenuListController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let refView = HomeViewController()
+        if (items[indexPath.row] == "Consultant Profile") {
+            refView.performSegue(withIdentifier: "HomeToPersonalProfile", sender: self)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

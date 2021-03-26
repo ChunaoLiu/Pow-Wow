@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		4E7DFF1A260BFFA900ACF83B /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DFF19260BFFA900ACF83B /* HomePage.storyboard */; };
 		4E7DFF1F260BFFFC00ACF83B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DFF1E260BFFFC00ACF83B /* HomeViewController.swift */; };
 		4E7DFF2A260C104200ACF83B /* ConsultantCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DFF29260C104200ACF83B /* ConsultantCollectionCell.swift */; };
+		4E7DFFA3260DB43A00ACF83B /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DFFA2260DB43A00ACF83B /* PersonalProfileViewController.swift */; };
 		6A14C1A9260BD41100D71998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1A8260BD41100D71998 /* AppDelegate.swift */; };
 		6A14C1AB260BD41100D71998 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1AA260BD41100D71998 /* SceneDelegate.swift */; };
 		6A14C1B0260BD41100D71998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A14C1AE260BD41100D71998 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		4E7DFF19260BFFA900ACF83B /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		4E7DFF1E260BFFFC00ACF83B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E7DFF29260C104200ACF83B /* ConsultantCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCollectionCell.swift; sourceTree = "<group>"; };
+		4E7DFFA2260DB43A00ACF83B /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		5E16D17A95D26F209582368E /* Pods_Pow_Wow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pow_Wow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A14C1A5260BD41100D71998 /* Pow Wow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pow Wow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A14C1A8260BD41100D71998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				6A14C1E5260BD48400D71998 /* FeedViewController.swift */,
 				6A14C1F1260BD5D200D71998 /* InitialViewController.swift */,
 				4E7DFF29260C104200ACF83B /* ConsultantCollectionCell.swift */,
+				4E7DFFA2260DB43A00ACF83B /* PersonalProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,7 +208,6 @@
 				865B79F4A562808E7235BE8A /* Pods-Pow WowTests.debug.xcconfig */,
 				B7064F80646F74DD9C6277A5 /* Pods-Pow WowTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -455,6 +457,7 @@
 				6A14C1F2260BD5D200D71998 /* InitialViewController.swift in Sources */,
 				6A14C1E6260BD48400D71998 /* FeedViewController.swift in Sources */,
 				4E7DFF1F260BFFFC00ACF83B /* HomeViewController.swift in Sources */,
+				4E7DFFA3260DB43A00ACF83B /* PersonalProfileViewController.swift in Sources */,
 				6A14C1AB260BD41100D71998 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
