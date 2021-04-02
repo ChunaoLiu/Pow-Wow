@@ -7,45 +7,33 @@
 
 import UIKit
 
-extension UIImage {
-
-    static func imageByMergingImages(topImage: UIImage, bottomImage: UIImage, scaleForTop: CGFloat = 1.0) -> UIImage {
-        let size = bottomImage.size
-        let container = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, 2.0)
-        UIGraphicsGetCurrentContext()!.interpolationQuality = .high
-        bottomImage.draw(in: container)
-
-        let topWidth = size.width / scaleForTop
-        let topHeight = size.height / scaleForTop
-        let topX = (size.width / 2.0) - (topWidth / 2.0)
-        let topY = (size.height / 2.0) - (topHeight / 2.0)
-
-        topImage.draw(in: CGRect(x: topX, y: topY, width: topWidth, height: topHeight), blendMode: .normal, alpha: 1.0)
-
-        return UIGraphicsGetImageFromCurrentImageContext()!
-    }
-
-}
-
 class PersonalProfileViewController: UIViewController {
-
-    @IBAction func ToHome(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
 
     @IBOutlet weak var PersonIcon: UIImageView!
     @IBOutlet weak var ProfileName: UILabel!
     @IBOutlet weak var ProfileBio: UILabel!
     @IBOutlet weak var Banner: UIImageView!
     
-    func make_Icon() {
-        
-        let Icon = UIImage(named: "person.fill")
-        let IconImageView = UIImageView(image: Icon)
-        IconImageView.frame = CGRect(x: Banner.center.x - 300, y: Banner.center.y - 150, width: 130, height: 130)
-        makeRounded(ProfileImage: IconImageView)
-        
+    @IBAction func ToHome(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func ToEdit(_ sender: Any) {
+        performSegue(withIdentifier: "ProfileEditSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ProfileEditSegue") {
+            if let editPage = segue.destination as? EditProfileViewController {
+                editPage.previous_Name = self.ProfileName.text!
+                editPage.previous_Bios = self.ProfileBio.text!
+                if (self.Banner.image != nil) {
+                    editPage.previous_banner = self.Banner.image!
+                }
+                if (self.PersonIcon.image != nil) {
+                    editPage.previous_icon = self.PersonIcon.image!
+                }
+            }
+        }
     }
     
     // This can make the profile icon a circle
