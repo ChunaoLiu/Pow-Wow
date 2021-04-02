@@ -11,7 +11,7 @@ weak var refView = HomeViewController()
 
 class MenuListController: UITableViewController {
 
-    var items = ["Consultant Profile", "Business Profile", "Setting", "Log Out", "About Us"]
+    var items = ["Profile", "Setting", "Log Out", "About Us"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class MenuListController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (items[indexPath.row] == "Consultant Profile") {
+        if (items[indexPath.row] == "Profile") {
             refView?.dismiss(animated: true, completion: nil)
             refView?.performSegue(withIdentifier: "HomeToPersonalProfile", sender: indexPath)
         }
