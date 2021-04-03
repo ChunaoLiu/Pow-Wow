@@ -40,6 +40,10 @@ class MenuListController: UITableViewController {
             refView?.dismiss(animated: true, completion: nil)
             refView?.performSegue(withIdentifier: "HomeToPersonalProfile", sender: indexPath)
         }
+        else if (items[indexPath.row] == "Setting") {
+            refView?.dismiss(animated: true, completion: nil)
+            refView?.performSegue(withIdentifier: "toSettingSegue", sender: self)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
