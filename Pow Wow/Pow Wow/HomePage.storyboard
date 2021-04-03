@@ -306,7 +306,7 @@
                                     <outletCollection property="gestureRecognizers" destination="VX4-N9-psf" appends="YES" id="l19-aG-9J1"/>
                                 </connections>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your Bio Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vj5-v0-ERK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vj5-v0-ERK">
                                 <rect key="frame" x="20" y="418" width="374" height="340"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -369,7 +369,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="6C4-co-1vj">
+                                    <navigationItem title="Setting" id="6C4-co-1vj">
                                         <barButtonItem key="leftBarButtonItem" title="Return" style="plain" id="Uoy-ST-UAk">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NXg-uE-rq3">
                                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
@@ -394,7 +394,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fkQ-8n-5Va"/>
+        <segue reference="M0p-kS-0uo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>

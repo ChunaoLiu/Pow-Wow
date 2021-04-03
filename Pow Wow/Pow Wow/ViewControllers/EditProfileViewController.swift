@@ -15,15 +15,19 @@ class EditProfileViewController: UIViewController, UITextViewDelegate, UIImagePi
     @IBOutlet weak var PersonName: UITextField!
     @IBOutlet weak var PersonBio: UITextView!
     
+    /* These are used to catch the data passed from the
+     * Profile Page
+     */
     var previous_Name = String()
     var previous_Bios = String()
     var previous_icon = UIImage()
     var previous_banner = UIImage()
     
+    // Used to check whether the icon or the banner is using the camera
     var BannerPicked: Bool = false
     
     var borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
-    
+     
     @IBAction func onSubmit(_ sender: Any) {
         // Todo: Submit the data to server and update user info
         self.dismiss(animated: true, completion: nil)
@@ -39,7 +43,7 @@ class EditProfileViewController: UIViewController, UITextViewDelegate, UIImagePi
         ProfileImage.layer.masksToBounds = false
         ProfileImage.layer.borderColor = UIColor.black.cgColor
         ProfileImage.layer.cornerRadius = ProfileImage.frame.height/2 //This will change with corners of image and height/2 will make this circle shape
-        ProfileImage.clipsToBounds = true
+        ProfileImage.clipsToBounds = true	
     }
     
     // Upon clicking the image
@@ -94,20 +98,25 @@ class EditProfileViewController: UIViewController, UITextViewDelegate, UIImagePi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Pass the old profile as the base of edit
         Banner.image = previous_banner
         PersonIcon.image = previous_icon
         PersonName.text = previous_Name
         PersonBio.text = previous_Bios
         
+        // Initialize camera picker parameter
         BannerPicked = false
         
+        // Make the text view looks better
         PersonBio.delegate = self
         PersonBio.layer.borderWidth = 0.5
         PersonBio.layer.borderColor = borderColor.cgColor
         PersonBio.layer.cornerRadius = 5.0
         
+        // Make a rounded profile icon
         makeRounded(ProfileImage: PersonIcon)
         
+        // Simulate a placeholder for textview
         PersonBio.text = "Enter your Bio Here:"
         PersonBio.textColor = UIColor.lightGray
 
