@@ -44,6 +44,10 @@ class MenuListController: UITableViewController {
             refView?.dismiss(animated: true, completion: nil)
             refView?.performSegue(withIdentifier: "toSettingSegue", sender: self)
         }
+        else if (items[indexPath.row] == "Log Out") {
+            refView?.dismiss(animated: true, completion: nil)
+            refView?.performSegue(withIdentifier: "BackToLoginSegue", sender: self)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

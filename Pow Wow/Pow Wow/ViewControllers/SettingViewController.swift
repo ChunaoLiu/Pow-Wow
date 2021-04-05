@@ -13,9 +13,12 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var About_Us: UILabel!
     @IBOutlet weak var left_menu: UITextView!
     @IBOutlet weak var Setting_Font: UITextView!
-    @IBAction func OnReturn(_ sender: Any) {
+    
+    
+    @IBAction func onReturn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func onAccount(_ sender: Any) {
         print("Yoo")
     }
