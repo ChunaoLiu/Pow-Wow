@@ -7,8 +7,11 @@ target 'Pow Wow' do
 
   # Pods for Pow Wow
   pod 'Parse'
-  pod "AlamofireImage"
-  pod "SideMenu"
+  pod 'AlamofireImage'
+  pod 'SideMenu'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'Pow WowTests' do
     inherit! :search_paths

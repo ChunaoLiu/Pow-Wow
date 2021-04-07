@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AlamofireImage
+//import AlamofireImage
 
 class EditProfileViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 

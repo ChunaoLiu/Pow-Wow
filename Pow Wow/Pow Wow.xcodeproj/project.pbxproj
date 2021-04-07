@@ -29,6 +29,8 @@
 		6A14C1E1260BD47700D71998 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1E0260BD47700D71998 /* LoginViewController.swift */; };
 		6A14C1E6260BD48400D71998 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1E5260BD48400D71998 /* FeedViewController.swift */; };
 		6A14C1F2260BD5D200D71998 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14C1F1260BD5D200D71998 /* InitialViewController.swift */; };
+		6A88DF86261C1F72004044AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A88DF85261C1F72004044AD /* GoogleService-Info.plist */; };
+		6A88DF8B261C20F0004044AD /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A88DF8A261C20F0004044AD /* FirebaseAuthManager.swift */; };
 		7828A0342DEEBC578AAD4AEF /* Pods_Pow_Wow_Pow_WowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A5BDA187629783AB22C1F /* Pods_Pow_Wow_Pow_WowUITests.framework */; };
 		A635AFEFE9F8F4F55DE7C8A6 /* Pods_Pow_Wow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E16D17A95D26F209582368E /* Pods_Pow_Wow.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		6A14C1FA260BECF900D71998 /* Pow-Wow-Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Pow-Wow-Logo.jpg"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo.jpg"; sourceTree = "<absolute>"; };
 		6A14C1FB260BED0000D71998 /* Background.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.PNG; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Background.PNG"; sourceTree = "<absolute>"; };
 		6A14C1FC260BED0200D71998 /* Pow-Wow-Logo-Transparent.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pow-Wow-Logo-Transparent.PNG"; path = "/Users/j6/Desktop/Pow-Wow/Pow Wow/Pow Wow/Pow-Wow-Logo-Transparent.PNG"; sourceTree = "<absolute>"; };
+		6A88DF85261C1F72004044AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A88DF8A261C20F0004044AD /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		865B79F4A562808E7235BE8A /* Pods-Pow WowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow WowTests.debug.xcconfig"; path = "Target Support Files/Pods-Pow WowTests/Pods-Pow WowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A9C14C8D61A9C60A0F9F661 /* Pods-Pow Wow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow Wow.debug.xcconfig"; path = "Target Support Files/Pods-Pow Wow/Pods-Pow Wow.debug.xcconfig"; sourceTree = "<group>"; };
 		B7064F80646F74DD9C6277A5 /* Pods-Pow WowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pow WowTests.release.xcconfig"; path = "Target Support Files/Pods-Pow WowTests/Pods-Pow WowTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				6A14C1B1260BD41600D71998 /* Assets.xcassets */,
 				6A14C200260C014B00D71998 /* PowWowAssets */,
 				6A14C1B6260BD41600D71998 /* Info.plist */,
+				6A88DF85261C1F72004044AD /* GoogleService-Info.plist */,
+				6A88DF8A261C20F0004044AD /* FirebaseAuthManager.swift */,
 			);
 			path = "Pow Wow";
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			files = (
 				4E7DFF1A260BFFA900ACF83B /* HomePage.storyboard in Resources */,
 				6A14C1B5260BD41600D71998 /* LaunchScreen.storyboard in Resources */,
+				6A88DF86261C1F72004044AD /* GoogleService-Info.plist in Resources */,
 				6A14C1B2260BD41600D71998 /* Assets.xcassets in Resources */,
 				6A14C1B0260BD41100D71998 /* Main.storyboard in Resources */,
 			);
@@ -478,6 +485,7 @@
 			files = (
 				4EFDE3CF26179F2200C555CD /* EditProfileViewController.swift in Sources */,
 				4E7DFF2A260C104200ACF83B /* ConsultantCollectionCell.swift in Sources */,
+				6A88DF8B261C20F0004044AD /* FirebaseAuthManager.swift in Sources */,
 				6A14C1A9260BD41100D71998 /* AppDelegate.swift in Sources */,
 				4E7DFFA8260DBAC700ACF83B /* MenuListController.swift in Sources */,
 				6A14C1DC260BD46A00D71998 /* SignUpViewController.swift in Sources */,
