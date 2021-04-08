@@ -74,7 +74,7 @@ class ATCClassicSignUpViewController: UIViewController {
         signUpButton.configure(color: backgroundColor,
                                font: buttonFont,
                                cornerRadius: 40/2,
-                               backgroundColor: UIColor(hexString: "#334D92"))
+                               backgroundColor: UIColor(hexString: "#ff5a66"))
 
         self.hideKeyboardWhenTappedAround()
     }
