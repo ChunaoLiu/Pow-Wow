@@ -5,39 +5,36 @@
 //  Created by J6 on 3/24/21.
 //
 
-import FBSDKCoreKit
-import FBSDKLoginKit
 import FirebaseAuth
 import UIKit
 
 class ATCClassicLoginScreenViewController: UIViewController {
   
   @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var passwordTextField: ATCTextField!
-  @IBOutlet var contactPointTextField: ATCTextField!
+  @IBOutlet var passwordTextField: UITextField!
+  @IBOutlet var contactPointTextField: UITextField!
   @IBOutlet var loginButton: UIButton!
   @IBOutlet var separatorLabel: UILabel!
   @IBOutlet var facebookButton: UIButton!
   @IBOutlet var backButton: UIButton!
   
-  private let backgroundColor = HelperDarkMode.mainThemeBackgroundColor
-  private let tintColor = UIColor(hexString: "#ff5a66")
+  private let backgroundColor = "black"
+  private let tintColor = UIColor(named: "#ff5a66")
   
   private let titleFont = UIFont.boldSystemFont(ofSize: 30)
   private let buttonFont = UIFont.boldSystemFont(ofSize: 20)
   
   private let textFieldFont = UIFont.systemFont(ofSize: 16)
-  private let textFieldColor = UIColor(hexString: "#B0B3C6")
-  private let textFieldBorderColor = UIColor(hexString: "#B0B3C6")
+  private let textFieldColor = UIColor(named: "#B0B3C6")
+  private let textFieldBorderColor = UIColor(named: "#B0B3C6")
   
   private let separatorFont = UIFont.boldSystemFont(ofSize: 14)
-  private let separatorTextColor = UIColor(hexString: "#464646")
-  
+  private let separatorTextColor = UIColor(named: "#464646")
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = backgroundColor
-    backButton.setImage(UIImage.localImage("arrow-back-icon", template: true), for: .normal)
-    backButton.tintColor = UIColor(hexString: "#282E4F")
+    view.backgroundColor = UIColor(named: "#000000")
+    backButton.tintColor = UIColor(named: "#282E4F")
     backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
     
     titleLabel.font = titleFont
