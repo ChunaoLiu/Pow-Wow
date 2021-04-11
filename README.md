@@ -147,7 +147,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * - [x] User can see a *"enter username" section* (on the login page)
    * - [x] User can see a *"enter password" section* (on the login page)
    * - [x] User can see a *"login" button* (on the login page)
-   * - [ ] User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
+   * - [x] User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
 * **Register Page**
    * - [x] User can see a *"enter first name" section* (on the register page)
    * - [x] User can see a *"enter last name" section* (on the register page)
@@ -156,11 +156,11 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * - [x] User can see a *"create password" section* (on the register page)
    * - [x] User can see a *"confirm password" section* (on the register page)
    * - [x] User can see a *"sign up"** button* (on the register page)
-   * - [ ] User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
-   * - [ ] User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
-   * - [ ] User can see an error message *"This password is invalid"* if the password in the wrong format
-   * - [ ] User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
-   * - [ ] User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
+   * - [x] User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
+   * - [x] User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
+   * - [x] User can see an error message *"This password is invalid"* if the password in the wrong format
+   * - [x] User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
+   * - [x] User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * **Feed Page**
    * - [x] User can see a *vertical feed of consultant or business profiles* (on the feed page)
    * - [x] User can see a *"profile" button* (on the feed page)
