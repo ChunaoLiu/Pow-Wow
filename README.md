@@ -1,6 +1,8 @@
 # Pow-Wow
 Consulting On Demand for iOS
 
+![](week2.gif)
+
 ![](Static-Files/Pow-Wow-Logo.jpg)
 
 ## Table of Contents
