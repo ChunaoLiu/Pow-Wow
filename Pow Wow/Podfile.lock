@@ -215,7 +215,6 @@ PODS:
   - Alamofire (5.4.2)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
-  - Bolts/Tasks (1.9.1)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -333,10 +332,6 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - Parse (1.19.2):
-    - Parse/Core (= 1.19.2)
-  - Parse/Core (1.19.2):
-    - Bolts/Tasks (= 1.9.1)
   - PromisesObjC (1.2.12)
   - SideMenu (6.5.0)
 
@@ -345,7 +340,6 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
-  - Parse
   - SideMenu
 
 SPEC REPOS:
@@ -353,7 +347,6 @@ SPEC REPOS:
     - abseil
     - Alamofire
     - AlamofireImage
-    - Bolts
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -370,7 +363,6 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
-    - Parse
     - PromisesObjC
     - SideMenu
 
@@ -378,7 +370,6 @@ SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
-  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: fffddd0bab8677d07376538365faa93ff3889b39
   FirebaseAnalytics: 4641d7ae4220174f6ca5626163ffc5de2e90391e
@@ -395,10 +386,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  Parse: 081fb8755c3000fd11df817eec235def233d0af3
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 934f92d455999c6cab020983baa8339d6c043dd6
+PODFILE CHECKSUM: c46483bc144e1ba37f615e48a3117851a7f173f9
 
 COCOAPODS: 1.10.1

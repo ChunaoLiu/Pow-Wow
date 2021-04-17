@@ -5,8 +5,10 @@
 //  Created by J6 on 3/24/21.
 //
 
-import FirebaseAuth
+import Firebase
 import UIKit
+import Alamofire
+
 
 class ATCClassicLoginScreenViewController: UIViewController {
   

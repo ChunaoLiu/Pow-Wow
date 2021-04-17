@@ -6,16 +6,11 @@ target 'Pow Wow' do
   use_frameworks!
 
   # Pods for Pow Wow
-  pod 'Parse'
   pod 'AlamofireImage'
   pod 'SideMenu'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'FacebookShare'
-  pod 'Alamofire'
   
   target 'Pow WowTests' do
     inherit! :search_paths

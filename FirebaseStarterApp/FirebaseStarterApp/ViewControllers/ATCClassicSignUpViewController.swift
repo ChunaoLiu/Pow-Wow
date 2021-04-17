@@ -91,21 +91,34 @@ class ATCClassicSignUpViewController: UIViewController {
     @objc func didTapBackButton() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func validateEmail(enteredEmail:String) -> Bool {
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+    }
 
     @objc func didTapSignUpButton() {
         let signUpManager = FirebaseAuthManager()
         if let email = emailTextField.text, let password = passwordTextField.text {
             signUpManager.createUser(email: email, password: password) {[weak self] (success) in
                 guard let `self` = self else { return }
-                var message: String = ""
-                if (success) {
-                    message = "User was sucessfully created."
-                } else {
-                    message = "There was an error."
+                if (!self.validateEmail(enteredEmail: email)) {
+                    let alertController = UIAlertController(title: "Invalid Email", message: "Please check your email address", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
                 }
-                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.display(alertController: alertController)
+                else {
+                    var message: String = ""
+                    if (success) {
+                        message = "User was sucessfully created."
+                    } else {
+                        message = "There was an error."
+                    }
+                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.display(alertController: alertController)
+                }
             }
         }
     }
