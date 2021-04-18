@@ -26,18 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-694" y="250"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="Zh3-pU-wZQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="qqD-oq-4Zk" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sGD-4E-mxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="233" y="-289"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="tEf-st-6D1">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="buQ-1p-Zn9" customClass="HomeViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="buQ-1p-Zn9" customClass="HomeViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W3T-NK-e3l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +55,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ConsultantCollectionCell" id="ruD-wZ-773" customClass="ConsultantCollectionCell" customModule="Pow_Wow" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ConsultantCollectionCell" id="ruD-wZ-773" customClass="ConsultantCollectionCell" customModule="FirebaseStarterApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="386"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FrE-mG-p1G">
@@ -162,7 +154,6 @@
                         <outlet property="TypeFilter" destination="XPr-eO-smQ" id="Vk0-eU-IAJ"/>
                         <segue destination="XUo-Pa-ERM" kind="presentation" identifier="HomeToPersonalProfile" modalPresentationStyle="fullScreen" id="lYT-pB-ehC"/>
                         <segue destination="U2G-32-XXE" kind="presentation" identifier="toSettingSegue" modalPresentationStyle="fullScreen" id="Ck4-BD-1To"/>
-                        <segue destination="qqD-oq-4Zk" kind="presentation" identifier="BackToLoginSegue" modalPresentationStyle="fullScreen" id="hEJ-EZ-YwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGA-3N-jVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,7 +163,7 @@
         <!--Personal Profile View Controller-->
         <scene sceneID="GiW-Xx-VT9">
             <objects>
-                <viewController storyboardIdentifier="PersonalProfileViewController" id="XUo-Pa-ERM" customClass="PersonalProfileViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalProfileViewController" id="XUo-Pa-ERM" customClass="PersonalProfileViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wt4-cu-Lud">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,7 +268,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="pzu-tD-wy6">
             <objects>
-                <viewController id="wwC-RZ-cat" customClass="EditProfileViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wwC-RZ-cat" customClass="EditProfileViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aX5-SQ-0Xi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +376,7 @@
         <!--Setting View Controller-->
         <scene sceneID="wVf-z2-sGe">
             <objects>
-                <viewController id="U2G-32-XXE" customClass="SettingViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U2G-32-XXE" customClass="SettingViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBF-8B-hb5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,7 +520,7 @@
         <!--Edit Auth View Controller-->
         <scene sceneID="n1w-aF-vSw">
             <objects>
-                <viewController id="3Gx-ar-RDT" customClass="EditAuthViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Gx-ar-RDT" customClass="EditAuthViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hV0-YD-zZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -656,7 +647,7 @@
         <!--ChangePW View Controller-->
         <scene sceneID="GYs-Z2-HRl">
             <objects>
-                <viewController id="teP-8X-VhT" customClass="ChangePWViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="teP-8X-VhT" customClass="ChangePWViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="foA-Qn-2zF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -714,7 +705,7 @@
         <!--Change Name View Controller-->
         <scene sceneID="LgR-ef-yR8">
             <objects>
-                <viewController storyboardIdentifier="ChangeName" id="E24-Ay-nlV" customClass="ChangeNameViewController" customModule="Pow_Wow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeName" id="E24-Ay-nlV" customClass="ChangeNameViewController" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7t3-yS-avx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -97,18 +97,39 @@ class ATCClassicSignUpViewController: UIViewController {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: enteredEmail)
     }
+    
+    func callAlart(title: String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     @objc func didTapSignUpButton() {
         let signUpManager = FirebaseAuthManager()
-        if let email = emailTextField.text, let password = passwordTextField.text {
+        let UserDataManager = FirebaseDataAccessManager()
+        if (emailTextField.text == "") {
+            self.callAlart(title: "Missing email", message: "Please Write down your email address")
+        }
+        else if (passwordTextField.text == "") {
+            self.callAlart(title: "Missing password", message: "Please Write down your email address")
+        }
+        else if (nameTextField.text == "") {
+            self.callAlart(title: "Missing Name", message: "Please Write down your Full Name")
+        }
+        if (!self.validateEmail(enteredEmail: emailTextField.text!)) {
+            let alertController = UIAlertController(title: "Invalid Email", message: "Please check your email address", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+        if let email = emailTextField.text, let password = passwordTextField.text,
+           let UserName = nameTextField.text, let UserPhone = phoneNumberTextField.text{
             signUpManager.createUser(email: email, password: password) {[weak self] (success) in
-                guard let `self` = self else { return }
-                if (!self.validateEmail(enteredEmail: email)) {
-                    let alertController = UIAlertController(title: "Invalid Email", message: "Please check your email address", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alertController, animated: true, completion: nil)
+                let UserCreationStatus = UserDataManager.addNewUser(UserName: UserName, UserEmail: email, UserPhoneNum: Int(UserPhone) ?? 0)
+                if (!UserCreationStatus) {
+                    self?.callAlart(title: "Error", message: "User Creation Error. Call Admin for help.")
                 }
-                else {
+                guard let `self` = self else { return }
                     var message: String = ""
                     if (success) {
                         message = "User was sucessfully created."
