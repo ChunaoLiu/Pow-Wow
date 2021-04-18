@@ -1,5 +1,5 @@
 //
-//  PersonalProfileViewController.swift
+//  ATCClassicProfileViewController.swift
 //  Pow Wow
 //
 //  Created by 刘淳傲 on 3/26/21.
@@ -23,7 +23,7 @@ class ATCClassicProfileViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ProfileEditSegue") {
-            if let editPage = segue.destination as? EditProfileViewController {
+            if let editPage = segue.destination as? ATCClassicEditProfileViewController {
                 editPage.previous_Name = self.ProfileName.text!
                 editPage.previous_Bios = self.ProfileBio.text!
                 if (self.Banner.image != nil) {

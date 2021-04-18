@@ -29,11 +29,15 @@
 		6A7BF267262CE4DE005B5EC6 /* ATCClassicMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */; };
 		6A7BF26A262CE529005B5EC6 /* ATCClassicMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */; };
 		6A7BF26D262CE540005B5EC6 /* ATCClassicProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF26C262CE540005B5EC6 /* ATCClassicProfileViewController.swift */; };
-		6A7BF270262CE55B005B5EC6 /* ATCClassicProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF26F262CE55B005B5EC6 /* ATCClassicProfileViewController.xib */; };
 		6A7BF273262CE56D005B5EC6 /* ATCClassicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF272262CE56D005B5EC6 /* ATCClassicSearchViewController.swift */; };
 		6A7BF276262CE581005B5EC6 /* ATCClassicSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF275262CE581005B5EC6 /* ATCClassicSearchViewController.xib */; };
 		6A7BF279262CE596005B5EC6 /* ATCClassicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF278262CE596005B5EC6 /* ATCClassicSettingsViewController.swift */; };
 		6A7BF27C262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF27B262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib */; };
+		6A7BF281262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF280262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib */; };
+		6A7BF285262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF284262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib */; };
+		6A7BF287262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF286262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift */; };
+		6A7BF2AA262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF2A9262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift */; };
+		6A7BF2AD262CF1E0005B5EC6 /* ATCClassicMenuListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF2AC262CF1E0005B5EC6 /* ATCClassicMenuListViewController.xib */; };
 		6A97DF89261E82A10031D290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A97DF88261E82A10031D290 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +67,15 @@
 		6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicMainViewController.swift; sourceTree = "<group>"; };
 		6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicMainViewController.xib; sourceTree = "<group>"; };
 		6A7BF26C262CE540005B5EC6 /* ATCClassicProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicProfileViewController.swift; sourceTree = "<group>"; };
-		6A7BF26F262CE55B005B5EC6 /* ATCClassicProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicProfileViewController.xib; sourceTree = "<group>"; };
 		6A7BF272262CE56D005B5EC6 /* ATCClassicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicSearchViewController.swift; sourceTree = "<group>"; };
 		6A7BF275262CE581005B5EC6 /* ATCClassicSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicSearchViewController.xib; sourceTree = "<group>"; };
 		6A7BF278262CE596005B5EC6 /* ATCClassicSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicSettingsViewController.swift; sourceTree = "<group>"; };
 		6A7BF27B262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicSettingsViewController.xib; sourceTree = "<group>"; };
+		6A7BF280262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicProfileViewController.xib; sourceTree = "<group>"; };
+		6A7BF284262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicEditProfileViewController.xib; sourceTree = "<group>"; };
+		6A7BF286262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicEditProfileViewController.swift; sourceTree = "<group>"; };
+		6A7BF2A9262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicMenuListViewController.swift; sourceTree = "<group>"; };
+		6A7BF2AC262CF1E0005B5EC6 /* ATCClassicMenuListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicMenuListViewController.xib; sourceTree = "<group>"; };
 		6A97DF88261E82A10031D290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F562D2664D895A5CDEF3A83 /* Pods-FirebaseStarterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStarterApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStarterApp/Pods-FirebaseStarterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C65F32946A0E14A8914D92CE /* Pods-FirebaseStarterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStarterApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStarterApp/Pods-FirebaseStarterApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,20 +140,24 @@
 		1773BFDB221FA7D0005C82D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1773BFDC221FA7D0005C82D8 /* ATCClassicSignUpViewController.xib */,
-				1773BFDD221FA7D0005C82D8 /* ATCClassicSignUpViewController.swift */,
-				1773BFDE221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.xib */,
 				1773BFDF221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.swift */,
+				1773BFDE221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.xib */,
+				1773BFDD221FA7D0005C82D8 /* ATCClassicSignUpViewController.swift */,
+				1773BFDC221FA7D0005C82D8 /* ATCClassicSignUpViewController.xib */,
 				1773BFE0221FA7D0005C82D8 /* ATCClassicLoginScreenViewController.swift */,
 				1773BFE1221FA7D0005C82D8 /* ATCClassicLoginScreenViewController.xib */,
 				6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */,
 				6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */,
 				6A7BF26C262CE540005B5EC6 /* ATCClassicProfileViewController.swift */,
-				6A7BF26F262CE55B005B5EC6 /* ATCClassicProfileViewController.xib */,
+				6A7BF280262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib */,
 				6A7BF272262CE56D005B5EC6 /* ATCClassicSearchViewController.swift */,
 				6A7BF275262CE581005B5EC6 /* ATCClassicSearchViewController.xib */,
 				6A7BF278262CE596005B5EC6 /* ATCClassicSettingsViewController.swift */,
 				6A7BF27B262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib */,
+				6A7BF286262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift */,
+				6A7BF284262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib */,
+				6A7BF2A9262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift */,
+				6A7BF2AC262CF1E0005B5EC6 /* ATCClassicMenuListViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,13 +252,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7BF281262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib in Resources */,
 				1773BFD4221FA51F005C82D8 /* LaunchScreen.storyboard in Resources */,
 				1773BFE4221FA7D1005C82D8 /* ATCClassicLandingScreenViewController.xib in Resources */,
+				6A7BF2AD262CF1E0005B5EC6 /* ATCClassicMenuListViewController.xib in Resources */,
 				6A7BF27C262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib in Resources */,
+				6A7BF285262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib in Resources */,
 				1773BFD1221FA51F005C82D8 /* Assets.xcassets in Resources */,
 				1773BFE2221FA7D1005C82D8 /* ATCClassicSignUpViewController.xib in Resources */,
 				4E81B257262A386C0002E816 /* HomePage.storyboard in Resources */,
-				6A7BF270262CE55B005B5EC6 /* ATCClassicProfileViewController.xib in Resources */,
 				1773BFE7221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.xib in Resources */,
 				6A7BF26A262CE529005B5EC6 /* ATCClassicMainViewController.xib in Resources */,
 				6A7BF276262CE581005B5EC6 /* ATCClassicSearchViewController.xib in Resources */,
@@ -300,8 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1773BFE5221FA7D1005C82D8 /* ATCClassicLandingScreenViewController.swift in Sources */,
+				6A7BF2AA262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift in Sources */,
 				1773BFF4221FB4D8005C82D8 /* UITextField.swift in Sources */,
 				4E81B25D262A46080002E816 /* FirebaseDataAccessManager.swift in Sources */,
+				6A7BF287262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift in Sources */,
 				1773BFEE221FA8CC005C82D8 /* UIColor.swift in Sources */,
 				1773BFEC221FA894005C82D8 /* UIViewController+ATCAdditions.swift in Sources */,
 				6A7BF273262CE56D005B5EC6 /* ATCClassicSearchViewController.swift in Sources */,

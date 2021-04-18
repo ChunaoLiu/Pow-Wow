@@ -27,7 +27,7 @@ class ATCClassicMainViewController: UIViewController {
         refView = self
         definesPresentationContext = true
         // Initialize the SideMenu When it loads
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu = SideMenuNavigationController(rootViewController: ATCClassicMenuListViewController())
         // Menu will pop up at left
         menu?.leftSide = true
         

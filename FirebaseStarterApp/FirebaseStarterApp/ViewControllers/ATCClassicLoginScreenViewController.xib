@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="backButton" destination="8NB-UE-ekP" id="9OE-QV-wHf"/>
                 <outlet property="contactPointTextField" destination="LlF-qr-eCs" id="CkI-vx-Ntb"/>
+                <outlet property="goToButton" destination="gUr-Fy-fRV" id="hlz-82-IKL"/>
                 <outlet property="loginButton" destination="Wyk-3M-06P" id="JqD-mQ-Q8h"/>
                 <outlet property="passwordTextField" destination="Sln-s1-Z9D" id="i2y-QV-mlH"/>
                 <outlet property="titleLabel" destination="1Kl-jQ-2Bx" id="S39-pV-jbr"/>
@@ -69,6 +70,13 @@
                                             </constraints>
                                             <state key="normal" image="arrow-back-icon"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUr-Fy-fRV" userLabel="Login Button">
+                                            <rect key="frame" x="50" y="452" width="275" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="uhb-aY-1Ci"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -116,7 +124,7 @@
                 <constraint firstItem="2K0-wN-Eon" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rgo-j8-MUa"/>
                 <constraint firstItem="2K0-wN-Eon" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="vyL-kq-74s"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
         </view>
     </objects>
     <resources>

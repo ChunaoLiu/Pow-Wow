@@ -8,6 +8,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
   @IBOutlet var contactPointTextField: ATCTextField!
   @IBOutlet var loginButton: UIButton!
   @IBOutlet var backButton: UIButton!
+  @IBOutlet var goToButton: UIButton!
   
   private let backgroundColor = HelperDarkMode.mainThemeBackgroundColor
   private let tintColor = UIColor(hexString: "#ff5a66")
@@ -61,6 +62,13 @@ class ATCClassicLoginScreenViewController: UIViewController {
                           cornerRadius: 55/2,
                           backgroundColor: tintColor)
     
+    goToButton.setTitle("Enter Pow Wow", for: .normal)
+    goToButton.addTarget(self, action: #selector(didTapGoToButton), for: .touchUpInside)
+    goToButton.configure(color: backgroundColor,
+                         font: buttonFont,
+                         cornerRadius: 55/2,
+                         backgroundColor: tintColor)
+    
     self.hideKeyboardWhenTappedAround()
   }
   
@@ -84,6 +92,11 @@ class ATCClassicLoginScreenViewController: UIViewController {
       self?.showPopup(isSuccess: success)
     }
   }
+    
+    @objc private func didTapGoToButton() {
+        let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
+        self.navigationController?.pushViewController(mainVC, animated: true)
+    }
 }
   
 extension ATCClassicLoginScreenViewController {
@@ -94,10 +107,5 @@ extension ATCClassicLoginScreenViewController {
       let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
       alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
       self.present(alert, animated: true, completion: nil)
-    }
-    
-    @objc func loginWasSuccessful() {
-      let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
-      self.navigationController?.pushViewController(mainVC, animated: true)
     }
 }

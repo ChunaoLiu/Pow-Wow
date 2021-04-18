@@ -11,6 +11,8 @@ target 'FirebaseStarterApp' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'SideMenu'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
