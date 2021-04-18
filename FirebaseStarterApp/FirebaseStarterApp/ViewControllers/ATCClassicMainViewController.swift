@@ -1,7 +1,15 @@
+//
+//  ATCClassicMainViewController.swift
+//  FirebaseStarterApp
+//
+//  Created by J6 on 4/18/21.
+//  Copyright © 2021 Instamobile. All rights reserved.
+//
+
 import FirebaseAuth
 import UIKit
 
-class ATCClassicLoginScreenViewController: UIViewController {
+class ATCClassicMainViewController: UIViewController {
   
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var passwordTextField: ATCTextField!
@@ -82,17 +90,14 @@ class ATCClassicLoginScreenViewController: UIViewController {
     guard let email = contactPointTextField.text, let password = passwordTextField.text else { return }
     loginManager.signIn(email: email, pass: password) {[weak self] (success) in
       self?.showPopup(isSuccess: success)
-      self?.loginWasSuccessful()
     }
-  }
     
-  @objc func loginWasSuccessful() {
     let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
     self.navigationController?.pushViewController(mainVC, animated: true)
   }
 }
   
-extension ATCClassicLoginScreenViewController {
+extension ATCClassicMainViewController {
     
     func showPopup(isSuccess: Bool) {
       let successMessage = "User was sucessfully logged in."
@@ -102,3 +107,7 @@ extension ATCClassicLoginScreenViewController {
       self.present(alert, animated: true, completion: nil)
     }
 }
+
+
+
+
