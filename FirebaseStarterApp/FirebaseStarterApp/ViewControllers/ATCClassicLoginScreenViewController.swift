@@ -82,13 +82,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
     guard let email = contactPointTextField.text, let password = passwordTextField.text else { return }
     loginManager.signIn(email: email, pass: password) {[weak self] (success) in
       self?.showPopup(isSuccess: success)
-      self?.loginWasSuccessful()
     }
-  }
-    
-  @objc func loginWasSuccessful() {
-    let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
-    self.navigationController?.pushViewController(mainVC, animated: true)
   }
 }
   
@@ -100,5 +94,10 @@ extension ATCClassicLoginScreenViewController {
       let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
       alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
       self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func loginWasSuccessful() {
+      let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
+      self.navigationController?.pushViewController(mainVC, animated: true)
     }
 }

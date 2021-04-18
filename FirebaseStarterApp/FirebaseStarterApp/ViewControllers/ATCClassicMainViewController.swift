@@ -1,113 +1,98 @@
 //
 //  ATCClassicMainViewController.swift
-//  FirebaseStarterApp
+//  Pow Wow
 //
-//  Created by J6 on 4/18/21.
-//  Copyright © 2021 Instamobile. All rights reserved.
+//  Created by 刘淳傲 on 3/24/21.
 //
 
-import FirebaseAuth
 import UIKit
+import AlamofireImage
+import SideMenu
 
 class ATCClassicMainViewController: UIViewController {
-  
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var passwordTextField: ATCTextField!
-  @IBOutlet var contactPointTextField: ATCTextField!
-  @IBOutlet var loginButton: UIButton!
-  @IBOutlet var backButton: UIButton!
-  
-  private let backgroundColor = HelperDarkMode.mainThemeBackgroundColor
-  private let tintColor = UIColor(hexString: "#ff5a66")
-  
-  private let titleFont = UIFont.boldSystemFont(ofSize: 30)
-  private let buttonFont = UIFont.boldSystemFont(ofSize: 20)
-  
-  private let textFieldFont = UIFont.systemFont(ofSize: 16)
-  private let textFieldColor = UIColor(hexString: "#B0B3C6")
-  private let textFieldBorderColor = UIColor(hexString: "#B0B3C6")
-  
-  private let separatorFont = UIFont.boldSystemFont(ofSize: 14)
-  private let separatorTextColor = UIColor(hexString: "#464646")
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = backgroundColor
-    backButton.setImage(UIImage.localImage("arrow-back-icon", template: true), for: .normal)
-    backButton.tintColor = UIColor(hexString: "#282E4F")
-    backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
     
-    titleLabel.font = titleFont
-    titleLabel.text = "Log In"
-    titleLabel.textColor = tintColor
+    @IBOutlet weak var TypeFilter: UITextField!
+    var menu : SideMenuNavigationController?
+    var selectedType: String?
+    var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
     
-    contactPointTextField.configure(color: textFieldColor,
-                                    font: textFieldFont,
-                                    cornerRadius: 55/2,
-                                    borderColor: textFieldBorderColor,
-                                    backgroundColor: backgroundColor,
-                                    borderWidth: 1.0)
-    contactPointTextField.placeholder = "E-mail"
-    contactPointTextField.textContentType = .emailAddress
-    contactPointTextField.clipsToBounds = true
-    
-    passwordTextField.configure(color: textFieldColor,
-                                font: textFieldFont,
-                                cornerRadius: 55/2,
-                                borderColor: textFieldBorderColor,
-                                backgroundColor: backgroundColor,
-                                borderWidth: 1.0)
-    passwordTextField.placeholder = "Password"
-    passwordTextField.isSecureTextEntry = true
-    passwordTextField.textContentType = .emailAddress
-    passwordTextField.clipsToBounds = true
-    
-    loginButton.setTitle("Log In", for: .normal)
-    loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
-    loginButton.configure(color: backgroundColor,
-                          font: buttonFont,
-                          cornerRadius: 55/2,
-                          backgroundColor: tintColor)
-    
-    self.hideKeyboardWhenTappedAround()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
-  }
-  
-  @objc func didTapBackButton() {
-    self.navigationController?.popViewController(animated: true)
-  }
-  
-  @objc func didTapLoginButton() {
-    let loginManager = FirebaseAuthManager()
-    guard let email = contactPointTextField.text, let password = passwordTextField.text else { return }
-    loginManager.signIn(email: email, pass: password) {[weak self] (success) in
-      self?.showPopup(isSuccess: success)
+    @IBAction func ProfileButton(_ sender: Any) {
+        present(menu!, animated: true)
     }
     
-    let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
-    self.navigationController?.pushViewController(mainVC, animated: true)
-  }
-}
-  
-extension ATCClassicMainViewController {
+    @IBOutlet weak var ConsultantCollectionView: UICollectionView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        refView = self
+        definesPresentationContext = true
+        // Initialize the SideMenu When it loads
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        // Menu will pop up at left
+        menu?.leftSide = true
+        
+        // Let the SideMenuManager take control over the left menu
+        SideMenuManager.default.leftMenuNavigationController = menu
+        // This allow the user to scroll right to see the menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
+        self.createAndSetupPickerView()
+        self.dismissAndClosePickerView()
+
+        // Do any additional setup after loading the view.
+    }
     
-    func showPopup(isSuccess: Bool) {
-      let successMessage = "User was sucessfully logged in."
-      let errorMessage = "Something went wrong. Please try again"
-      let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
-      alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-      self.present(alert, animated: true, completion: nil)
+    func createAndSetupPickerView(){
+        let pickerview = UIPickerView()
+        pickerview.delegate = self
+        pickerview.dataSource = self
+        self.TypeFilter.inputView=pickerview
+    }
+    
+    // This will change the text field to a picker
+    func dismissAndClosePickerView(){
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let button = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(self.dismissAction))
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        self.TypeFilter.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissAction(){
+        self.view.endEditing(true)
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
+
+// Extending ATCClassicMainViewController for a picker
+extension ATCClassicMainViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.TypeList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.TypeList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedType = self.TypeList[row]
+        self.TypeFilter.text = self.selectedType
     }
 }
-
-
-
-
