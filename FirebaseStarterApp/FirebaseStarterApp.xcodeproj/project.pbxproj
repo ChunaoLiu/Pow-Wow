@@ -28,6 +28,7 @@
 		4E81B25D262A46080002E816 /* FirebaseDataAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E81B25C262A46080002E816 /* FirebaseDataAccessManager.swift */; };
 		4ECA1BEF262D2A2900140DF9 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA1BEE262D2A2900140DF9 /* HomePage.storyboard */; };
 		4ECA1BF2262D2B7D00140DF9 /* ConsultantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA1BF1262D2B7D00140DF9 /* ConsultantCollectionViewController.swift */; };
+		4ECA1BF6262D5ACA00140DF9 /* UIImageViewOverride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */; };
 		6A7BF267262CE4DE005B5EC6 /* ATCClassicMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */; };
 		6A7BF26A262CE529005B5EC6 /* ATCClassicMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */; };
 		6A7BF26D262CE540005B5EC6 /* ATCClassicProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BF26C262CE540005B5EC6 /* ATCClassicProfileViewController.swift */; };
@@ -66,6 +67,7 @@
 		4E81B25C262A46080002E816 /* FirebaseDataAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataAccessManager.swift; sourceTree = "<group>"; };
 		4ECA1BEE262D2A2900140DF9 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomePage.storyboard; path = "../../Pow Wow/Pow Wow/HomePage.storyboard"; sourceTree = "<group>"; };
 		4ECA1BF1262D2B7D00140DF9 /* ConsultantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCollectionViewController.swift; sourceTree = "<group>"; };
+		4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewOverride.swift; sourceTree = "<group>"; };
 		5651F14D5CB6E681D3D70507 /* Pods_FirebaseStarterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseStarterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicMainViewController.swift; sourceTree = "<group>"; };
 		6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicMainViewController.xib; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				6A7BF284262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib */,
 				6A7BF2A9262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift */,
 				4ECA1BF1262D2B7D00140DF9 /* ConsultantCollectionViewController.swift */,
+				4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				1773BFE6221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.swift in Sources */,
 				1773BFCA221FA51C005C82D8 /* AppDelegate.swift in Sources */,
 				177371E92221D7C6003E7EC4 /* FirebaseAuthManager.swift in Sources */,
+				4ECA1BF6262D5ACA00140DF9 /* UIImageViewOverride.swift in Sources */,
 				1773BFF2221FAE14005C82D8 /* UIImage.swift in Sources */,
 				6A7BF279262CE596005B5EC6 /* ATCClassicSettingsViewController.swift in Sources */,
 				6A7BF26D262CE540005B5EC6 /* ATCClassicProfileViewController.swift in Sources */,

@@ -28,6 +28,8 @@ class ATCClassicProfileViewController: UIViewController {
         navigationController?.pushViewController(ProfileVC, animated: true)
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ProfileEditSegue") {
             if let editPage = segue.destination as? ATCClassicEditProfileViewController {
@@ -48,19 +50,18 @@ class ATCClassicProfileViewController: UIViewController {
         ProfileImage.layer.borderWidth = 1
         ProfileImage.layer.masksToBounds = false
         ProfileImage.layer.borderColor = UIColor.black.cgColor
-        ProfileImage.layer.cornerRadius = ProfileImage.frame.height/2 //This will change with corners of image and height/2 will make this circle shape
+ //This will change with corners of image and height/2 will make this circle shape
         ProfileImage.clipsToBounds = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("The center of phone is: \(view.center.x) + \(view.center.y)")
-        print("The center of banner is: \(Banner.center.x) + \(Banner.center.y)")
-        let Userinfo = UserDataManager.getUserInfo(uid: user!.uid)
+        print("The center of pic is: \(PersonIcon.center.x) + \(Banner.center.y)")
+        UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
+            self.ProfileName.text = userData["UserName"]!
+        }
         makeRounded(ProfileImage: PersonIcon)
-        self.PersonIcon.draw(CGRect(x: self.Banner.center.x/2, y: self.Banner.center.y, width: 130, height: 130))
-        print("Yee Yee Ass Haircut: " + Userinfo["UserName"]!)
-        self.ProfileName.text = Userinfo["UserName"] as? String
 
         // Do any additional setup after loading the view.
     }

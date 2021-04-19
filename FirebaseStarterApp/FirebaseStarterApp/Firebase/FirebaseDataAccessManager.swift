@@ -37,18 +37,18 @@ class FirebaseDataAccessManager {
         return Success
     }
     
-    func getUserInfo(uid: String) -> [String: String]{
+    func getUserInfo(uid: String, completion: @escaping (_ UserInfo: [String: String]) -> Void) {
         
-        var UserInformation: [String: String] = [:]
-
-        database.child(uid).observeSingleEvent(of: .value, with: { snapshot in
-            guard let UserInfo = snapshot.value as? [String: String] else {
-                print(" \n \n \nError in Receiving Incrementation number")
-                return
+        print("UID: " + uid)
+        database.child(uid).observeSingleEvent(of: .value, with:
+            { snapshot in
+                guard let UserInfo = snapshot.value as? [String: String] else {
+                    print("Error in Receiving Incrementation number")
+                    return
             }
-            UserInformation = UserInfo
+            completion(UserInfo)
         })
-        return UserInformation
+        print("Im Later!")
     }
 }
 
