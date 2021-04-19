@@ -8,7 +8,7 @@ class FirebaseDataAccessManager {
     private let database = Database.database().reference()
     private let storage = Storage.storage().reference()
 
-    func addNewUser(UserName: String, UserEmail: String, UserPhoneNum: Int) -> Bool {
+    func addNewUser(UserName: String, UserEmail: String, UserPhoneNum: Int, uid: String) -> Bool {
         
         var Success = true
         
@@ -18,23 +18,37 @@ class FirebaseDataAccessManager {
                 Success = false
                 return
             }
-            let User: [String: Any] = [
-                "UserObjectID" : Increment,
+            let User: [String: String] = [
+                "uid" : uid,
                 "UserName" : UserName,
                 "UserEmail" : UserEmail,
-                "UserPhoneNumber" : UserPhoneNum,
+                "UserPhoneNumber" : String(UserPhoneNum),
                 "UserType" : "NULL",
                 "UserBannerURL" : "NULL",
                 "UserPictureURL" : "NULL",
                 "ProIndustry" : "NULL",
-                "ProKeywords" : ["NULL"],
+                "ProKeywords" : "NULL",
                 "ProBio" : "NULL"
             ]
-            self.database.child("User_" + String(Increment)).setValue(User)
+            self.database.child(uid).setValue(User)
             self.database.child("Increment").setValue(Increment + 1)
             Success = true
         })
         return Success
+    }
+    
+    func getUserInfo(uid: String) -> [String: String]{
+        
+        var UserInformation: [String: String] = [:]
+
+        database.child(uid).observeSingleEvent(of: .value, with: { snapshot in
+            guard let UserInfo = snapshot.value as? [String: String] else {
+                print(" \n \n \nError in Receiving Incrementation number")
+                return
+            }
+            UserInformation = UserInfo
+        })
+        return UserInformation
     }
 }
 

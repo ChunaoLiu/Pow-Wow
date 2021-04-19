@@ -91,6 +91,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
     loginManager.signIn(email: email, pass: password) {[weak self] (success) in
       self?.showPopup(isSuccess: success)
     }
+    self.didTapGoToButton()
   }
     
     @objc private func didTapGoToButton() {

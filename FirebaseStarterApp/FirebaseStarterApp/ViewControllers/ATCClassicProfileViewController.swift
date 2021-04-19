@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import Firebase
+
+let user = Auth.auth().currentUser
+let userEmail = user?.email
 
 class ATCClassicProfileViewController: UIViewController {
+    
+    let UserDataManager = FirebaseDataAccessManager()
 
     @IBOutlet weak var PersonIcon: UIImageView!
     @IBOutlet weak var ProfileName: UILabel!
@@ -18,7 +24,8 @@ class ATCClassicProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func ToEdit(_ sender: Any) {
-        performSegue(withIdentifier: "ProfileEditSegue", sender: self)
+        let ProfileVC = ATCClassicEditProfileViewController(nibName: "ATCClassicEditProfileViewController", bundle: nil)
+        navigationController?.pushViewController(ProfileVC, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,8 +56,11 @@ class ATCClassicProfileViewController: UIViewController {
         super.viewDidLoad()
         print("The center of phone is: \(view.center.x) + \(view.center.y)")
         print("The center of banner is: \(Banner.center.x) + \(Banner.center.y)")
+        let Userinfo = UserDataManager.getUserInfo(uid: user!.uid)
         makeRounded(ProfileImage: PersonIcon)
         self.PersonIcon.draw(CGRect(x: self.Banner.center.x/2, y: self.Banner.center.y, width: 130, height: 130))
+        print("Yee Yee Ass Haircut: " + Userinfo["UserName"]!)
+        self.ProfileName.text = Userinfo["UserName"] as? String
 
         // Do any additional setup after loading the view.
     }

@@ -125,7 +125,7 @@ class ATCClassicSignUpViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextField.text,
            let UserName = nameTextField.text, let UserPhone = phoneNumberTextField.text{
             signUpManager.createUser(email: email, password: password) {[weak self] (success) in
-                let UserCreationStatus = UserDataManager.addNewUser(UserName: UserName, UserEmail: email, UserPhoneNum: Int(UserPhone) ?? 0)
+                let UserCreationStatus = UserDataManager.addNewUser(UserName: UserName, UserEmail: email, UserPhoneNum: Int(UserPhone) ?? 0, uid: user!.uid)
                 if (!UserCreationStatus) {
                     self?.callAlart(title: "Error", message: "User Creation Error. Call Admin for help.")
                 }

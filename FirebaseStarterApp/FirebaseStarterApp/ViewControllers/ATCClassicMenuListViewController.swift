@@ -38,7 +38,8 @@ class ATCClassicMenuListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (items[indexPath.row] == "Profile") {
             refView?.dismiss(animated: true, completion: nil)
-            refView?.performSegue(withIdentifier: "HomeToPersonalProfile", sender: indexPath)
+            let ProfileVC = ATCClassicProfileViewController(nibName: "ATCClassicProfileViewController", bundle: nil)
+            refView?.navigationController?.pushViewController(ProfileVC, animated: true)
         }
         else if (items[indexPath.row] == "Setting") {
             refView?.dismiss(animated: true, completion: nil)
