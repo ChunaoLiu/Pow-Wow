@@ -59,15 +59,15 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can enter their first name in the "enter first name" section (on the register page)**
 * **User can enter their last name in the "enter last name" section (on the register page)**
 * **User can enter their email in the "enter email" section (on the register page)**
-* - [ ] User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
+* - [x] User can see an error message *"This email is taken or not valid."* if the email is already associated with an account or in the wrong format
 * ** User can enter a username in the "create username" section (on the register page)**
-* - [ ] User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
+* - [x] User can see an error message *"This username is taken or not valid."* if the username is already associated with an account or in the wrong format
 * **User can enter a password in the "enter password" section (on the register page)**
-* - [ ] User can see an error message *"This password is invalid"* if the password in the wrong format
+* - [x] User can see an error message *"This password is invalid"* if the password in the wrong format
 * **User can enter a password in the "confirm password" section (on the register page)**
-* - [ ] User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
+* - [x] User can see an error message *"Passwords do not match"* if the passwords in both sections do not match
 * **User can click the "sign up" button* (on the register page) to navigate to the login page**
-* - [ ] User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
+* - [x] User can see a error message *"One or more fields are incomplete. Please try again."*, if registration credentials are incomplete
 * - [x] User can see a *feed page*
 * - [x] User can see a *vertical feed of consultant or business profiles* (on the feed page)
 * **User can vertically scroll through the feed page**
@@ -89,15 +89,15 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * **User can upload their profile picture in the "edit profile picture" section (in the business section) (on the profile page)**
 * - [x] User can see an *"edit banner picture" section* (in the business section) (on the profile page)
 * **User can upload their banner picture in the "edit banner picture" section (in the business section) (on the profile page)**
-* - [ ] User can see an *"edit industry" section* (in the business section) (on the profile page)
+* - [x] User can see an *"edit industry" section* (in the business section) (on the profile page)
 * **User can select their business industry out of the options in the "industry" section (in the business section) (on the profile page)**
-* - [ ] User can see an *"edit keywords" section* (in the business section) (on the profile page)
+* - [x] User can see an *"edit keywords" section* (in the business section) (on the profile page)
 * **User can enter their business keywords in the "edit keywords" section (in the business section) (on the profile page)**
-* - [ ] User can see an *"edit bio" section* (in the business section) (on the profile page)
+* - [x] User can see an *"edit bio" section* (in the business section) (on the profile page)
 * **User can enter their business biography in the "edit bio" section (in the business section) (on the profile page)**
-* - [ ] User can see a *"save and publish" button* (in the business section) (on the profile page)
+* - [x] User can see a *"save and publish" button* (in the business section) (on the profile page)
 * **User can click the "save and publish" button (in the business section) (on the profile page)**
-* - [ ] User can see a *search/filter page*
+* - [x] User can see a *search/filter page*
 * **User can edit preferences (on the search/filter page)**
 * - [ ] User can see a *list of options* to filter the search on the feed (on the search/filter page)
 * **User can select businesses or consultants (with a checkbox) (on the search/filter page)**
