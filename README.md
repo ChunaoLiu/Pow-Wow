@@ -1,7 +1,9 @@
 # Pow-Wow
 Consulting On Demand for iOS
 
-![](week2.gif)
+![](Static-Files/week2.gif)
+
+![](Static-Files/week 3 gif.gif)
 
 ![](Static-Files/Pow-Wow-Logo.jpg)
 
