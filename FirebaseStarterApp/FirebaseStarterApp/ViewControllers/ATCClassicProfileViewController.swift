@@ -117,7 +117,6 @@ class ATCClassicProfileViewController: UIViewController {
                     DispatchQueue.main.async {
                         let image = UIImage(data: data)
                         self.PersonIcon.image = image
-                        print("Should be Updated?")
                     }
                 })
                 task.resume()
@@ -133,7 +132,6 @@ class ATCClassicProfileViewController: UIViewController {
                     DispatchQueue.main.async {
                         let image = UIImage(data: data)
                         self.Banner.image = image
-                        print("Should be Updated?")
                     }
                 })
                 task.resume()

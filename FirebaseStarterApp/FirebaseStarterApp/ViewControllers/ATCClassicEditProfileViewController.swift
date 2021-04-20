@@ -35,36 +35,33 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         let DataManager = FirebaseDataAccessManager()
         var url_id = "Nothing"
         
-        // To make sure we get uid before we upload, all the code regarding upload must be put inside this closure
-        DataManager.getUserInfo(uid: user!.uid) { (userData) in
-            url_id = userData["URL_ID"]!
-            DataManager.updateUserIcon(URL_ID: url_id, image: self.PersonIcon.image!) { (success, urlString) in
-                if (success) {
-                    print("PersonIcon Upload Success!")
-                    print("URL stored into the data is: \(urlString)")
-                    DataManager.updateUserIconURL(uid: user!.uid, url: urlString)
-                }
-            }
-            DataManager.updateUserBanner(URL_ID: url_id, image: self.Banner.image!) { (success, urlString) in
-                if (success) {
-                    print("PersonBanner Upload Success!")
-                    print("URL stored into the data is: \(urlString)")
-                }
-                DataManager.updateUserBannerURL(uid: user!.uid, url: urlString)
-            }
-        }
-        
-        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text as! String, UserBio: self.PersonBio.text as! String, UserKeyword: self.PersonKeyword.text as! String) { (success) in
+        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text as! String, UserKeyword: self.PersonKeyword.text as! String) { (success) in
             if (success) {
-                self.navigationController?.popViewController(animated: true)
+                DataManager.getUserInfo(uid: user!.uid) { (userData) in
+                    url_id = userData["URL_ID"]!
+                    DataManager.updateUserIcon(URL_ID: url_id, image: self.PersonIcon.image!) { (success, urlString) in
+                        if (success) {
+                            print("PersonIcon Upload Success!")
+                            print("URL stored into the data is: \(urlString)")
+                            DataManager.updateUserIconURL(uid: user!.uid, url: urlString)
+                            
+                            DataManager.updateUserBanner(URL_ID: url_id, image: self.Banner.image!) { (success, urlString) in
+                                if (success) {
+                                    print("PersonBanner Upload Success!")
+                                    print("URL stored into the data is: \(urlString)")
+                                    self.navigationController?.popViewController(animated: true)
+                                }
+                                DataManager.updateUserBannerURL(uid: user!.uid, url: urlString)
+                            }
+                        }
+                    }
+                }
             }
             else {
                 print("We're not going anywhere cuz update failed!")
             }
         }
-        
-
-        self.navigationController?.popViewController(animated: true)
+        // To make sure we get uid before we upload, all the code regarding upload must be put inside this closure
     }
     
     @IBAction func onCancel(_ sender: Any) {
