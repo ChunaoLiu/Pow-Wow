@@ -28,8 +28,6 @@ class ATCClassicProfileViewController: UIViewController {
         navigationController?.pushViewController(ProfileVC, animated: true)
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ProfileEditSegue") {
             if let editPage = segue.destination as? ATCClassicEditProfileViewController {
@@ -60,10 +58,88 @@ class ATCClassicProfileViewController: UIViewController {
         print("The center of pic is: \(PersonIcon.center.x) + \(Banner.center.y)")
         UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
             self.ProfileName.text = userData["UserName"]!
+            if (userData["UserBio"] != "NULL") {
+                self.ProfileBio.text = userData["UserBio"]!
+            }
+            if (userData["UserIconURL"] != "NULL") {
+                let url = URL(string: userData["UserIconURL"]!)
+                let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                    guard let data = data, error == nil else {
+                        print("Error trying to download user icon")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data)
+                        self.PersonIcon.image = image
+                        print("Should be Updated?")
+                    }
+                })
+                task.resume()
+            }
+            if (userData["UserBannerURL"] != "NULL") {
+                let url = URL(string: userData["UserBannerURL"]!)
+                let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                    guard let data = data, error == nil else {
+                        print("Error trying to download user Banner")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data)
+                        self.Banner.image = image
+                        print("Should be Updated?")
+                    }
+                })
+                task.resume()
+            }
         }
         makeRounded(ProfileImage: PersonIcon)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
+            self.ProfileName.text = userData["UserName"]!
+            if (userData["UserBio"] != "NULL") {
+                self.ProfileBio.text = userData["UserBio"]!
+            }
+            if (userData["UserIconURL"] != "NULL") {
+                let url = URL(string: userData["UserIconURL"]!)
+                let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                    guard let data = data, error == nil else {
+                        print("Error trying to download user icon")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data)
+                        self.PersonIcon.image = image
+                        print("Should be Updated?")
+                    }
+                })
+                task.resume()
+            }
+            if (userData["UserBannerURL"] != "NULL") {
+                let url = URL(string: userData["UserBannerURL"]!)
+                let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                    guard let data = data, error == nil else {
+                        print("Error trying to download user Banner")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data)
+                        self.Banner.image = image
+                        print("Should be Updated?")
+                    }
+                })
+                task.resume()
+            }
+        }
+        makeRounded(ProfileImage: PersonIcon)
     }
     
 

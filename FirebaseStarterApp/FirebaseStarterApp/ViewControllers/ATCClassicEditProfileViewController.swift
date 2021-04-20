@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import FirebaseAuth
 
 class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -14,6 +15,7 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
     @IBOutlet weak var PersonIcon: UIImageView!
     @IBOutlet weak var PersonName: UITextField!
     @IBOutlet weak var PersonBio: UITextView!
+    @IBOutlet weak var PersonKeyword: UITextField!
     
     /* These are used to catch the data passed from the
      * Profile Page
@@ -30,12 +32,44 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
      
     @IBAction func onSubmit(_ sender: Any) {
         // Todo: Submit the data to server and update user info
-        self.dismiss(animated: true, completion: nil)
+        let DataManager = FirebaseDataAccessManager()
+        var url_id = "Nothing"
+        
+        // To make sure we get uid before we upload, all the code regarding upload must be put inside this closure
+        DataManager.getUserInfo(uid: user!.uid) { (userData) in
+            url_id = userData["URL_ID"]!
+            DataManager.updateUserIcon(URL_ID: url_id, image: self.PersonIcon.image!) { (success, urlString) in
+                if (success) {
+                    print("PersonIcon Upload Success!")
+                    print("URL stored into the data is: \(urlString)")
+                    DataManager.updateUserIconURL(uid: user!.uid, url: urlString)
+                }
+            }
+            DataManager.updateUserBanner(URL_ID: url_id, image: self.Banner.image!) { (success, urlString) in
+                if (success) {
+                    print("PersonBanner Upload Success!")
+                    print("URL stored into the data is: \(urlString)")
+                }
+                DataManager.updateUserBannerURL(uid: user!.uid, url: urlString)
+            }
+        }
+        
+        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text as! String, UserBio: self.PersonBio.text as! String, UserKeyword: self.PersonKeyword.text as! String) { (success) in
+            if (success) {
+                self.navigationController?.popViewController(animated: true)
+            }
+            else {
+                print("We're not going anywhere cuz update failed!")
+            }
+        }
+        
+
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onCancel(_ sender: Any) {
         // Todo: Discard User's input and return to profile
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func makeRounded(ProfileImage: UIImageView) {
@@ -64,7 +98,7 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
     }
     
     @IBAction func onChangeIcon(_ sender: Any) {
-        print("Change Banner now!")
+        print("Change Icon now!")
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true

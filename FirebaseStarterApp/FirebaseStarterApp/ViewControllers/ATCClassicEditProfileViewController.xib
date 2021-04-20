@@ -11,19 +11,120 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATCClassicEditProfileViewController" customModule="FirebaseStarterApp" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="qy8-zc-m3G"/>
+                <outlet property="Banner" destination="2bD-Wr-iGf" id="XHJ-CX-i4a"/>
+                <outlet property="PersonBio" destination="xtn-Q1-Mgj" id="fk8-YA-nr7"/>
+                <outlet property="PersonIcon" destination="pD6-DC-cqq" id="F4C-Me-tsG"/>
+                <outlet property="PersonKeyword" destination="6ZT-GS-Qg0" id="ez2-SP-QkC"/>
+                <outlet property="PersonName" destination="4Lx-jg-9Tp" id="vj3-3s-eTc"/>
+                <outlet property="view" destination="EUu-d4-aRF" id="lEZ-4x-gCK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="EUu-d4-aRF">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="U6V-CV-2AS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Edit Profile" id="QjS-0y-dMk">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" id="Laa-sz-Fbp">
+                                <connections>
+                                    <action selector="onCancel:" destination="-1" id="yGQ-XO-cmI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Confirm" id="Fvm-aR-rND">
+                                <connections>
+                                    <action selector="onSubmit:" destination="-1" id="EZa-ip-p7z"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-Wr-iGf" userLabel="Profile Banner">
+                    <rect key="frame" x="0.0" y="88" width="414" height="224"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="LmD-aL-2mh" appends="YES" id="ZWs-BW-K8B"/>
+                    </connections>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lx-jg-9Tp">
+                    <rect key="frame" x="69" y="376" width="275" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-DC-cqq" customClass="UIImageViewOverride" customModule="FirebaseStarterApp" customModuleProvider="target">
+                    <rect key="frame" x="132" y="219.5" width="150" height="147"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="FGD-LG-Oc5"/>
+                        <constraint firstAttribute="width" secondItem="pD6-DC-cqq" secondAttribute="height" multiplier="1:1" id="bB3-hc-4Bz"/>
+                        <constraint firstAttribute="width" constant="150" id="g7V-k9-QUD"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="SJu-on-MGR" appends="YES" id="siP-u2-2iU"/>
+                    </connections>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-Q1-Mgj">
+                    <rect key="frame" x="20" y="418" width="374" height="340"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword: " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-GS-Qg0" userLabel="Keyword Field">
+                    <rect key="frame" x="69" y="766" width="275" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="CfO-bp-HOb"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="110"/>
+            <constraints>
+                <constraint firstItem="U6V-CV-2AS" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" id="1eO-Fp-QjK"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="4Lx-jg-9Tp" secondAttribute="trailing" constant="70" id="3Ef-zb-4LQ"/>
+                <constraint firstItem="2bD-Wr-iGf" firstAttribute="width" secondItem="2bD-Wr-iGf" secondAttribute="height" multiplier="207:112" id="6eo-Mg-ZqH"/>
+                <constraint firstItem="U6V-CV-2AS" firstAttribute="trailing" secondItem="CfO-bp-HOb" secondAttribute="trailing" id="D58-ep-YV4"/>
+                <constraint firstItem="2bD-Wr-iGf" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" id="EDm-lB-t5Q"/>
+                <constraint firstItem="pD6-DC-cqq" firstAttribute="top" secondItem="U6V-CV-2AS" secondAttribute="bottom" constant="130" id="KgK-LQ-n1L"/>
+                <constraint firstItem="U6V-CV-2AS" firstAttribute="top" secondItem="CfO-bp-HOb" secondAttribute="top" id="NF8-Sp-yiQ"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="bottom" secondItem="6ZT-GS-Qg0" secondAttribute="bottom" constant="62" id="PkC-f0-7PJ"/>
+                <constraint firstItem="xtn-Q1-Mgj" firstAttribute="top" secondItem="4Lx-jg-9Tp" secondAttribute="bottom" constant="8" id="R1A-5Z-yZD"/>
+                <constraint firstItem="4Lx-jg-9Tp" firstAttribute="top" secondItem="pD6-DC-cqq" secondAttribute="bottom" constant="8" id="Vbk-ul-pwC"/>
+                <constraint firstItem="6ZT-GS-Qg0" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="69" id="Y16-5V-5Qu"/>
+                <constraint firstItem="pD6-DC-cqq" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="132" id="aUE-PQ-oAd"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="6ZT-GS-Qg0" secondAttribute="trailing" constant="70" id="bJP-Kn-NGB"/>
+                <constraint firstItem="xtn-Q1-Mgj" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="20" id="fmD-V9-RW6"/>
+                <constraint firstItem="6ZT-GS-Qg0" firstAttribute="top" secondItem="xtn-Q1-Mgj" secondAttribute="bottom" constant="8" symbolic="YES" id="glx-Ki-nb5"/>
+                <constraint firstItem="2bD-Wr-iGf" firstAttribute="trailing" secondItem="CfO-bp-HOb" secondAttribute="trailing" id="h7N-4F-V8b"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="pD6-DC-cqq" secondAttribute="trailing" constant="132" id="jh3-60-XwP"/>
+                <constraint firstItem="2bD-Wr-iGf" firstAttribute="top" secondItem="U6V-CV-2AS" secondAttribute="bottom" id="rfK-7C-UH5"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="xtn-Q1-Mgj" secondAttribute="trailing" constant="20" id="sm0-Z9-bXl"/>
+                <constraint firstItem="4Lx-jg-9Tp" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="69" id="x1B-jl-xqD"/>
+            </constraints>
+            <point key="canvasLocation" x="-268.1159420289855" y="-652.23214285714278"/>
         </view>
+        <tapGestureRecognizer id="LmD-aL-2mh" userLabel="onChangeBanner">
+            <connections>
+                <action selector="onChangeBanner:" destination="-1" id="6XF-os-Lac"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="SJu-on-MGR" userLabel="onChangeIcon">
+            <connections>
+                <action selector="onChangeIcon:" destination="-1" id="JJk-6u-ZJB"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
