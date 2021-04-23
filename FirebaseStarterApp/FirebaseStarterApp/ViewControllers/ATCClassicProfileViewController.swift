@@ -54,8 +54,6 @@ class ATCClassicProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("The center of phone is: \(view.center.x) + \(view.center.y)")
-        print("The center of pic is: \(PersonIcon.center.x) + \(Banner.center.y)")
         UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
             self.ProfileName.text = userData["UserName"]!
             if (userData["UserBio"] != "NULL") {

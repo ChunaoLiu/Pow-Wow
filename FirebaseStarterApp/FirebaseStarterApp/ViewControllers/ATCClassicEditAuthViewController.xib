@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATCClassicEditAuthViewController" customModule="FirebaseStarterApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="nSE-rV-D5v" id="GPa-r8-ot9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nSE-rV-D5v">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Your Login Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfC-dU-8O8">
+                    <rect key="frame" x="20" y="96" width="374" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-fe-v3u">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="CiA-8g-KNx">
+                            <barButtonItem key="leftBarButtonItem" title="Return" id="jhK-kg-ppi"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQh-ei-gi1">
+                    <rect key="frame" x="20" y="167" width="374" height="55"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="EYB-Fg-4d4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <state key="normal" title="Change Email">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="O67-p7-SiD" appends="YES" id="3Wn-xn-Wq4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-CQ-qr9">
+                    <rect key="frame" x="20" y="230" width="374" height="55"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="gGt-Tr-AlP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <state key="normal" title="Change Password">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="8Gc-yv-L7u" appends="YES" id="ekQ-97-hh3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm5-aT-cRs">
+                    <rect key="frame" x="20" y="293" width="374" height="55"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Q1A-f7-qDU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <state key="normal" title="Change Phone Number">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Beu-qa-Das" appends="YES" id="q3Y-YK-8I9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3rn-qc-RJe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tQh-ei-gi1" firstAttribute="leading" secondItem="3rn-qc-RJe" secondAttribute="leading" constant="20" id="3D8-IB-zEU"/>
+                <constraint firstItem="3rn-qc-RJe" firstAttribute="trailing" secondItem="B5d-CQ-qr9" secondAttribute="trailing" constant="20" id="5oM-Kb-yq0"/>
+                <constraint firstItem="T2b-fe-v3u" firstAttribute="leading" secondItem="3rn-qc-RJe" secondAttribute="leading" id="9wJ-gn-JqO"/>
+                <constraint firstItem="T2b-fe-v3u" firstAttribute="trailing" secondItem="3rn-qc-RJe" secondAttribute="trailing" id="AMg-KW-RQk"/>
+                <constraint firstItem="3rn-qc-RJe" firstAttribute="trailing" secondItem="LfC-dU-8O8" secondAttribute="trailing" constant="20" id="DcN-u3-Aga"/>
+                <constraint firstItem="B5d-CQ-qr9" firstAttribute="leading" secondItem="3rn-qc-RJe" secondAttribute="leading" constant="20" id="MtQ-ZD-8OL"/>
+                <constraint firstItem="B5d-CQ-qr9" firstAttribute="top" secondItem="tQh-ei-gi1" secondAttribute="bottom" constant="8" symbolic="YES" id="Ww7-nS-rXz"/>
+                <constraint firstItem="hm5-aT-cRs" firstAttribute="top" secondItem="B5d-CQ-qr9" secondAttribute="bottom" constant="8" symbolic="YES" id="Y50-Cy-f0k"/>
+                <constraint firstItem="3rn-qc-RJe" firstAttribute="trailing" secondItem="tQh-ei-gi1" secondAttribute="trailing" constant="20" id="cAw-xe-fSK"/>
+                <constraint firstItem="3rn-qc-RJe" firstAttribute="trailing" secondItem="hm5-aT-cRs" secondAttribute="trailing" constant="20" id="fVw-IV-7ma"/>
+                <constraint firstItem="T2b-fe-v3u" firstAttribute="top" secondItem="3rn-qc-RJe" secondAttribute="top" id="hwz-w9-LU2"/>
+                <constraint firstItem="LfC-dU-8O8" firstAttribute="leading" secondItem="3rn-qc-RJe" secondAttribute="leading" constant="20" id="in7-9v-YRU"/>
+                <constraint firstItem="LfC-dU-8O8" firstAttribute="top" secondItem="T2b-fe-v3u" secondAttribute="bottom" constant="8" id="mIM-ct-OON"/>
+                <constraint firstItem="tQh-ei-gi1" firstAttribute="top" secondItem="LfC-dU-8O8" secondAttribute="bottom" constant="23" id="no8-02-nHK"/>
+                <constraint firstItem="hm5-aT-cRs" firstAttribute="leading" secondItem="3rn-qc-RJe" secondAttribute="leading" constant="20" id="o3E-4E-hjT"/>
+            </constraints>
+            <point key="canvasLocation" x="741" y="-102"/>
+        </view>
+        <tapGestureRecognizer id="WFd-qt-F6s" userLabel="onChangeUserName">
+            <connections>
+                <action selector="onChangeUserName:" destination="-1" id="ndl-hf-4G2"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="8Gc-yv-L7u" userLabel="onChangePassword">
+            <connections>
+                <action selector="onChangePW:" destination="-1" id="UpY-IQ-Gju"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="O67-p7-SiD" userLabel="onChangeEmail">
+            <connections>
+                <action selector="onChangeEmail:" destination="-1" id="NY1-jQ-68g"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="Beu-qa-Das" userLabel="onChangePhoneNum">
+            <connections>
+                <action selector="onChangePhoneNum:" destination="-1" id="ZTy-ca-ZCs"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

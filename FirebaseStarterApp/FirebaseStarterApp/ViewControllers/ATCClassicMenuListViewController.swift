@@ -43,7 +43,8 @@ class ATCClassicMenuListViewController: UITableViewController {
         }
         else if (items[indexPath.row] == "Setting") {
             refView?.dismiss(animated: true, completion: nil)
-            refView?.performSegue(withIdentifier: "toSettingSegue", sender: self)
+            let SettingVC = ATCClassicSettingsViewController(nibName: "ATCClassicSettingsViewController", bundle: nil)
+            refView?.navigationController?.pushViewController(SettingVC, animated: true)
         }
         else if (items[indexPath.row] == "Log Out") {
             refView?.dismiss(animated: true, completion: nil)

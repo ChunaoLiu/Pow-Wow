@@ -24,8 +24,14 @@
 		1773BFF2221FAE14005C82D8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773BFF1221FAE14005C82D8 /* UIImage.swift */; };
 		1773BFF4221FB4D8005C82D8 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773BFF3221FB4D8005C82D8 /* UITextField.swift */; };
 		3E398CD0763F03111BF118C5 /* Pods_FirebaseStarterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5651F14D5CB6E681D3D70507 /* Pods_FirebaseStarterApp.framework */; };
+		4E52CF752632E421008C1A9A /* ChangePhoneNumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E52CF742632E421008C1A9A /* ChangePhoneNumView.xib */; };
+		4E52CF782632E42C008C1A9A /* ChangePhoneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52CF772632E42C008C1A9A /* ChangePhoneNumViewController.swift */; };
 		4E81B257262A386C0002E816 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E81B256262A386C0002E816 /* HomePage.storyboard */; };
 		4E81B25D262A46080002E816 /* FirebaseDataAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E81B25C262A46080002E816 /* FirebaseDataAccessManager.swift */; };
+		4EB4ACBE2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */; };
+		4EB4ACC12632BA96000BE195 /* ATCClassicEditAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */; };
+		4EB4ACCA2632C062000BE195 /* ChangeEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */; };
+		4EB4ACD02632C18B000BE195 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4ACCF2632C18B000BE195 /* ChangeEmailViewController.swift */; };
 		4ECA1BEF262D2A2900140DF9 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA1BEE262D2A2900140DF9 /* HomePage.storyboard */; };
 		4ECA1BF2262D2B7D00140DF9 /* ConsultantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA1BF1262D2B7D00140DF9 /* ConsultantCollectionViewController.swift */; };
 		4ECA1BF6262D5ACA00140DF9 /* UIImageViewOverride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */; };
@@ -63,8 +69,14 @@
 		1773BFF1221FAE14005C82D8 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		1773BFF3221FB4D8005C82D8 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		30FC2861236C7A5300DF476E /* FirebaseStarterApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseStarterApp.entitlements; sourceTree = "<group>"; };
+		4E52CF742632E421008C1A9A /* ChangePhoneNumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePhoneNumView.xib; sourceTree = "<group>"; };
+		4E52CF772632E42C008C1A9A /* ChangePhoneNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneNumViewController.swift; sourceTree = "<group>"; };
 		4E81B256262A386C0002E816 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomePage.storyboard; path = "../Pow Wow/Pow Wow/HomePage.storyboard"; sourceTree = "<group>"; };
 		4E81B25C262A46080002E816 /* FirebaseDataAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataAccessManager.swift; sourceTree = "<group>"; };
+		4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicEditAuthViewController.xib; sourceTree = "<group>"; };
+		4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicEditAuthViewController.swift; sourceTree = "<group>"; };
+		4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeEmailView.xib; sourceTree = "<group>"; };
+		4EB4ACCF2632C18B000BE195 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		4ECA1BEE262D2A2900140DF9 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomePage.storyboard; path = "../../Pow Wow/Pow Wow/HomePage.storyboard"; sourceTree = "<group>"; };
 		4ECA1BF1262D2B7D00140DF9 /* ConsultantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCollectionViewController.swift; sourceTree = "<group>"; };
 		4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewOverride.swift; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 		1773BFDB221FA7D0005C82D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4ACC42632BB80000BE195 /* EditAuthSubControllers */,
 				1773BFDF221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.swift */,
 				1773BFDE221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.xib */,
 				1773BFDD221FA7D0005C82D8 /* ATCClassicSignUpViewController.swift */,
@@ -159,6 +172,8 @@
 				6A7BF275262CE581005B5EC6 /* ATCClassicSearchViewController.xib */,
 				6A7BF278262CE596005B5EC6 /* ATCClassicSettingsViewController.swift */,
 				6A7BF27B262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib */,
+				4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */,
+				4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */,
 				6A7BF286262CF01C005B5EC6 /* ATCClassicEditProfileViewController.swift */,
 				6A7BF284262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib */,
 				6A7BF2A9262CF1CE005B5EC6 /* ATCClassicMenuListViewController.swift */,
@@ -179,6 +194,17 @@
 				1773BFF3221FB4D8005C82D8 /* UITextField.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		4EB4ACC42632BB80000BE195 /* EditAuthSubControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */,
+				4EB4ACCF2632C18B000BE195 /* ChangeEmailViewController.swift */,
+				4E52CF742632E421008C1A9A /* ChangePhoneNumView.xib */,
+				4E52CF772632E42C008C1A9A /* ChangePhoneNumViewController.swift */,
+			);
+			path = EditAuthSubControllers;
 			sourceTree = "<group>";
 		};
 		749E3BE59A7001F21DFB8A77 /* Frameworks */ = {
@@ -260,6 +286,7 @@
 			files = (
 				6A7BF281262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib in Resources */,
 				1773BFD4221FA51F005C82D8 /* LaunchScreen.storyboard in Resources */,
+				4E52CF752632E421008C1A9A /* ChangePhoneNumView.xib in Resources */,
 				1773BFE4221FA7D1005C82D8 /* ATCClassicLandingScreenViewController.xib in Resources */,
 				4ECA1BEF262D2A2900140DF9 /* HomePage.storyboard in Resources */,
 				6A7BF27C262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib in Resources */,
@@ -268,7 +295,9 @@
 				1773BFE2221FA7D1005C82D8 /* ATCClassicSignUpViewController.xib in Resources */,
 				4E81B257262A386C0002E816 /* HomePage.storyboard in Resources */,
 				1773BFE7221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.xib in Resources */,
+				4EB4ACBE2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib in Resources */,
 				6A7BF26A262CE529005B5EC6 /* ATCClassicMainViewController.xib in Resources */,
+				4EB4ACCA2632C062000BE195 /* ChangeEmailView.xib in Resources */,
 				6A7BF276262CE581005B5EC6 /* ATCClassicSearchViewController.xib in Resources */,
 				6A97DF89261E82A10031D290 /* GoogleService-Info.plist in Resources */,
 			);
@@ -327,15 +356,18 @@
 				1773BFEE221FA8CC005C82D8 /* UIColor.swift in Sources */,
 				1773BFEC221FA894005C82D8 /* UIViewController+ATCAdditions.swift in Sources */,
 				6A7BF273262CE56D005B5EC6 /* ATCClassicSearchViewController.swift in Sources */,
+				4E52CF782632E42C008C1A9A /* ChangePhoneNumViewController.swift in Sources */,
 				1773BFF0221FABDD005C82D8 /* UIButton.swift in Sources */,
 				1773BFE6221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.swift in Sources */,
 				1773BFCA221FA51C005C82D8 /* AppDelegate.swift in Sources */,
+				4EB4ACC12632BA96000BE195 /* ATCClassicEditAuthViewController.swift in Sources */,
 				177371E92221D7C6003E7EC4 /* FirebaseAuthManager.swift in Sources */,
 				4ECA1BF6262D5ACA00140DF9 /* UIImageViewOverride.swift in Sources */,
 				1773BFF2221FAE14005C82D8 /* UIImage.swift in Sources */,
 				6A7BF279262CE596005B5EC6 /* ATCClassicSettingsViewController.swift in Sources */,
 				6A7BF26D262CE540005B5EC6 /* ATCClassicProfileViewController.swift in Sources */,
 				6A7BF267262CE4DE005B5EC6 /* ATCClassicMainViewController.swift in Sources */,
+				4EB4ACD02632C18B000BE195 /* ChangeEmailViewController.swift in Sources */,
 				4ECA1BF2262D2B7D00140DF9 /* ConsultantCollectionViewController.swift in Sources */,
 				1773BFE3221FA7D1005C82D8 /* ATCClassicSignUpViewController.swift in Sources */,
 				1773BFEA221FA854005C82D8 /* ATCTextField.swift in Sources */,

@@ -20,8 +20,10 @@ class ATCClassicSettingsViewController: UIViewController {
     }
     
     @IBAction func onAccount(_ sender: Any) {
-        print("Yoo")
+        let editAuthVC = ATCClassicEditAuthViewController(nibName: "ATCClassicEditAuthViewController", bundle: nil)
+        self.navigationController?.pushViewController(editAuthVC, animated: true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Account.isUserInteractionEnabled = true
