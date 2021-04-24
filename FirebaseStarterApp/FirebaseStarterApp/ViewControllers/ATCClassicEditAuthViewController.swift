@@ -11,12 +11,24 @@ import FirebaseAuth
 
 class ATCClassicEditAuthViewController: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func callAlart(title: String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func onReturn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func onChangePW(_ sender: Any) {
         Auth.auth().sendPasswordReset(withEmail: (Auth.auth().currentUser?.email!)!) { (_: Error?) in
             self.callAlart(title: "Success", message: "An password reset link has been send to your email. Please check your email and follow the procedure to reset your password.")

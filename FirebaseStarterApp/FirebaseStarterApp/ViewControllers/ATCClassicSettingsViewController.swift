@@ -16,12 +16,21 @@ class ATCClassicSettingsViewController: UIViewController {
     
     
     @IBAction func onReturn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onAccount(_ sender: Any) {
         let editAuthVC = ATCClassicEditAuthViewController(nibName: "ATCClassicEditAuthViewController", bundle: nil)
         self.navigationController?.pushViewController(editAuthVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLoad() {

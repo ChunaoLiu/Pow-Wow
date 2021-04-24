@@ -29,6 +29,15 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
     var BannerPicked: Bool = false
     
     var borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
      
     @IBAction func onSubmit(_ sender: Any) {
         // Todo: Submit the data to server and update user info

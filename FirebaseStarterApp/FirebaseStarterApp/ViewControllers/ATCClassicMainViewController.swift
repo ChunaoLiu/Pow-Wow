@@ -8,11 +8,13 @@
 import UIKit
 import AlamofireImage
 import SideMenu
+import FirebaseAuth
 
 class ATCClassicMainViewController: UIViewController {
     
     @IBOutlet weak var TypeFilter: UITextField!
     var menu : SideMenuNavigationController?
+    let SignInManager = FirebaseAuthManager()
     var selectedType: String?
     var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
     
@@ -20,15 +22,27 @@ class ATCClassicMainViewController: UIViewController {
         present(menu!, animated: true)
     }
     
+    func callAlart(title: String, message:String, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (Action) in
+            completion()
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        if (Auth.auth().currentUser == nil) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
+
     @IBOutlet weak var ConsultantCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()

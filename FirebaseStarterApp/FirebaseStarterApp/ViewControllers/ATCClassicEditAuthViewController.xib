@@ -29,7 +29,11 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <items>
                         <navigationItem title="Title" id="CiA-8g-KNx">
-                            <barButtonItem key="leftBarButtonItem" title="Return" id="jhK-kg-ppi"/>
+                            <barButtonItem key="leftBarButtonItem" title="Return" id="jhK-kg-ppi">
+                                <connections>
+                                    <action selector="onReturn:" destination="-1" id="fvw-I6-tZ6"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

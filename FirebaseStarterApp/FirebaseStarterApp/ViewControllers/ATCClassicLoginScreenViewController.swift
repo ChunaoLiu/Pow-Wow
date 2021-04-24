@@ -106,8 +106,11 @@ extension ATCClassicLoginScreenViewController {
       let successMessage = "User was sucessfully logged in."
       let errorMessage = "Something went wrong. Please try again"
       let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: {_ in
+      alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: {_ in
+        if (isSuccess) {
             self.didTapGoToButton()
+        }
       }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

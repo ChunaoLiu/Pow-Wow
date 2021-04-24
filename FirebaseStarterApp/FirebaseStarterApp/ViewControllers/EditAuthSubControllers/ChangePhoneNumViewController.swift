@@ -11,6 +11,15 @@ import FirebaseAuth
 
 class ChangePhoneNumViewController: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func callAlart(title: String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -42,6 +51,7 @@ class ChangePhoneNumViewController: UIViewController {
                         self.callAlart(title: "Invalid Code", message: "Please verify your input")
                     } else {
                         self.callAlart(title: "Change Successful", message: "You have successfully changed your phone number!")
+                        self.navigationController?.popViewController(animated: true)
                     }
                     
                 })

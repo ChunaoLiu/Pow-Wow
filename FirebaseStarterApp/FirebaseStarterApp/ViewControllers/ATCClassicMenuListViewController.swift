@@ -9,6 +9,8 @@ import UIKit
 
 weak var refView = ATCClassicMainViewController()
 
+func no_closure() -> Void {return}
+
 class ATCClassicMenuListViewController: UITableViewController {
 
     var items = ["Profile", "Setting", "Log Out", "About Us"]
@@ -48,7 +50,19 @@ class ATCClassicMenuListViewController: UITableViewController {
         }
         else if (items[indexPath.row] == "Log Out") {
             refView?.dismiss(animated: true, completion: nil)
-            refView?.performSegue(withIdentifier: "BackToLoginSegue", sender: self)
+            refView?.SignInManager.signOut(completionBlock: { (success) in
+                if (success) {
+                    refView?.callAlart(title: "Logged Out", message: "You have successfully logged out") {
+                        refView?.navigationController?.popViewController(animated: true)
+                    }
+                    
+                    
+                } else {
+                    refView?.callAlart(title: "Error", message: "Something is wrong while trying to log out", completion: no_closure)
+                }
+                
+            })
+            
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
