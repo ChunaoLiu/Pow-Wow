@@ -91,7 +91,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
     loginManager.signIn(email: email, pass: password) {[weak self] (success) in
       self?.showPopup(isSuccess: success)
     }
-    self.didTapGoToButton()
+    
   }
     
     @objc private func didTapGoToButton() {
@@ -106,7 +106,8 @@ extension ATCClassicLoginScreenViewController {
       let successMessage = "User was sucessfully logged in."
       let errorMessage = "Something went wrong. Please try again"
       let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
-      alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-      self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: {_ in
+            self.didTapGoToButton()
+      }))
     }
 }

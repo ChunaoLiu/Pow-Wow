@@ -33,7 +33,7 @@
                                 <navigationItem title="Personal Profile" id="esA-5f-DOd">
                                     <barButtonItem key="leftBarButtonItem" title="Return" id="F2d-OO-RCe">
                                         <connections>
-                                            <action selector="ToHome:" destination="-1" id="bkQ-sj-KjC"/>
+                                            <action selector="onReturn:" destination="-1" id="9t4-3u-Pha"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" title="Edit" id="dvi-a4-KDx">

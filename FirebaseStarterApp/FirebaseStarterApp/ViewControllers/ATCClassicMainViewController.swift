@@ -20,6 +20,15 @@ class ATCClassicMainViewController: UIViewController {
         present(menu!, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBOutlet weak var ConsultantCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()

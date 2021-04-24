@@ -24,6 +24,7 @@ class FirebaseDataAccessManager {
                 "UserEmail" : UserEmail,
                 "UserPhoneNumber" : String(UserPhoneNum),
                 "UserType" : "NULL",
+                "UserIconURL" : "NULL",
                 "UserBannerURL" : "NULL",
                 "UserPictureURL" : "NULL",
                 "ProIndustry" : "NULL",

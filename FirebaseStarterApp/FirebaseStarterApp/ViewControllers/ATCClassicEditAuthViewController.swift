@@ -29,7 +29,8 @@ class ATCClassicEditAuthViewController: UIViewController {
     }
     
     @IBAction func onChangePhoneNum(_ sender: Any) {
-        
+        let ChangePhoneNumVC = ChangePhoneNumViewController(nibName: "ChangePhoneNumView", bundle: nil)
+        self.navigationController?.pushViewController(ChangePhoneNumVC, animated: true)
     }
     
     

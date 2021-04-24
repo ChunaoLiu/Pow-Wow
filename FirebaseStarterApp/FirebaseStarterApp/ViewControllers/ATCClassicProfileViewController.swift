@@ -23,24 +23,22 @@ class ATCClassicProfileViewController: UIViewController {
     @IBAction func ToHome(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func onReturn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func ToEdit(_ sender: Any) {
         let ProfileVC = ATCClassicEditProfileViewController(nibName: "ATCClassicEditProfileViewController", bundle: nil)
         navigationController?.pushViewController(ProfileVC, animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ProfileEditSegue") {
-            if let editPage = segue.destination as? ATCClassicEditProfileViewController {
-                editPage.previous_Name = self.ProfileName.text!
-                editPage.previous_Bios = self.ProfileBio.text!
-                if (self.Banner.image != nil) {
-                    editPage.previous_banner = self.Banner.image!
-                }
-                if (self.PersonIcon.image != nil) {
-                    editPage.previous_icon = self.PersonIcon.image!
-                }
-            }
-        }
     }
     
     // This can make the profile icon a circle

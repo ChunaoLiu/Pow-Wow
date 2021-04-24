@@ -23,7 +23,29 @@ class ChangePhoneNumViewController: UIViewController {
         if (self.newPhoneNum.text == nil) {
             self.callAlart(title: "Missing Phone Number", message: "Please Input a Valid Phone Number")
         } else {
+            var verificationId: String?
             
+            PhoneAuthProvider.provider().verifyPhoneNumber(self.newPhoneNum.text!, uiDelegate: nil) { (verificationID, Error) in
+                if let error = Error {
+                    self.callAlart(title: "Error", message: "Unable to retrive verification Info")
+                } else {
+                    verificationId = verificationID
+                }
+            }
+            
+            self.showInputDialog(title: "Verification", subtitle: "We've send a verification code to your phone. Please type in the code in your SMS message to continue", actionTitle: "Submit", cancelTitle: "Cancel", inputPlaceholder: "Your Code", inputKeyboardType: .default) { (UIAlertAction) in
+                return
+            } actionHandler: { (Code) in
+                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationId!, verificationCode: Code!)
+                Auth.auth().currentUser?.updatePhoneNumber(credential, completion: { (error) in
+                    if let error = error {
+                        self.callAlart(title: "Invalid Code", message: "Please verify your input")
+                    } else {
+                        self.callAlart(title: "Change Successful", message: "You have successfully changed your phone number!")
+                    }
+                    
+                })
+            }
         }
     }
     
