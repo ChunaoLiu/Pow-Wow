@@ -19,6 +19,7 @@ class ATCClassicProfileViewController: UIViewController {
     @IBOutlet weak var ProfileName: UILabel!
     @IBOutlet weak var ProfileBio: UILabel!
     @IBOutlet weak var Banner: UIImageView!
+    @IBOutlet weak var ProfileKeyword: UILabel!
     
     @IBAction func ToHome(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -56,6 +57,9 @@ class ATCClassicProfileViewController: UIViewController {
             self.ProfileName.text = userData["UserName"]!
             if (userData["UserBio"] != "NULL") {
                 self.ProfileBio.text = userData["UserBio"]!
+            }
+            if (userData["UserKeywords"] != "") {
+                self.ProfileKeyword.text = "KeyWords: " + userData["UserKeywords"]!
             }
             if (userData["UserIconURL"] != "NULL") {
                 let url = URL(string: userData["UserIconURL"]!)
@@ -135,6 +139,8 @@ class ATCClassicProfileViewController: UIViewController {
         }
         makeRounded(ProfileImage: PersonIcon)
     }
+    
+    
     
 
     /*

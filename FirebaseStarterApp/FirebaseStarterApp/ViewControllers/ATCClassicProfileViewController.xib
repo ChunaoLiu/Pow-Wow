@@ -14,6 +14,7 @@
                 <outlet property="Banner" destination="3PA-mL-EOg" id="Zg8-dH-FLE"/>
                 <outlet property="PersonIcon" destination="Jq9-jG-Hps" id="dtj-g8-tMl"/>
                 <outlet property="ProfileBio" destination="36R-Ek-oMh" id="nFp-Cx-GgQ"/>
+                <outlet property="ProfileKeyword" destination="NYD-fX-Rey" id="ZVf-6Y-qgr"/>
                 <outlet property="ProfileName" destination="loY-IM-3N1" id="Zlm-8C-gic"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rdq-JC-q3i"/>
             </connections>

@@ -28,11 +28,11 @@ class FirebaseDataAccessManager {
                 "UserBannerURL" : "NULL",
                 "UserPictureURL" : "NULL",
                 "ProIndustry" : "NULL",
-                "ProKeywords" : "NULL",
+                "Userkeywords" : "NULL",
                 "UserBio" : "NULL",
                 "URL_ID" : String(Increment)
             ]
-            self.database.child(uid).setValue(User)
+            self.database.child("Users").child(uid).setValue(User)
             self.database.child("Increment").setValue(Increment + 1)
             Success = true
         })
@@ -42,7 +42,7 @@ class FirebaseDataAccessManager {
     func getUserInfo(uid: String, completion: @escaping (_ UserInfo: [String: String]) -> Void) {
         
         print("UID: " + uid)
-        database.child(uid).observeSingleEvent(of: .value, with:
+        database.child("Users").child(uid).observeSingleEvent(of: .value, with:
             { snapshot in
                 guard let UserInfo = snapshot.value as? [String: String] else {
                     print("Error in Receiving some Value")
@@ -107,7 +107,7 @@ class FirebaseDataAccessManager {
     
     func updateUserSetting(uid: String, UserName: String, UserBio: String, UserKeyword: String, completion: @escaping (_ success: Bool) -> Void) {
         
-        let UpdateRef = database.child(uid)
+        let UpdateRef = database.child("Users").child(uid)
         
         UpdateRef.updateChildValues([
             "UserName": UserName,
@@ -126,7 +126,7 @@ class FirebaseDataAccessManager {
     }
     
     func updateUserIconURL(uid: String, url: String) {
-        let UpdateRef = database.child(uid)
+        let UpdateRef = database.child("Users").child(uid)
         
         UpdateRef.updateChildValues([
             "UserIconURL": url
@@ -141,7 +141,7 @@ class FirebaseDataAccessManager {
     }
     
     func updateUserBannerURL(uid: String, url: String) {
-        let UpdateRef = database.child(uid)
+        let UpdateRef = database.child("Users").child(uid)
         
         UpdateRef.updateChildValues([
             "UserBannerURL": url

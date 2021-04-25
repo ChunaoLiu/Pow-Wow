@@ -16,14 +16,9 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
     @IBOutlet weak var PersonName: UITextField!
     @IBOutlet weak var PersonBio: UITextView!
     @IBOutlet weak var PersonKeyword: UITextField!
+    var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
     
-    /* These are used to catch the data passed from the
-     * Profile Page
-     */
-    var previous_Name = String()
-    var previous_Bios = String()
-    var previous_icon = UIImage()
-    var previous_banner = UIImage()
+    var selectedType: String?
     
     // Used to check whether the icon or the banner is using the camera
     var BannerPicked: Bool = false
@@ -44,7 +39,7 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         let DataManager = FirebaseDataAccessManager()
         var url_id = "Nothing"
         
-        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text as! String, UserKeyword: self.PersonKeyword.text as! String) { (success) in
+        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text!, UserKeyword: self.PersonKeyword.text!) { (success) in
             if (success) {
                 DataManager.getUserInfo(uid: user!.uid) { (userData) in
                     url_id = userData["URL_ID"]!
@@ -135,14 +130,31 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         dismiss(animated: true, completion: nil)
     }
     
+    func createAndSetupPickerView(){
+        let pickerview = UIPickerView()
+        pickerview.delegate = self
+        pickerview.dataSource = self
+        self.PersonKeyword.inputView=pickerview
+    }
+    
+    // This will change the text field to a picker
+    func dismissAndClosePickerView(){
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let button = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(self.dismissAction))
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        self.PersonKeyword.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissAction(){
+        self.view.endEditing(true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Pass the old profile as the base of edit
-        Banner.image = previous_banner
-        PersonIcon.image = previous_icon
-        PersonName.text = previous_Name
-        PersonBio.text = previous_Bios
         
         // Initialize camera picker parameter
         BannerPicked = false
@@ -163,6 +175,10 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         PersonBio.becomeFirstResponder()
 
         PersonBio.selectedTextRange = PersonBio.textRange(from: PersonBio.beginningOfDocument, to: PersonBio.beginningOfDocument)
+        
+        self.createAndSetupPickerView()
+        self.dismissAndClosePickerView()
+        
         
         // Do any additional setup after loading the view.
     }
@@ -221,5 +237,27 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension ATCClassicEditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.TypeList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.TypeList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedType = self.TypeList[row]
+        self.PersonKeyword.text = self.selectedType
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
 }
