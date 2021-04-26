@@ -12,7 +12,7 @@
         <!--Profile-->
         <scene sceneID="e7B-RN-vLl">
             <objects>
-                <viewController id="F0g-o5-EE6" customClass="Profile" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testTableview" id="F0g-o5-EE6" customClass="Profile" customModule="FirebaseStarterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I2i-z4-MTJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bTb-jY-kq7"/>
                     <connections>
-                        <outlet property="tableView" destination="fbS-dr-bQh" id="esV-HH-NVi"/>
+                        <outlet property="tableView" destination="fbS-dr-bQh" id="yq1-A9-c3e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLy-lw-CK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -145,7 +145,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hCR-LV-CND">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4oT-OE-PSJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TestStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="4oT-OE-PSJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pIW-VB-tCX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

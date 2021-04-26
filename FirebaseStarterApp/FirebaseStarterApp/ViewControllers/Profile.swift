@@ -30,24 +30,26 @@ class Profile: UIViewController {
     func createArray() -> [Pro] {
         var tempProfiles: [Pro] = [] // Array of Pro objects used to return profiles to tableView
         
-        let profileSampleOne: Pro( // Placeholder Pro object
-            image: sample-image,
+        // I'll place system image for now to test how it looks
+        
+        let profileSampleOne = Pro( // Placeholder Pro object
+            image: UIImage(systemName: "info.circle")!,
             name: "Sample Name",
             type: "Sample Type",
             description: "Sample Description",
             keywords: "Sample Keywords"
         )
         
-        let profileSampleTwo: Pro( // Placeholder Pro object
-            image: sample-image,
+        let profileSampleTwo = Pro( // Placeholder Pro object
+            image: UIImage(systemName: "info.circle")!,
             name: "Sample Name",
             type: "Sample Type",
             description: "Sample Description",
             keywords: "Sample Keywords"
         )
         
-        let profileSampleThree: Pro( // Placeholder Pro object
-            image: sample-image,
+        let profileSampleThree = Pro( // Placeholder Pro object
+            image: UIImage(systemName: "info.circle")!,
             name: "Sample Name",
             type: "Sample Type",
             description: "Sample Description",
@@ -75,6 +77,6 @@ extension Profile: UITableViewDataSource, UITableViewDelegate {
         
         cell.setProfile(profile: profile) // Current profile set to current cell
         
-        return profile // Returns current profile cell
+        return cell // Returns current profile cell
     }
 }
