@@ -5,6 +5,8 @@ Consulting On Demand for iOS
 
 ![](Static-Files/Week 3 gif.gif)
 
+![](Static-Files/Week 4 gif.gif)
+
 ![](Static-Files/Pow-Wow-Logo.jpg)
 
 ## Table of Contents
@@ -49,7 +51,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * - [x] ** User can enter their username in the "enter username" section (on the login page)**
 * - [x] ** User can enter their password in the "enter password" section (on the login page)**
 * - [x] ** User can click the "login" button (on the login page) to navigate to the feed**
-* - [ ] User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
+* - [x] User can see a error message *"Username or password incorrect. Please try again."*, if login credentials are incorrect.
 * - [x] ** User can see a register page**
 * - [x] User can see a *"enter first name" section* (on the register page)
 * - [x] User can see a *"enter last name" section* (on the register page)
@@ -104,7 +106,7 @@ A platform that provides a wide range of on-demand consulting services. Users ca
 * - [ ] User can see a *list of options* to filter the search on the feed (on the search/filter page)
 * **User can select businesses or consultants (with a checkbox) (on the search/filter page)**
 * **User can select different industries (with a checkbox) (on the search/filter page)**
-* - [ ] User can see a *"save" button* (on the search/filter page)
+* - [x] User can see a *"save" button* (on the search/filter page)
 * **User can search keywords in a search bar (typing text) (on the search/filter page)**
 * - [x] User can see a *"search" button* (on the search/filter page)
 * **User can click the "search" button (on the search/filter page) to query the search based off their edited preferences**
@@ -177,16 +179,16 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * - [x] User can see an *"edit name" section* (in the business section) (on the profile page)
    * - [x] User can see an *"edit profile picture" section* (in the business section) (on the profile page)
    * - [x] User can see an *"edit banner picture" section* (in the business section) (on the profile page)
-   * - [ ] User can see an *"edit industry" section* (in the business section) (on the profile page)
-   * - [ ] User can see an *"edit keywords" section* (in the business section) (on the profile page)
-   * - [ ] User can see an *"edit bio" section* (in the business section) (on the profile page)
+   * - [x] User can see an *"edit industry" section* (in the business section) (on the profile page)
+   * - [x] User can see an *"edit keywords" section* (in the business section) (on the profile page)
+   * - [x] User can see an *"edit bio" section* (in the business section) (on the profile page)
    * - [x] User can see a *"save and publish" button* (in the business section) (on the profile page)
 * **Search Page**
    * - [x] User can see a *list of options* to filter the search on the feed (on the search/filter page)
-   * - [ ] User can see an option for *businesses or consultants* (with a checkbox) (on the search/filter page)
-   * - [ ] User can see an option for different industries (with a checkbox) (on the search/filter page)
+   * - [x] User can see an option for *businesses or consultants* (with a checkbox) (on the search/filter page)
+   * - [x] User can see an option for different industries (with a checkbox) (on the search/filter page)
    * - [x] User can see a *"save" button* (on the search/filter page)
-   * - [ ] User can see a section to search keywords in a search bar (typing text) (on the search/filter page)
+   * - [x] User can see a section to search keywords in a search bar (typing text) (on the search/filter page)
    * - [x] User can see a *"search" button* (on the search/filter page)
 * **Settings Page**
    * - [x] User can see an "account" section (on the settings page)
@@ -200,8 +202,8 @@ A platform that provides a wide range of on-demand consulting services. Users ca
    * - [x] User can see a "confirm new password" section (in the security section)
    * - [x] User can see a "save" button (in the security section)
    * - [x] User can see an "about" section (on the settings page)
-   * - [ ] User can see an "help" section (on the settings page)
-   * - [ ] User can see an "contact us" section (on the settings page)
+   * - [x] User can see an "help" section (on the settings page)
+   * - [x] User can see an "contact us" section (on the settings page)
 * **View Other User Profile** *(Nice-To-Have) !!!*
 * **Message Other User** *(Nice-To-Have) !!!*
 * **Pay Other User** *(Nice-To-Have) !!!*
