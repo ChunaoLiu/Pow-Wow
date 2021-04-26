@@ -14,16 +14,23 @@ import UIKit
 
 
 class Profile: UIViewController {
-    var profiles: [Pro] = []
+    var profiles: [Pro] = [] // All the profiles rendered to tableView
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var tableView: UITableView! // Main table view on view controller
+    
+    override func viewDidLoad() { // Main Constructor
+        super.viewDidLoad() // Super Constructor
+        
+        profiles = createArray() // Calls createArray() function to update profiles array
+        
+        // tableView.delegate = self // Setting view controller delegate of tableView
+        // tableView.dataSource = self // Setting view controller dataSource of tableView
     }
     
     func createArray() -> [Pro] {
-        var tempProfiles: [Pro] = []
+        var tempProfiles: [Pro] = [] // Array of Pro objects used to return profiles to tableView
         
-        let profileSampleOne: Pro(
+        let profileSampleOne: Pro( // Placeholder Pro object
             image: sample-image,
             name: "Sample Name",
             type: "Sample Type",
@@ -31,7 +38,7 @@ class Profile: UIViewController {
             keywords: "Sample Keywords"
         )
         
-        let profileSampleTwo: Pro(
+        let profileSampleTwo: Pro( // Placeholder Pro object
             image: sample-image,
             name: "Sample Name",
             type: "Sample Type",
@@ -39,7 +46,7 @@ class Profile: UIViewController {
             keywords: "Sample Keywords"
         )
         
-        let profileSampleThree: Pro(
+        let profileSampleThree: Pro( // Placeholder Pro object
             image: sample-image,
             name: "Sample Name",
             type: "Sample Type",
@@ -47,10 +54,27 @@ class Profile: UIViewController {
             keywords: "Sample Keywords"
         )
         
-        tempProfiles.append(profileSampleOne)
-        tempProfiles.append(profileSampleTwo)
-        tempProfiles.append(profileSampleThree)
+        tempProfiles.append(profileSampleOne) // Placeholder append to tempProfiles array
+        tempProfiles.append(profileSampleTwo) // Placeholder append to tempProfiles array
+        tempProfiles.append(profileSampleThree) // Placeholder append to tempProfiles array
         
-        return tempProfiles
+        return tempProfiles // This array will contain the Pro objects displayed on tableView
+    }
+}
+
+extension Profile: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // Allocates space
+        return profiles.count // Returns number of profiles in tableView
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let profile = profiles[indexPath.row] // Current profile set to index indexPath.row of profiles array
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
+        
+        cell.setProfile(profile: profile) // Current profile set to current cell
+        
+        return profile // Returns current profile cell
     }
 }

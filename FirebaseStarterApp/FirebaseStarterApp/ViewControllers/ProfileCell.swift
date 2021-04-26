@@ -8,12 +8,21 @@
 
 import UIKit
 
+// Profile Cell Class used for Individual Profile Cell Objects
+
 class ProfileCell: UITableViewCell {
     // Initialize UI References
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var profileNameLabel: UILabel!
-    @IBOutlet weak var profileTypeLabel: UILabel!
-    @IBOutlet weak var profileDescriptionLabel: UILabel!
-    @IBOutlet weak var profileKeywordsLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView! // Profile Picture (as UIImage)
+    @IBOutlet weak var profileNameLabel: UILabel! // Consultant or Business Name (as String)
+    @IBOutlet weak var profileTypeLabel: UILabel! // Type (Consultant or Business) (as String)
+    @IBOutlet weak var profileDescriptionLabel: UILabel! // Description (as String)
+    @IBOutlet weak var profileKeywordsLabel: UILabel! // Keywords (as String)
     
+    func setProfile(profile: Pro) { // Maps Data from Pro Object to Profile Cell UI
+        profileImageView.image = profile.image
+        profileNameLabel.text = profile.name
+        profileTypeLabel.text = profile.type
+        profileDescriptionLabel.text = profile.description
+        profileKeywordsLabel.text = profile.keywords
+    }
 }

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="5MF-Vf-g8S" customClass="ProfileCell" customModule="FirebaseStarterApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="160" id="5MF-Vf-g8S" customClass="ProfileCell" customModule="FirebaseStarterApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5MF-Vf-g8S" id="fGb-6H-Sjq">
@@ -118,6 +118,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="F0g-o5-EE6" id="Wms-dA-ffb"/>
+                                    <outlet property="delegate" destination="F0g-o5-EE6" id="Ub6-qK-Mrh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hWS-u3-j6i"/>
@@ -130,6 +134,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bTb-jY-kq7"/>
+                    <connections>
+                        <outlet property="tableView" destination="fbS-dr-bQh" id="esV-HH-NVi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLy-lw-CK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
