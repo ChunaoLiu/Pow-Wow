@@ -3,9 +3,9 @@ Consulting On Demand for iOS
 
 ![](Static-Files/week2.gif)
 
-![](Static-Files/Week 3 gif.gif)
+![](Static-Files/Week_3.gif)
 
-![](Static-Files/Week 4 gif.gif)
+![](Static-Files/Week_4.gif)
 
 ![](Static-Files/Pow-Wow-Logo.jpg)
 
