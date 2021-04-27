@@ -211,6 +211,34 @@ class FirebaseDataAccessManager {
             }
         }
     }
+    
+    func getFilteredUser(type: String, keyword: String, completion: @escaping (_ UserList: [Pro]) -> Void) {
+        var FilteredList: [Pro] = []
+        print("Type is" + type)
+        print("keyword is" + keyword)
+        self.getAllUser { (proList) in
+            for profiles: Pro in proList {
+                if (type != "All") {
+                    if (keyword != "Select Type..." && keyword != "All") {
+                        if (profiles.type == type && profiles.keywords == keyword) {
+                            FilteredList.append(profiles)
+                        }
+                    } else {
+                        if (profiles.type == type) {
+                            FilteredList.append(profiles)
+                        }
+                    }
+                } else if (keyword != "Select Type..." && keyword != "All") {
+                    if (profiles.keywords == keyword) {
+                        FilteredList.append(profiles)
+                    }
+                } else {
+                    FilteredList = proList
+                }
+            }
+            completion(FilteredList)
+        }
+    }
 }
 
 

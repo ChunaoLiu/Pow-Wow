@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATCClassicMainViewController" customModule="FirebaseStarterApp" customModuleProvider="target">
             <connections>
-                <outlet property="TypeFilter" destination="RoL-au-R3B" id="WS5-SL-oWD"/>
+                <outlet property="ConfirmFilter" destination="Bp3-KC-MzL" id="PYC-iq-WqF"/>
+                <outlet property="SelectedFilter" destination="j58-7S-erP" id="nWa-kd-E7W"/>
+                <outlet property="TypeFilter" destination="RoL-au-R3B" id="9Et-Ee-FBS"/>
                 <outlet property="tableView" destination="keC-Ef-YrU" id="gbn-03-9k3"/>
                 <outlet property="view" destination="skL-TJ-aJi" id="CLB-PB-OTR"/>
             </connections>
@@ -28,8 +30,9 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j58-7S-erP">
                     <rect key="frame" x="2" y="144" width="414" height="32"/>
                     <segments>
+                        <segment title="All"/>
                         <segment title="Consultant"/>
-                        <segment title="Employment"/>
+                        <segment title="Employer"/>
                     </segments>
                 </segmentedControl>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Type..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RoL-au-R3B">
@@ -59,6 +62,16 @@
                     <rect key="frame" x="0.0" y="225" width="414" height="671"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-KC-MzL">
+                    <rect key="frame" x="348" y="185" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onConfirmFilter:" destination="-1" eventType="touchUpInside" id="oe3-qL-ufv"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="FvX-ul-S4P"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,6 +96,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

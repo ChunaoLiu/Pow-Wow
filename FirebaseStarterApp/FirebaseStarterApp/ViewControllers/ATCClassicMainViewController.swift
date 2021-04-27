@@ -13,11 +13,14 @@ import FirebaseAuth
 
 class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet weak var ConfirmFilter: UIButton!
     @IBOutlet weak var TypeFilter: UITextField!
     var menu : SideMenuNavigationController?
     let SignInManager = FirebaseAuthManager()
     var selectedType: String?
-    var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
+    var TypeList = ["All", "Business", "Psychology", "Programming", "Gaming", "Meme"]
+    
+    @IBOutlet weak var SelectedFilter: UISegmentedControl!
     
     @IBAction func ProfileButton(_ sender: Any) {
         present(menu!, animated: true)
@@ -43,6 +46,17 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         FirebaseDataManager.getAllUser { (ProList) in
             tempProfiles = ProList
             self.profiles = tempProfiles
+            print("Count in createArray function is: " + String(self.profiles.count))
+            self.tableView.reloadData()
+        }
+    }
+    
+    func createFilteredArray(Input_type: String, Input_keyword: String) {
+        var tempProfiles: [Pro] = [] // Array of Pro objects used to return profiles to tableView
+        
+        FirebaseDataManager.getFilteredUser (type: Input_type, keyword: Input_keyword){  (ProList) in
+            tempProfiles = ProList
+            self.profiles = tempProfiles
             print("Count in function is: " + String(self.profiles.count))
             self.tableView.reloadData()
         }
@@ -56,6 +70,21 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func onConfirmFilter(_ sender: Any) {
+        print("Changed!")
+        var SelectedType = ""
+        switch self.SelectedFilter.selectedSegmentIndex {
+        case 0:
+            SelectedType = "All"
+        case 1:
+            SelectedType = "Consultant"
+        case 2:
+            SelectedType = "Employer"
+        default:
+            break;
+        }
+        self.createFilteredArray(Input_type: SelectedType, Input_keyword: self.TypeFilter.text!)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -75,6 +104,8 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         refView = self
         
         self.tableView.register(UINib(nibName: "TableviewCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+        
+        self.ConfirmFilter.layer.borderWidth = 1
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
