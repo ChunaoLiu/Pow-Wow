@@ -155,6 +155,49 @@ class FirebaseDataAccessManager {
         }
     }
     
+    func getAllUser(completion: @escaping (_ UserList: [Pro]) -> Void) {
+        let databaseRef = database.child("Users")
+        var returnPro: [Pro] = []
+        databaseRef.observeSingleEvent(of: .value) { (dataSnapshot) in
+            
+            DispatchQueue.global(qos: .utility).async {
+                let group = DispatchGroup()
+                let queue = DispatchQueue.global(qos: .userInteractive)
+                let semaphore = DispatchSemaphore(value: 2)
+                
+                for snap in dataSnapshot.children {
+                    
+                    group.enter()
+                    semaphore.wait()
+                    
+                    queue.async {
+                        let userSnap = snap as! DataSnapshot
+                        let uid = userSnap.key
+                        let userDict = userSnap.value as! [String: String]
+                        
+                        let url = URL(string: userDict["UserIconURL"]!)
+                        
+                        let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                            guard let data = data, error == nil else {
+                                print("Error trying to download user icon")
+                                return
+                            }
+                            let image = UIImage(data: data)
+                            let ProItem = Pro(image: image!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["UserKeywords"]!)
+                            returnPro.append(ProItem)
+                            
+                            semaphore.signal()
+                            group.leave()
+                            })
+                        task.resume()
+                        }
+                    }
+                group.notify(queue: .main) {
+                    completion(returnPro)
+                }
+            }
+        }
+    }
 }
 
 

@@ -16,51 +16,39 @@ import UIKit
 class Profile: UIViewController {
     var profiles: [Pro] = [] // All the profiles rendered to tableView
     
+    let FirebaseDataManager = FirebaseDataAccessManager()
+    
     @IBOutlet weak var tableView: UITableView! // Main table view on view controller
     
     override func viewDidLoad() { // Main Constructor
         super.viewDidLoad() // Super Constructor
         
-        profiles = createArray() // Calls createArray() function to update profiles array
+        createArray() // Calls createArray() function to update profiles array
+        
+        print("Count is: " + String(profiles.count))
         
         // tableView.delegate = self // Setting view controller delegate of tableView
         // tableView.dataSource = self // Setting view controller dataSource of tableView
     }
     
-    func createArray() -> [Pro] {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        createArray()
+    }
+
+    
+    func createArray() {
         var tempProfiles: [Pro] = [] // Array of Pro objects used to return profiles to tableView
         
         // I'll place system image for now to test how it looks
         
-        let profileSampleOne = Pro( // Placeholder Pro object
-            image: UIImage(systemName: "info.circle")!,
-            name: "Sample Name",
-            type: "Sample Type",
-            description: "Sample Description",
-            keywords: "Sample Keywords"
-        )
-        
-        let profileSampleTwo = Pro( // Placeholder Pro object
-            image: UIImage(systemName: "info.circle")!,
-            name: "Sample Name",
-            type: "Sample Type",
-            description: "Sample Description",
-            keywords: "Sample Keywords"
-        )
-        
-        let profileSampleThree = Pro( // Placeholder Pro object
-            image: UIImage(systemName: "info.circle")!,
-            name: "Sample Name",
-            type: "Sample Type",
-            description: "Sample Description",
-            keywords: "Sample Keywords"
-        )
-        
-        tempProfiles.append(profileSampleOne) // Placeholder append to tempProfiles array
-        tempProfiles.append(profileSampleTwo) // Placeholder append to tempProfiles array
-        tempProfiles.append(profileSampleThree) // Placeholder append to tempProfiles array
-        
-        return tempProfiles // This array will contain the Pro objects displayed on tableView
+        FirebaseDataManager.getAllUser { (ProList) in
+            tempProfiles = ProList
+            self.profiles = tempProfiles
+            print("Count in function is: " + String(self.profiles.count))
+            self.tableView.reloadData()
+        }
     }
 }
 
