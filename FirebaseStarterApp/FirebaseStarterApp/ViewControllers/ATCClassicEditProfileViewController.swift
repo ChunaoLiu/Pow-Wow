@@ -16,6 +16,7 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
     @IBOutlet weak var PersonName: UITextField!
     @IBOutlet weak var PersonBio: UITextView!
     @IBOutlet weak var PersonKeyword: UITextField!
+    @IBOutlet weak var UserTypeSeg: UISegmentedControl!
     var TypeList = ["Business", "Psychology", "Programming", "Gaming", "Meme"]
     
     var selectedType: String?
@@ -38,8 +39,14 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         // Todo: Submit the data to server and update user info
         let DataManager = FirebaseDataAccessManager()
         var url_id = "Nothing"
+        var userType: String
+        if (UserTypeSeg.selectedSegmentIndex == 0) {
+            userType = "Consultant"
+        } else {
+            userType = "Employer"
+        }
         
-        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text!, UserKeyword: self.PersonKeyword.text!) { (success) in
+        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text!, UserKeyword: self.PersonKeyword.text!, UserType: userType) { (success) in
             if (success) {
                 DataManager.getUserInfo(uid: user!.uid) { (userData) in
                     url_id = userData["URL_ID"]!

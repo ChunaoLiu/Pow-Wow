@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Testing storyboard Profile
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let testboard = UIStoryboard(name: "Profile", bundle: nil)
-        window?.rootViewController = testboard.instantiateViewController(withIdentifier: "TestStoryboard")
-//        window?.rootViewController = UINavigationController(rootViewController: ATCClassicLandingScreenViewController(nibName: "ATCClassicLandingScreenViewController", bundle: nil))
+//        let testboard = UIStoryboard(name: "Profile", bundle: nil)
+//        window?.rootViewController = testboard.instantiateViewController(withIdentifier: "TestStoryboard")
+        window?.rootViewController = UINavigationController(rootViewController: ATCClassicLandingScreenViewController(nibName: "ATCClassicLandingScreenViewController", bundle: nil))
         window?.makeKeyAndVisible()
         return true
     }

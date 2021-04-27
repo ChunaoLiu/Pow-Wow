@@ -20,10 +20,7 @@ class ATCClassicProfileViewController: UIViewController {
     @IBOutlet weak var ProfileBio: UILabel!
     @IBOutlet weak var Banner: UIImageView!
     @IBOutlet weak var ProfileKeyword: UILabel!
-    
-    @IBAction func ToHome(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var UserType: UISegmentedControl!
     
     @IBAction func onReturn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -58,8 +55,16 @@ class ATCClassicProfileViewController: UIViewController {
             if (userData["UserBio"] != "NULL") {
                 self.ProfileBio.text = userData["UserBio"]!
             }
-            if (userData["UserKeywords"] != "") {
-                self.ProfileKeyword.text = "KeyWords: " + userData["UserKeywords"]!
+            if (userData["Userkeywords"] != "NULL") {
+                print(userData["Userkeywords"]!)
+                self.ProfileKeyword.text = ("KeyWords: " + userData["Userkeywords"]!)
+            }
+            if (userData["UserType"] != "NULL") {
+                if (userData["UserType"] == "Consultant") {
+                    self.UserType.selectedSegmentIndex = 0
+                } else {
+                    self.UserType.selectedSegmentIndex = 1
+                }
             }
             if (userData["UserIconURL"] != "NULL") {
                 let url = URL(string: userData["UserIconURL"]!)

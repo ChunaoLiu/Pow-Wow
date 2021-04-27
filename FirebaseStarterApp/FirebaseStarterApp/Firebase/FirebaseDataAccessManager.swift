@@ -26,7 +26,7 @@ class FirebaseDataAccessManager {
                 "UserType" : "NULL",
                 "UserIconURL" : "NULL",
                 "UserBannerURL" : "NULL",
-                "UserPictureURL" : "NULL",
+                "UserIconURL" : "NULL",
                 "ProIndustry" : "NULL",
                 "Userkeywords" : "NULL",
                 "UserBio" : "NULL",
@@ -105,14 +105,15 @@ class FirebaseDataAccessManager {
         })
     }
     
-    func updateUserSetting(uid: String, UserName: String, UserBio: String, UserKeyword: String, completion: @escaping (_ success: Bool) -> Void) {
+    func updateUserSetting(uid: String, UserName: String, UserBio: String, UserKeyword: String, UserType: String, completion: @escaping (_ success: Bool) -> Void) {
         
         let UpdateRef = database.child("Users").child(uid)
         
         UpdateRef.updateChildValues([
             "UserName": UserName,
             "UserBio": UserBio,
-            "UserKeywords": UserKeyword,
+            "Userkeywords": UserKeyword,
+            "UserType": UserType
         ]) { (error, DatabaseRef) in
             if let error = error {
                 print("Failed to update User's profile: \(error)")

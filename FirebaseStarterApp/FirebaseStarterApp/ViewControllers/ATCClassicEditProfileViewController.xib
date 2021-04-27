@@ -16,6 +16,7 @@
                 <outlet property="PersonIcon" destination="pD6-DC-cqq" id="F4C-Me-tsG"/>
                 <outlet property="PersonKeyword" destination="6ZT-GS-Qg0" id="ez2-SP-QkC"/>
                 <outlet property="PersonName" destination="4Lx-jg-9Tp" id="vj3-3s-eTc"/>
+                <outlet property="UserTypeSeg" destination="rBn-il-XLS" id="dXN-me-nXM"/>
                 <outlet property="view" destination="EUu-d4-aRF" id="lEZ-4x-gCK"/>
             </connections>
         </placeholder>
@@ -49,11 +50,6 @@
                         <outletCollection property="gestureRecognizers" destination="LmD-aL-2mh" appends="YES" id="ZWs-BW-K8B"/>
                     </connections>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lx-jg-9Tp">
-                    <rect key="frame" x="69" y="376" width="275" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-DC-cqq" customClass="UIImageViewOverride" customModule="FirebaseStarterApp" customModuleProvider="target">
                     <rect key="frame" x="132" y="219.5" width="150" height="147"/>
                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -68,7 +64,7 @@
                     </connections>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-Q1-Mgj">
-                    <rect key="frame" x="20" y="418" width="374" height="340"/>
+                    <rect key="frame" x="20" y="459" width="374" height="299"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -79,6 +75,18 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lx-jg-9Tp">
+                    <rect key="frame" x="69" y="417" width="275" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rBn-il-XLS">
+                    <rect key="frame" x="19" y="376" width="374" height="32"/>
+                    <segments>
+                        <segment title="Consultant"/>
+                        <segment title="Employer"/>
+                    </segments>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="CfO-bp-HOb"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,18 +94,21 @@
                 <constraint firstItem="U6V-CV-2AS" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" id="1eO-Fp-QjK"/>
                 <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="4Lx-jg-9Tp" secondAttribute="trailing" constant="70" id="3Ef-zb-4LQ"/>
                 <constraint firstItem="2bD-Wr-iGf" firstAttribute="width" secondItem="2bD-Wr-iGf" secondAttribute="height" multiplier="207:112" id="6eo-Mg-ZqH"/>
+                <constraint firstItem="rBn-il-XLS" firstAttribute="top" secondItem="pD6-DC-cqq" secondAttribute="bottom" constant="8" id="BJu-iI-x92"/>
                 <constraint firstItem="U6V-CV-2AS" firstAttribute="trailing" secondItem="CfO-bp-HOb" secondAttribute="trailing" id="D58-ep-YV4"/>
                 <constraint firstItem="2bD-Wr-iGf" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" id="EDm-lB-t5Q"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="rBn-il-XLS" secondAttribute="trailing" constant="21" id="Em7-Ib-US1"/>
                 <constraint firstItem="pD6-DC-cqq" firstAttribute="top" secondItem="U6V-CV-2AS" secondAttribute="bottom" constant="130" id="KgK-LQ-n1L"/>
                 <constraint firstItem="U6V-CV-2AS" firstAttribute="top" secondItem="CfO-bp-HOb" secondAttribute="top" id="NF8-Sp-yiQ"/>
-                <constraint firstItem="CfO-bp-HOb" firstAttribute="bottom" secondItem="6ZT-GS-Qg0" secondAttribute="bottom" constant="62" id="PkC-f0-7PJ"/>
+                <constraint firstItem="CfO-bp-HOb" firstAttribute="bottom" secondItem="6ZT-GS-Qg0" secondAttribute="bottom" priority="100" constant="62" id="PkC-f0-7PJ"/>
+                <constraint firstItem="rBn-il-XLS" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="19" id="QTZ-Ba-ExF"/>
                 <constraint firstItem="xtn-Q1-Mgj" firstAttribute="top" secondItem="4Lx-jg-9Tp" secondAttribute="bottom" constant="8" id="R1A-5Z-yZD"/>
-                <constraint firstItem="4Lx-jg-9Tp" firstAttribute="top" secondItem="pD6-DC-cqq" secondAttribute="bottom" constant="8" id="Vbk-ul-pwC"/>
+                <constraint firstItem="4Lx-jg-9Tp" firstAttribute="top" secondItem="rBn-il-XLS" secondAttribute="bottom" constant="10" id="Vbk-ul-pwC"/>
                 <constraint firstItem="6ZT-GS-Qg0" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="69" id="Y16-5V-5Qu"/>
                 <constraint firstItem="pD6-DC-cqq" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="132" id="aUE-PQ-oAd"/>
                 <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="6ZT-GS-Qg0" secondAttribute="trailing" constant="70" id="bJP-Kn-NGB"/>
                 <constraint firstItem="xtn-Q1-Mgj" firstAttribute="leading" secondItem="CfO-bp-HOb" secondAttribute="leading" constant="20" id="fmD-V9-RW6"/>
-                <constraint firstItem="6ZT-GS-Qg0" firstAttribute="top" secondItem="xtn-Q1-Mgj" secondAttribute="bottom" constant="8" symbolic="YES" id="glx-Ki-nb5"/>
+                <constraint firstItem="6ZT-GS-Qg0" firstAttribute="top" secondItem="xtn-Q1-Mgj" secondAttribute="bottom" constant="8" id="glx-Ki-nb5"/>
                 <constraint firstItem="2bD-Wr-iGf" firstAttribute="trailing" secondItem="CfO-bp-HOb" secondAttribute="trailing" id="h7N-4F-V8b"/>
                 <constraint firstItem="CfO-bp-HOb" firstAttribute="trailing" secondItem="pD6-DC-cqq" secondAttribute="trailing" constant="132" id="jh3-60-XwP"/>
                 <constraint firstItem="2bD-Wr-iGf" firstAttribute="top" secondItem="U6V-CV-2AS" secondAttribute="bottom" id="rfK-7C-UH5"/>
