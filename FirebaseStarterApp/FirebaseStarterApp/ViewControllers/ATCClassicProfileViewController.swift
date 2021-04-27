@@ -50,6 +50,7 @@ class ATCClassicProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
             self.ProfileName.text = userData["UserName"]!
             if (userData["UserBio"] != "NULL") {

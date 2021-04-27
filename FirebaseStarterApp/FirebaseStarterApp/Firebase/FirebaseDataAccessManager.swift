@@ -183,12 +183,24 @@ class FirebaseDataAccessManager {
                                 print("Error trying to download user icon")
                                 return
                             }
-                            let image = UIImage(data: data)
-                            let ProItem = Pro(image: image!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
-                            returnPro.append(ProItem)
+                            let image_Icon = UIImage(data: data)
                             
-                            semaphore.signal()
-                            group.leave()
+                            let url_Banner = URL(string: userDict["UserBannerURL"]!)
+                            
+                            let task_Banner = URLSession.shared.dataTask(with: url_Banner!, completionHandler: { (data2, _, error) in
+                                guard let data_2 = data2, error == nil else {
+                                    print("Error trying to download user icon")
+                                    return
+                                }
+                                
+                                let image_Banner = UIImage(data: data_2)
+
+                                let ProItem = Pro(image_Icon: image_Icon!, Banner: image_Banner!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
+                                returnPro.append(ProItem)
+                                semaphore.signal()
+                                group.leave()
+                                })
+                            task_Banner.resume()
                             })
                         task.resume()
                         }

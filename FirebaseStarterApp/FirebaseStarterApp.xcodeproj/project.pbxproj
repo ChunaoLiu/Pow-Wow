@@ -32,6 +32,8 @@
 		4E90A21A26376A5C00AA842B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E90A21626376A5C00AA842B /* Profile.storyboard */; };
 		4E90A21B26376A5C00AA842B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90A21726376A5C00AA842B /* ProfileCell.swift */; };
 		4E90A2222637CB2600AA842B /* TableviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E90A2212637CB2600AA842B /* TableviewCell.xib */; };
+		4E90A22F2637D50E00AA842B /* ATCClassicOthersProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E90A22E2637D50E00AA842B /* ATCClassicOthersProfileViewController.xib */; };
+		4E90A2362637D56800AA842B /* ATCClassicOtherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90A2352637D56800AA842B /* ATCClassicOtherProfileViewController.swift */; };
 		4EB4ACBE2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */; };
 		4EB4ACC12632BA96000BE195 /* ATCClassicEditAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */; };
 		4EB4ACCA2632C062000BE195 /* ChangeEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */; };
@@ -81,6 +83,8 @@
 		4E90A21626376A5C00AA842B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		4E90A21726376A5C00AA842B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		4E90A2212637CB2600AA842B /* TableviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableviewCell.xib; path = FirebaseStarterApp/ViewControllers/TableviewCell.xib; sourceTree = SOURCE_ROOT; };
+		4E90A22E2637D50E00AA842B /* ATCClassicOthersProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicOthersProfileViewController.xib; sourceTree = "<group>"; };
+		4E90A2352637D56800AA842B /* ATCClassicOtherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicOtherProfileViewController.swift; sourceTree = "<group>"; };
 		4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicEditAuthViewController.xib; sourceTree = "<group>"; };
 		4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicEditAuthViewController.swift; sourceTree = "<group>"; };
 		4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeEmailView.xib; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				1773BFE1221FA7D0005C82D8 /* ATCClassicLoginScreenViewController.xib */,
 				6A7BF266262CE4DE005B5EC6 /* ATCClassicMainViewController.swift */,
 				6A7BF269262CE529005B5EC6 /* ATCClassicMainViewController.xib */,
+				4E90A2352637D56800AA842B /* ATCClassicOtherProfileViewController.swift */,
+				4E90A22E2637D50E00AA842B /* ATCClassicOthersProfileViewController.xib */,
 				6A7BF26C262CE540005B5EC6 /* ATCClassicProfileViewController.swift */,
 				6A7BF280262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib */,
 				6A7BF272262CE56D005B5EC6 /* ATCClassicSearchViewController.swift */,
@@ -309,6 +315,7 @@
 				1773BFE7221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.xib in Resources */,
 				4EB4ACBE2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib in Resources */,
 				6A7BF26A262CE529005B5EC6 /* ATCClassicMainViewController.xib in Resources */,
+				4E90A22F2637D50E00AA842B /* ATCClassicOthersProfileViewController.xib in Resources */,
 				4E90A21A26376A5C00AA842B /* Profile.storyboard in Resources */,
 				4EB4ACCA2632C062000BE195 /* ChangeEmailView.xib in Resources */,
 				6A7BF276262CE581005B5EC6 /* ATCClassicSearchViewController.xib in Resources */,
@@ -382,6 +389,7 @@
 				6A7BF279262CE596005B5EC6 /* ATCClassicSettingsViewController.swift in Sources */,
 				6A7BF26D262CE540005B5EC6 /* ATCClassicProfileViewController.swift in Sources */,
 				6A7BF267262CE4DE005B5EC6 /* ATCClassicMainViewController.swift in Sources */,
+				4E90A2362637D56800AA842B /* ATCClassicOtherProfileViewController.swift in Sources */,
 				4E90A21926376A5C00AA842B /* Pro.swift in Sources */,
 				4EB4ACD02632C18B000BE195 /* ChangeEmailViewController.swift in Sources */,
 				4ECA1BF2262D2B7D00140DF9 /* ConsultantCollectionViewController.swift in Sources */,

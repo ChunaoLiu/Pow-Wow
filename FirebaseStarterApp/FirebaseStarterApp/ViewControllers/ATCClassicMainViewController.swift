@@ -134,6 +134,19 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         return cell // Returns current profile cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let profile = profiles[indexPath.row]
+        let otherProfile = ATCClassicOtherProfileViewController(nibName: "ATCClassicOthersProfileViewController", bundle: nil)
+        otherProfile.BannerImage = profile.banner
+        otherProfile.IconImage = profile.image
+        otherProfile.UName = profile.name
+        otherProfile.UBio = profile.description
+        otherProfile.UType = profile.type
+        otherProfile.UKeywords = profile.keywords
+        
+        self.navigationController?.pushViewController(otherProfile, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -144,7 +157,6 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 // Extending ATCClassicMainViewController for a picker

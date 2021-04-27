@@ -20,17 +20,19 @@ import UIKit
 class Pro {
     // Initialize Pro Variables
     var image: UIImage
+    var banner: UIImage
     var name: String
     var type: String
     var description: String
     var keywords: String
     
     // Pro Constructor
-    init(image: UIImage, name: String, type: String, description: String, keywords: String) {
-        self.image = image
+    init(image_Icon: UIImage, Banner: UIImage, name: String, type: String, description: String, keywords: String) {
+        self.image = image_Icon
         self.name = name
         self.type = type
         self.description = description
         self.keywords = keywords
+        self.banner = Banner
     }
 }
