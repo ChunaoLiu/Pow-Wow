@@ -62,12 +62,14 @@
                     <rect key="frame" x="0.0" y="225" width="414" height="671"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-KC-MzL">
-                    <rect key="frame" x="348" y="185" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-KC-MzL">
+                    <rect key="frame" x="294" y="180" width="100" height="41"/>
                     <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Bp3-KC-MzL" secondAttribute="height" multiplier="100:41" id="MNG-5B-A9C"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="confirm filter"/>
                     <connections>
                         <action selector="onConfirmFilter:" destination="-1" eventType="touchUpInside" id="oe3-qL-ufv"/>
                     </connections>
@@ -78,12 +80,15 @@
             <constraints>
                 <constraint firstItem="kZa-Io-TyC" firstAttribute="top" secondItem="wjr-3K-ibe" secondAttribute="bottom" id="4PT-Kc-QS8"/>
                 <constraint firstItem="j58-7S-erP" firstAttribute="leading" secondItem="FvX-ul-S4P" secondAttribute="leading" constant="2" id="7L4-1i-27i"/>
+                <constraint firstItem="FvX-ul-S4P" firstAttribute="trailing" secondItem="Bp3-KC-MzL" secondAttribute="trailing" constant="20" id="9mk-j0-9sa"/>
                 <constraint firstItem="wjr-3K-ibe" firstAttribute="top" secondItem="FvX-ul-S4P" secondAttribute="top" id="HZ6-Zh-267"/>
                 <constraint firstItem="keC-Ef-YrU" firstAttribute="top" secondItem="RoL-au-R3B" secondAttribute="bottom" constant="8" symbolic="YES" id="I5p-Yv-gtE"/>
                 <constraint firstItem="keC-Ef-YrU" firstAttribute="leading" secondItem="FvX-ul-S4P" secondAttribute="leading" id="IsP-ct-LOO"/>
+                <constraint firstItem="keC-Ef-YrU" firstAttribute="top" secondItem="Bp3-KC-MzL" secondAttribute="bottom" constant="4" id="NOP-f6-Hfa"/>
                 <constraint firstItem="RoL-au-R3B" firstAttribute="top" secondItem="j58-7S-erP" secondAttribute="bottom" constant="8" symbolic="YES" id="PFk-mX-o1R"/>
                 <constraint firstItem="keC-Ef-YrU" firstAttribute="trailing" secondItem="FvX-ul-S4P" secondAttribute="trailing" id="S3M-YW-91F"/>
                 <constraint firstItem="kZa-Io-TyC" firstAttribute="trailing" secondItem="FvX-ul-S4P" secondAttribute="trailing" constant="2" id="SCs-jG-9P7"/>
+                <constraint firstItem="Bp3-KC-MzL" firstAttribute="top" secondItem="j58-7S-erP" secondAttribute="bottom" constant="5" id="bqT-vq-kjD"/>
                 <constraint firstItem="kZa-Io-TyC" firstAttribute="leading" secondItem="FvX-ul-S4P" secondAttribute="leading" constant="2" id="brx-h0-SF5"/>
                 <constraint firstItem="RoL-au-R3B" firstAttribute="leading" secondItem="FvX-ul-S4P" secondAttribute="leading" constant="10" id="e1Y-3I-hO2"/>
                 <constraint firstItem="wjr-3K-ibe" firstAttribute="trailing" secondItem="FvX-ul-S4P" secondAttribute="trailing" id="exQ-ri-iE1"/>

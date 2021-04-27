@@ -105,7 +105,10 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         
         self.tableView.register(UINib(nibName: "TableviewCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
         
-        self.ConfirmFilter.layer.borderWidth = 1
+        self.ConfirmFilter.layer.borderWidth = 0.5
+        self.ConfirmFilter.layer.cornerRadius = 0.2 * self.ConfirmFilter.bounds.size.width
+        
+        self.ConfirmFilter.clipsToBounds = true
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
