@@ -18,6 +18,10 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var profileDescriptionLabel: UILabel! // Description (as String)
     @IBOutlet weak var profileKeywordsLabel: UILabel! // Keywords (as String)
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     func setProfile(profile: Pro) { // Maps Data from Pro Object to Profile Cell UI
         profileImageView.image = profile.image
         profileNameLabel.text = profile.name

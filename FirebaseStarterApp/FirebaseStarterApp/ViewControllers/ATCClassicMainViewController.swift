@@ -5,12 +5,13 @@
 //  Created by 刘淳傲 on 3/24/21.
 //
 
+import Foundation
 import UIKit
 import AlamofireImage
 import SideMenu
 import FirebaseAuth
 
-class ATCClassicMainViewController: UIViewController {
+class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var TypeFilter: UITextField!
     var menu : SideMenuNavigationController?
@@ -20,6 +21,31 @@ class ATCClassicMainViewController: UIViewController {
     
     @IBAction func ProfileButton(_ sender: Any) {
         present(menu!, animated: true)
+    }
+    
+    var profiles: [Pro] = [] // All the profiles rendered to tableView
+    
+    let FirebaseDataManager = FirebaseDataAccessManager()
+    
+    @IBOutlet weak var tableView: UITableView! // Main table view on view controller
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        createArray()
+    }
+    
+    func createArray() {
+        var tempProfiles: [Pro] = [] // Array of Pro objects used to return profiles to tableView
+        
+        // I'll place system image for now to test how it looks
+        
+        FirebaseDataManager.getAllUser { (ProList) in
+            tempProfiles = ProList
+            self.profiles = tempProfiles
+            print("Count in function is: " + String(self.profiles.count))
+            self.tableView.reloadData()
+        }
     }
     
     func callAlart(title: String, message:String, completion: @escaping () -> Void) {
@@ -43,16 +69,22 @@ class ATCClassicMainViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
-    @IBOutlet weak var ConsultantCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         refView = self
+        
+        self.tableView.register(UINib(nibName: "TableviewCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         definesPresentationContext = true
         // Initialize the SideMenu When it loads
         menu = SideMenuNavigationController(rootViewController: ATCClassicMenuListViewController())
         // Menu will pop up at left
         menu?.leftSide = true
+        
+        createArray() // Calls createArray() function to update profiles array
         
         // Let the SideMenuManager take control over the left menu
         SideMenuManager.default.leftMenuNavigationController = menu
@@ -87,6 +119,21 @@ class ATCClassicMainViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // Allocates space
+        return profiles.count // Returns number of profiles in tableView
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let profile = profiles[indexPath.row] // Current profile set to index indexPath.row of profiles array
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
+        
+        cell.setProfile(profile: profile) // Current profile set to current cell
+        
+        return cell // Returns current profile cell
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -102,6 +149,7 @@ class ATCClassicMainViewController: UIViewController {
 
 // Extending ATCClassicMainViewController for a picker
 extension ATCClassicMainViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -119,3 +167,4 @@ extension ATCClassicMainViewController: UIPickerViewDataSource, UIPickerViewDele
         self.TypeFilter.text = self.selectedType
     }
 }
+

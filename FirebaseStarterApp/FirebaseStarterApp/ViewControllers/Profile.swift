@@ -25,8 +25,6 @@ class Profile: UIViewController {
         
         createArray() // Calls createArray() function to update profiles array
         
-        print("Count is: " + String(profiles.count))
-        
         // tableView.delegate = self // Setting view controller delegate of tableView
         // tableView.dataSource = self // Setting view controller dataSource of tableView
     }

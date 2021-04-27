@@ -184,7 +184,7 @@ class FirebaseDataAccessManager {
                                 return
                             }
                             let image = UIImage(data: data)
-                            let ProItem = Pro(image: image!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["UserKeywords"]!)
+                            let ProItem = Pro(image: image!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
                             returnPro.append(ProItem)
                             
                             semaphore.signal()

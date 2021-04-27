@@ -145,7 +145,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hCR-LV-CND">
             <objects>
-                <navigationController storyboardIdentifier="TestStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="4oT-OE-PSJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TableviewStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="4oT-OE-PSJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pIW-VB-tCX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

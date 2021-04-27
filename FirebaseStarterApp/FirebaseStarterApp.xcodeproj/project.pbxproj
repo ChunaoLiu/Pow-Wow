@@ -10,7 +10,6 @@
 		177371E92221D7C6003E7EC4 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177371E82221D7C6003E7EC4 /* FirebaseAuthManager.swift */; };
 		1773BFCA221FA51C005C82D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773BFC9221FA51C005C82D8 /* AppDelegate.swift */; };
 		1773BFD1221FA51F005C82D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1773BFD0221FA51F005C82D8 /* Assets.xcassets */; };
-		1773BFD4221FA51F005C82D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1773BFD2221FA51F005C82D8 /* LaunchScreen.storyboard */; };
 		1773BFE2221FA7D1005C82D8 /* ATCClassicSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1773BFDC221FA7D0005C82D8 /* ATCClassicSignUpViewController.xib */; };
 		1773BFE3221FA7D1005C82D8 /* ATCClassicSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773BFDD221FA7D0005C82D8 /* ATCClassicSignUpViewController.swift */; };
 		1773BFE4221FA7D1005C82D8 /* ATCClassicLandingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1773BFDE221FA7D0005C82D8 /* ATCClassicLandingScreenViewController.xib */; };
@@ -32,6 +31,7 @@
 		4E90A21926376A5C00AA842B /* Pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90A21526376A5B00AA842B /* Pro.swift */; };
 		4E90A21A26376A5C00AA842B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E90A21626376A5C00AA842B /* Profile.storyboard */; };
 		4E90A21B26376A5C00AA842B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90A21726376A5C00AA842B /* ProfileCell.swift */; };
+		4E90A2222637CB2600AA842B /* TableviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E90A2212637CB2600AA842B /* TableviewCell.xib */; };
 		4EB4ACBE2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */; };
 		4EB4ACC12632BA96000BE195 /* ATCClassicEditAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */; };
 		4EB4ACCA2632C062000BE195 /* ChangeEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */; };
@@ -58,7 +58,6 @@
 		1773BFC6221FA51C005C82D8 /* FirebaseStarterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseStarterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1773BFC9221FA51C005C82D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1773BFD0221FA51F005C82D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1773BFD3221FA51F005C82D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1773BFD5221FA51F005C82D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1773BFDC221FA7D0005C82D8 /* ATCClassicSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCClassicSignUpViewController.xib; sourceTree = "<group>"; };
 		1773BFDD221FA7D0005C82D8 /* ATCClassicSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCClassicSignUpViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		4E90A21526376A5B00AA842B /* Pro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pro.swift; sourceTree = "<group>"; };
 		4E90A21626376A5C00AA842B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		4E90A21726376A5C00AA842B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		4E90A2212637CB2600AA842B /* TableviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableviewCell.xib; path = FirebaseStarterApp/ViewControllers/TableviewCell.xib; sourceTree = SOURCE_ROOT; };
 		4EB4ACBD2632B9F8000BE195 /* ATCClassicEditAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCClassicEditAuthViewController.xib; sourceTree = "<group>"; };
 		4EB4ACC02632BA96000BE195 /* ATCClassicEditAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCClassicEditAuthViewController.swift; sourceTree = "<group>"; };
 		4EB4ACC92632C062000BE195 /* ChangeEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeEmailView.xib; sourceTree = "<group>"; };
@@ -155,7 +155,6 @@
 				1773BFDB221FA7D0005C82D8 /* ViewControllers */,
 				1773BFC9221FA51C005C82D8 /* AppDelegate.swift */,
 				1773BFD0221FA51F005C82D8 /* Assets.xcassets */,
-				1773BFD2221FA51F005C82D8 /* LaunchScreen.storyboard */,
 				1773BFD5221FA51F005C82D8 /* Info.plist */,
 				4ECA1BEE262D2A2900140DF9 /* HomePage.storyboard */,
 			);
@@ -189,6 +188,7 @@
 				4ECA1BF5262D5ACA00140DF9 /* UIImageViewOverride.swift */,
 				4E90A21526376A5B00AA842B /* Pro.swift */,
 				4E90A21626376A5C00AA842B /* Profile.storyboard */,
+				4E90A2212637CB2600AA842B /* TableviewCell.xib */,
 				4E90A21426376A5B00AA842B /* Profile.swift */,
 				4E90A21726376A5C00AA842B /* ProfileCell.swift */,
 			);
@@ -297,13 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A7BF281262CEEFD005B5EC6 /* ATCClassicProfileViewController.xib in Resources */,
-				1773BFD4221FA51F005C82D8 /* LaunchScreen.storyboard in Resources */,
 				4E52CF752632E421008C1A9A /* ChangePhoneNumView.xib in Resources */,
 				1773BFE4221FA7D1005C82D8 /* ATCClassicLandingScreenViewController.xib in Resources */,
 				4ECA1BEF262D2A2900140DF9 /* HomePage.storyboard in Resources */,
 				6A7BF27C262CE5A8005B5EC6 /* ATCClassicSettingsViewController.xib in Resources */,
 				6A7BF285262CF00A005B5EC6 /* ATCClassicEditProfileViewController.xib in Resources */,
 				1773BFD1221FA51F005C82D8 /* Assets.xcassets in Resources */,
+				4E90A2222637CB2600AA842B /* TableviewCell.xib in Resources */,
 				1773BFE2221FA7D1005C82D8 /* ATCClassicSignUpViewController.xib in Resources */,
 				4E81B257262A386C0002E816 /* HomePage.storyboard in Resources */,
 				1773BFE7221FA7D1005C82D8 /* ATCClassicLoginScreenViewController.xib in Resources */,
@@ -391,17 +391,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1773BFD2221FA51F005C82D8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1773BFD3221FA51F005C82D8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1773BFD6221FA51F005C82D8 /* Debug */ = {
