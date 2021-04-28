@@ -107,6 +107,7 @@ class ATCClassicMainViewController: UIViewController, UITableViewDataSource, UIT
         print ("Current User is: " + String(Auth.auth().currentUser!.uid))
         
         self.tableView.register(UINib(nibName: "TableviewCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+        self.tableView.keyboardDismissMode = .onDrag
         
         self.ConfirmFilter.layer.borderWidth = 0.5
         self.ConfirmFilter.layer.cornerRadius = 0.2 * self.ConfirmFilter.bounds.size.width
