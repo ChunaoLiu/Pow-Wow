@@ -46,9 +46,9 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
             userType = "Employer"
         }
         
-        DataManager.updateUserSetting(uid: user!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text!, UserKeyword: self.PersonKeyword.text!, UserType: userType) { (success) in
+        DataManager.updateUserSetting(uid: Auth.auth().currentUser!.uid, UserName: self.PersonName.text!, UserBio: self.PersonBio.text!, UserKeyword: self.PersonKeyword.text!, UserType: userType) { (success) in
             if (success) {
-                DataManager.getUserInfo(uid: user!.uid) { (userData) in
+                DataManager.getUserInfo(uid: Auth.auth().currentUser!.uid) { (userData) in
                     url_id = userData["URL_ID"]!
                     DataManager.updateUserIcon(URL_ID: url_id, image: self.PersonIcon.image!) { (success, urlString) in
                         if (success) {

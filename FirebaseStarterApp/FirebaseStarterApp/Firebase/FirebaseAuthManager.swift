@@ -6,17 +6,18 @@ class FirebaseAuthManager {
     func login(credential: AuthCredential, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().signIn(with: credential, completion: { (firebaseUser, error) in
             print(firebaseUser)
+            user = Auth.auth().currentUser
             completionBlock(error == nil)
         })
     }
 
-    func createUser(email: String, password: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+    func createUser(email: String, password: String, completionBlock: @escaping (_ success: Bool, _ userid: String) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
                 print(user)
-                completionBlock(true)
+                completionBlock(true, String(user.uid))
             } else {
-                completionBlock(true)
+                completionBlock(false, "NULL")
             }
         }
     }
@@ -35,11 +36,11 @@ class FirebaseAuthManager {
     func signOut(completionBlock: @escaping (_ success: Bool) -> Void) {
         do {
             try Auth.auth().signOut()
+            user = nil
             completionBlock(true)
             print("Signing out")
         } catch {
             completionBlock(false)
         }
     }
-    
 }

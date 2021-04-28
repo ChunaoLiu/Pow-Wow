@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-let user = Auth.auth().currentUser
+var user = Auth.auth().currentUser
 let userEmail = user?.email
 
 class ATCClassicProfileViewController: UIViewController {
@@ -51,7 +51,7 @@ class ATCClassicProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
+        UserDataManager.getUserInfo(uid: Auth.auth().currentUser!.uid) { (userData) in
             self.ProfileName.text = userData["UserName"]!
             if (userData["UserBio"] != "NULL") {
                 self.ProfileBio.text = userData["UserBio"]!
@@ -107,7 +107,7 @@ class ATCClassicProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UserDataManager.getUserInfo(uid: user!.uid) { (userData) in
+        UserDataManager.getUserInfo(uid: Auth.auth().currentUser!.uid) { (userData) in
             self.ProfileName.text = userData["UserName"]!
             if (userData["UserBio"] != "NULL") {
                 self.ProfileBio.text = userData["UserBio"]!

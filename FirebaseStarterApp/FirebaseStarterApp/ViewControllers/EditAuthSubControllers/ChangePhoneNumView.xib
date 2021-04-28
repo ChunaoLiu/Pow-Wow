@@ -39,7 +39,11 @@
                             <rect key="frame" x="0.0" y="32" width="414" height="44"/>
                             <items>
                                 <navigationItem title="Change Phone Number" id="MpG-0b-2To">
-                                    <barButtonItem key="leftBarButtonItem" title="Return" id="j4h-c1-djQ"/>
+                                    <barButtonItem key="leftBarButtonItem" title="Return" id="j4h-c1-djQ">
+                                        <connections>
+                                            <action selector="onReturn:" destination="-1" id="zfL-5n-52k"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>

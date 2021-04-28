@@ -26,6 +26,9 @@ class ChangePhoneNumViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func onReturn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBOutlet weak var newPhoneNum: UITextField!
     
     @IBAction func onSubmit(_ sender: Any) {
