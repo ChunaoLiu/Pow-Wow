@@ -95,12 +95,8 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         picker.delegate = self
         picker.allowsEditing = true
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
-        } else {
-            picker.sourceType = .photoLibrary
-        }
-        
+        self.showAlert()
+
         self.BannerPicked = true
         present(picker, animated: true, completion: nil)
     }
@@ -132,23 +128,18 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
 
     
     @IBAction func onChangeIcon(_ sender: Any) {
-        print("Change Icon now!")
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
-        } else {
-            picker.sourceType = .photoLibrary
-        }
-        
+        self.showAlert()
+
         self.BannerPicked = false
         present(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.editedImage] as! UIImage
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af.imageAspectScaled(toFill: size)
         
@@ -209,6 +200,8 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
 
         PersonBio.selectedTextRange = PersonBio.textRange(from: PersonBio.beginningOfDocument, to: PersonBio.beginningOfDocument)
         
+        PersonBio.delegate = self
+        
         self.createAndSetupPickerView()
         self.dismissAndClosePickerView()
         
@@ -245,6 +238,10 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         // For every other case, the text should change with the usual
         // behavior...
         else {
+            if(text == "\n") {
+                textView.resignFirstResponder()
+                return false
+            }
             return true
         }
 
