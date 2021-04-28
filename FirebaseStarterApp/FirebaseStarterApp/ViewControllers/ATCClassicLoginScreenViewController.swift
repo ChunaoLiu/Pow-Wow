@@ -62,7 +62,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
                           cornerRadius: 55/2,
                           backgroundColor: tintColor)
     
-    goToButton.setTitle("Enter Pow Wow", for: .normal)
+    goToButton.setTitle("Return", for: .normal)
     goToButton.addTarget(self, action: #selector(didTapGoToButton), for: .touchUpInside)
     goToButton.configure(color: backgroundColor,
                          font: buttonFont,
@@ -95,8 +95,7 @@ class ATCClassicLoginScreenViewController: UIViewController {
   }
     
     @objc private func didTapGoToButton() {
-        let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
-        self.navigationController?.pushViewController(mainVC, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
   
@@ -108,7 +107,8 @@ extension ATCClassicLoginScreenViewController {
       let alert = UIAlertController(title: isSuccess ? "Success": "Error", message: isSuccess ? successMessage: errorMessage, preferredStyle: UIAlertController.Style.alert)
       alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: {_ in
         if (isSuccess) {
-            self.didTapGoToButton()
+            let mainVC = ATCClassicMainViewController(nibName: "ATCClassicMainViewController", bundle: nil)
+            self.navigationController?.pushViewController(mainVC, animated: true)
         }
       }))
         self.present(alert, animated: true, completion: nil)

@@ -105,6 +105,32 @@ class ATCClassicEditProfileViewController: UIViewController, UITextViewDelegate,
         present(picker, animated: true, completion: nil)
     }
     
+    private func showAlert() {
+
+            let alert = UIAlertController(title: "Image Selection", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
+                self.getImage(fromSourceType: .camera)
+            }))
+            alert.addAction(UIAlertAction(title: "Photo Album", style: .default, handler: {(action: UIAlertAction) in
+                self.getImage(fromSourceType: .photoLibrary)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    
+    private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
+
+            //Check is source type available
+            if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.delegate = self
+                imagePickerController.sourceType = sourceType
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
+        }
+
+    
     @IBAction func onChangeIcon(_ sender: Any) {
         print("Change Icon now!")
         let picker = UIImagePickerController()

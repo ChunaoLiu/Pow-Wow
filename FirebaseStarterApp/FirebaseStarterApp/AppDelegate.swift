@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let testboard = UIStoryboard(name: "Profile", bundle: nil)
 //        window?.rootViewController = testboard.instantiateViewController(withIdentifier: "TestStoryboard")
         window?.rootViewController = UINavigationController(rootViewController: ATCClassicLandingScreenViewController(nibName: "ATCClassicLandingScreenViewController", bundle: nil))
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
         return true
     }

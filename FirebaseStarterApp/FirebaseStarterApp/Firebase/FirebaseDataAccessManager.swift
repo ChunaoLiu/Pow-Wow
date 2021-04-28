@@ -18,23 +18,39 @@ class FirebaseDataAccessManager {
                 Success = false
                 return
             }
-            let User: [String: String] = [
-                "uid" : uid,
-                "UserName" : UserName,
-                "UserEmail" : UserEmail,
-                "UserPhoneNumber" : String(UserPhoneNum),
-                "UserType" : "NULL",
-                "UserIconURL" : "NULL",
-                "UserBannerURL" : "NULL",
-                "UserIconURL" : "NULL",
-                "ProIndustry" : "NULL",
-                "Userkeywords" : "NULL",
-                "UserBio" : "NULL",
-                "URL_ID" : String(Increment)
-            ]
-            self.database.child("Users").child(uid).setValue(User)
-            self.database.child("Increment").setValue(Increment + 1)
-            Success = true
+            var proceed = true
+            self.database.child("Users").observeSingleEvent(of: .value) { (DataSnapshot) in
+                for snap in DataSnapshot.children {
+                    let userSnap = snap as! DataSnapshot
+                    let uid_database = userSnap.key
+                    let userDict = userSnap.value as! [String: String]
+                    print(userDict["UserEmail"] as! String + "\nVersus\n" + UserEmail)
+                    if userDict["UserEmail"] == UserEmail {
+                        Success = false
+                        proceed = false
+                        break
+                    }
+                }
+                print("We Should: " + String(proceed))
+                if (proceed) {
+                    let User: [String: String] = [
+                        "uid" : uid,
+                        "UserName" : UserName,
+                        "UserEmail" : UserEmail,
+                        "UserPhoneNumber" : String(UserPhoneNum),
+                        "UserType" : "NULL",
+                        "UserIconURL" : "NULL",
+                        "UserBannerURL" : "NULL",
+                        "ProIndustry" : "NULL",
+                        "Userkeywords" : "NULL",
+                        "UserBio" : "NULL",
+                        "URL_ID" : String(Increment)
+                    ]
+                    self.database.child("Users").child(uid).setValue(User)
+                    self.database.child("Increment").setValue(Increment + 1)
+                    Success = true
+                }
+            }
         })
         return Success
     }
@@ -159,6 +175,9 @@ class FirebaseDataAccessManager {
     func getAllUser(completion: @escaping (_ UserList: [Pro]) -> Void) {
         let databaseRef = database.child("Users")
         var returnPro: [Pro] = []
+        let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 1920, height: 1080))
+        let cgImage = CIContext().createCGImage(CIImage(color: .black), from: frame)!
+        let BlackImage = UIImage(cgImage: cgImage)
         databaseRef.observeSingleEvent(of: .value) { (dataSnapshot) in
             
             DispatchQueue.global(qos: .utility).async {
@@ -172,37 +191,81 @@ class FirebaseDataAccessManager {
                     semaphore.wait()
                     
                     queue.async {
+                        var task: URLSessionDataTask
+                        var task_Banner: URLSessionDataTask
                         let userSnap = snap as! DataSnapshot
                         let uid = userSnap.key
                         let userDict = userSnap.value as! [String: String]
                         
-                        let url = URL(string: userDict["UserIconURL"]!)
-                        
-                        let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
-                            guard let data = data, error == nil else {
-                                print("Error trying to download user icon")
-                                return
-                            }
-                            let image_Icon = UIImage(data: data)
-                            
-                            let url_Banner = URL(string: userDict["UserBannerURL"]!)
-                            
-                            let task_Banner = URLSession.shared.dataTask(with: url_Banner!, completionHandler: { (data2, _, error) in
-                                guard let data_2 = data2, error == nil else {
-                                    print("Error trying to download user icon")
-                                    return
-                                }
+                        if (userDict["UserIconURL"] != "NULL") {
+                            if (userDict["UserBannerURL"] != "NULL") {
+                                let url = URL(string: userDict["UserIconURL"]!)
                                 
-                                let image_Banner = UIImage(data: data_2)
+                                task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                                    guard let data = data, error == nil else {
+                                        print("Error trying to download user icon")
+                                        return
+                                    }
+                                    let image_Icon = UIImage(data: data)
+                                    
+                                    let url_Banner = URL(string: userDict["UserBannerURL"]!)
+                                    
+                                    let task_Banner = URLSession.shared.dataTask(with: url_Banner!, completionHandler: { (data2, _, error) in
+                                        guard let data_2 = data2, error == nil else {
+                                            print("Error trying to download user icon")
+                                            return
+                                        }
+                                        
+                                        let image_Banner = UIImage(data: data_2)
 
-                                let ProItem = Pro(image_Icon: image_Icon!, Banner: image_Banner!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
+                                        let ProItem = Pro(image_Icon: image_Icon!, Banner: image_Banner!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
+                                        returnPro.append(ProItem)
+                                        semaphore.signal()
+                                        group.leave()
+                                        })
+                                    task_Banner.resume()
+                                    })
+                                task.resume()
+                            } else {
+                                let url = URL(string: userDict["UserIconURL"]!)
+                                
+                                task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, _, error) in
+                                    guard let data = data, error == nil else {
+                                        print("Error trying to download user icon")
+                                        return
+                                    }
+                                    let image_Icon = UIImage(data: data)
+                                    
+                                    let url_Banner = URL(string: userDict["UserBannerURL"]!)
+                                    let ProItem = Pro(image_Icon: image_Icon!, Banner: BlackImage, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
+                                    returnPro.append(ProItem)
+                                    semaphore.signal()
+                                    group.leave()
+                                })
+                            }
+                        } else {
+                            if (userDict["UserBannerURL"] != "NULL") {
+                                let url_Banner = URL(string: userDict["UserBannerURL"]!)
+                                
+                                let task_Banner = URLSession.shared.dataTask(with: url_Banner!, completionHandler: { (data2, _, error) in
+                                    guard let data_2 = data2, error == nil else {
+                                        print("Error trying to download user icon")
+                                        return
+                                    }
+                                    
+                                    let image_Banner = UIImage(data: data_2)
+                                    let ProItem = Pro(image_Icon: UIImage(systemName: "person.fill")!, Banner: image_Banner!, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
+                                    returnPro.append(ProItem)
+                                    semaphore.signal()
+                                    group.leave()
+                                })
+                            } else {
+                                let ProItem = Pro(image_Icon: UIImage(systemName: "person.fill")!, Banner: BlackImage, name: userDict["UserName"]!, type: userDict["UserType"]!, description: userDict["UserBio"]!, keywords: userDict["Userkeywords"]!)
                                 returnPro.append(ProItem)
                                 semaphore.signal()
                                 group.leave()
-                                })
-                            task_Banner.resume()
-                            })
-                        task.resume()
+                            }
+                        }
                         }
                     }
                 group.notify(queue: .main) {
